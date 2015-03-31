@@ -116,9 +116,10 @@ a.pagination_next {
 }
 
 a.pagination_page {
-    border-width: 0 !important;
-    color: #616161 !important;
-    background: none !important;
+    border: 1px #333333 !important;
+    border-radius: 5px !important;
+    color: #777777 !important;
+    background-color: #252525 !important;
 }
 
 a.pagination_previous {
@@ -322,6 +323,7 @@ span.pagination_current {
     background: none !important;
     border: none !important;
     color: #ffffff !important;
+    font-weight: bold;
 }
 
 span.smalltext a {
@@ -672,12 +674,4 @@ input.button:active {
     border: 0px;
     transform: translate(0px, 2px);
     -webkit-transform: translate(0px, 2px);
-}
-
-.star_rating, .star_rating li a:hover, .star_rating .current_rating {
-    background: url(http://i.imgur.com/tZRCG6B.gif) left -1000px repeat-x !important;
-}
-
-.star_rating_success, .success_message {
-    color: #FFF !important;
 }

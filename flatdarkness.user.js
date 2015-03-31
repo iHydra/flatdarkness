@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness Hack Forums Theme
 // @namespace     https://github.com/iHydra
-// @version       1.0
+// @version       1.1
 // @description   Custom theme for Hack Forums.
 // @updateURL     https://raw.githubusercontent.com/iHydra/flatdarkness/master/flatdarkness.meta.js
 // @downloadURL   https://raw.githubusercontent.com/iHydra/flatdarkness/master/flatdarkness.user.js

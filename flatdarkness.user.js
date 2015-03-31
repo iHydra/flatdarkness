@@ -8,7 +8,7 @@
 // @include       http://nsfw.hackforums.net/*
 // @include       http://www.nsfw.hackforums.net/*
 // @author        iHydra
-// @resource      Custom_CSS file://D:\Users\Hydra\Downloads\flatdarkness_stylesheet.css
+// @resource      Custom_CSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet.css
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
 // @run-at        document-start

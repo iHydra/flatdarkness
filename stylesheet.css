@@ -52,13 +52,42 @@ input.bitButton {
     letter-spacing: 1px !important;
     font-size: 12px !important;
     padding: 5px 10px !important;
-    border-radius: 4px !important;
-    -moz-border-radius: 4px !important;
-    -webkit-border-radius: 4px !important;
+    border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    -webkit-border-radius: 6px !important;
     border: 0px solid #555 !important;
     border-bottom-width: 2px !important;
     text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
     box-shadow: none !important;
+    margin-right: 5px;
+}
+
+input.bitButton:hover {
+    background-color: #777 !important;
+    border-color: #555 !important;
+}
+
+input.bitButton:active {
+    background-color: #555 !important;
+    border: 0px !important;
+    transform: translate(0px, 2px) !important;
+    -webkit-transform: translate(0px, 2px) !important;
+}
+
+td[bgcolor="red"]{
+    border-radius: 6px 0px 0px 6px !important;
+    background-color: #bb3131 !important;
+    -moz-border-radius: 6px 0px 0px 6px !important;
+    -webkit-border-radius: 6px 0px 0px 6px !important;
+    color: #FFF !important;
+}
+
+td[bgcolor="green"]{
+    border-radius: 0px 6px 6px 0px !important;
+    background-color: #31bb4b !important;
+    -moz-border-radius: 0px 6px 6px 0px !important;
+    -webkit-border-radius: 0px 6px 6px 0px !important;
+    color: #FFF !important;
 }
 
 a.bitButton {
@@ -70,9 +99,9 @@ a.bitButton {
     letter-spacing: 1px !important;
     font-size: 12px !important;
     padding: 5px 10px !important;
-    border-radius: 4px !important;
-    -moz-border-radius: 4px !important;
-    -webkit-border-radius: 4px !important;
+    border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    -webkit-border-radius: 6px !important;
     border: 0px solid #555 !important;
     border-bottom-width: 2px !important;
     text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
@@ -92,39 +121,46 @@ a.bitButton:active {
 }
 
 a.navButton :hover {
-    color: #646d78 !important;
+    color: #666d78 !important;
 }
 
 a.navButton hover {
-    color: #646d78 !important;
+    color: #666d78 !important;
 }
 
 a.pagination_first {
-    border-style: none !important;
+    border: 1px #252525 !important;
+    border-radius: 5px !important;
     color: #FFF !important;
-    background: none !important;
+    background-color: #252525 !important;
 }
 
 a.pagination_last {
-    border-width: 0 !important;
-    background: none !important;
+    border: 1px #252525 !important;
+    border-radius: 5px !important;
+    color: #888 !important;
+    background-color: #252525 !important;
 }
 
 a.pagination_next {
-    border-style: none !important;
-    background: none !important;
+    border: 1px #252525 !important;
+    border-radius: 5px !important;
+    color: #FFF !important;
+    background-color: #252525 !important;
 }
 
 a.pagination_page {
-    border: 1px #333333 !important;
+    border: 1px #252525 !important;
     border-radius: 5px !important;
-    color: #777777 !important;
+    color: #888 !important;
     background-color: #252525 !important;
 }
 
 a.pagination_previous {
-    border-style: none !important;
-    background: none !important;
+    border: 1px #252525 !important;
+    border-radius: 5px !important;
+    color: #FFF !important;
+    background-color: #252525 !important;
 }
 
 a.quick_jump {
@@ -167,7 +203,7 @@ div.menu ul {
     margin-top: 0 !important;
     padding-bottom: 60px !important;
     padding-left: 25px !important;
-    padding-top: 40px !important;
+    padding-top: 60px !important;
     text-align: left !important;
 }
 
@@ -199,14 +235,14 @@ div.pagination {
     font-size: 11px !important;
 }
 div.navigation a {
-    color: #525252 !important;
+    color: #cfcfcf !important;
 }
 div.pm_alert {
 	font-size: 11px !important;
     background-color: #202020 !important;
-    border-bottom: 1px solid #41a859 !important;
+    border-bottom: 1px solid #61a859 !important;
     border-radius: 0 !important;
-    border-top: 1px solid #41a859 !important;
+    border-top: 1px solid #61a859 !important;
     margin-top: 20px !important;
     padding: 10px !important;
 }
@@ -218,7 +254,7 @@ div.post_body {
 }
 
 div.author.smalltext a {
-    color: #949494 !important;
+    color: #969696 !important;
 }
 
 img.expander {
@@ -226,7 +262,7 @@ img.expander {
 }
 
 div.post_body blockquote {
-    background-color: #404040 !important;
+    background-color: #606060 !important;
     border-color: #262626 !important;
     border-style: solid !important;
     border-width: 1px !important;
@@ -247,7 +283,7 @@ div.post_body blockquote cite {
 
 div.smalltext ul li {
     list-style: square !important;
-    margin-left: -4px !important;
+    margin-left: -6px !important;
 }
 
 html body {
@@ -269,7 +305,7 @@ span.group0 {
 }
 
 span.group9 {
-    color: #7adb4f !important;
+    color: #7adb6f !important;
 }
 
 span.pages {
@@ -298,9 +334,9 @@ span.button {
     letter-spacing: 1px !important;
     font-size: 12px !important;
     padding: 5px 10px !important;
-    border-radius: 4px !important;
-    -moz-border-radius: 4px !important;
-    -webkit-border-radius: 4px !important;
+    border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    -webkit-border-radius: 6px !important;
     border: 0px solid #555 !important;
     border-bottom-width: 2px !important;
     text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
@@ -371,7 +407,7 @@ td.tfoot form {
 
 td.tfoot form select {
     border: none !important;
-    color: #404040 !important;
+    color: #606060 !important;
     font-weight: normal !important;
     margin-bottom: 10px !important;
     margin-top: 10px !important;
@@ -379,7 +415,7 @@ td.tfoot form select {
 }
 
 div.menu ul:after {
-    background-color: #353b40 !important;
+    background-color: #353b60 !important;
     border-radius: 2px !important;
     color: #fff !important;
     content: "flat darkness" !important;
@@ -521,19 +557,23 @@ span.group3 {
 
 img[src="http://x.hackforums.net/images/modern_bl/starstaff.png"] {
     content:url(http://i.imgur.com/2dS5exk.png) !important;
+    filter: hue-rotate(15deg) !important;
 }
 
-span.group4 {
+span.group6 {
     color: #ff3eab !important;
     text-shadow: 1px 1px #000000 !important;
 }
 
 img[src="http://x.hackforums.net/images/modern_bl/staradmin.png"] {
     -webkit-filter: hue-rotate(35deg) !important;
+    filter: hue-rotate(35deg);
+
 }
 
 img[src="http://x.hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
     -webkit-filter: hue-rotate(35deg) !important;
+    filter: hue-rotate(35deg);
 }
 
 img[src="http://x.hackforums.net/images/modern_bl/add_buddy.gif"] {
@@ -551,7 +591,7 @@ td.thead strong {
 }
 
 td.tcat {
-    background-color: #182330 !important;
+    background-color: #393939 !important;
     background-image: none !important;
     border: none !important;
     border-radius: 0px !important;
@@ -565,7 +605,7 @@ td.tcat {
 }
 
 td.thead {
-    background-color: #646d78 !important;
+    background-color: #292929 !important;
     background-image: none !important;
     border-radius: 0px !important;
     border-style: none !important;
@@ -589,12 +629,18 @@ span.smalltext {
 
 div.navigation{
     font-size: 12px !important;
-    color: #545454 !important;
+    color: #cfcfcf !important;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
 }
+
 div.navigation a {
-    color: #545454;
+    color: #cfcfcf !important;
+    font-weight: normal;
+}
+
+div.navigation a:hover {
+    color: #eee !important;
 }
 
 ul.shadetabs li a {
@@ -641,9 +687,16 @@ a.popup_item {
     color: #FFF !important;
 }
 
-div.popup_menu {
-    background: none !important;
+a.popup_item:hover {
+    background: #888 !important;
     border: none !important;
+    color: #FFF !important;
+}
+
+div.popup_menu {
+    background: #555 !important;
+    border: none !important;
+    width: 166px !important;
 }
 
 input.button {
@@ -655,9 +708,9 @@ input.button {
     letter-spacing: 1px !important;
     font-size: 12px !important;
     padding: 5px 10px !important;
-    border-radius: 4px !important;
-    -moz-border-radius: 4px !important;
-    -webkit-border-radius: 4px !important;
+    border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    -webkit-border-radius: 6px !important;
     border: 0px solid #555 !important;
     border-bottom-width: 2px !important;
     text-shadow: 0px 1px rgba(0,0,0,0.5) !important;

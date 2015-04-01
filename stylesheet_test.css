@@ -2,7 +2,7 @@ div.menu ul:after {
     background-color: #282828 !important;
     border-radius: 2px !important;
     color: #ccc !important;
-    content: "flat darkness v1.1.4" !important;
+    content: "beta.0.0.3" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -591,7 +591,7 @@ img[src="http://x.hackforums.net/images/modern_bl/starstaff.png"] {
     filter: hue-rotate(15deg) !important;
 }
 
-span.group6 {
+span.group4 {
     color: #ff3eab !important;
     text-shadow: 1px 1px #000000 !important;
 }
@@ -766,3 +766,4 @@ input.button:active {
     transform: translate(0px, 2px);
     -webkit-transform: translate(0px, 2px);
 }
+

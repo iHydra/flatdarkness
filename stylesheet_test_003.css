@@ -623,6 +623,41 @@ img[src$="/img/enable.png"] {
     content: url(http://i.imgur.com/YHDATSF.png) !important;
 }
 
+/**
+img[src="http://x.hackforums.net/images/modern_bl/folder.gif"] {
+    content: url() !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_folder.gif"] {
+    content: url() !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_lockfolder.gif"] {
+    content: url() !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/newfolder.gif"] {
+    content: url() !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/hotfolder.gif"] {
+    content: url() !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/newlockfolder.gif"] {
+    content: url() !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/hotlockfolder.gif"] {
+    content: url() !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_hotfolder.gif"] {
+    content: url() !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_newfolder.gif"] {
+    content: url() !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_hotlockfolder.gif"] {
+    content: url() !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_newlockfolder.gif"] {
+    content: url() !important;
+} **/
+
 li[class="printable"] {
     background: url(http://i.imgur.com/uJA6SMg.png) no-repeat 0px 0px !important;
 }
@@ -775,3 +810,26 @@ input.button:active {
     -webkit-transform: translate(0px, 2px);
 }
 
+.usercp_nav_home {
+    background: url(http://i.imgur.com/oOCsagR.png) no-repeat left center !important;
+}
+.usercp_nav_composepm {
+    background: url(http://i.imgur.com/yobYUTC.png) no-repeat left center !important;
+}
+.usercp_nav_pmfolder {
+    background: url(http://i.imgur.com/x6gbgmA.png) no-repeat left center !important;
+}
+.usercp_nav_sub_pmfolder {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/TLNEzsL.png) no-repeat left center !important;
+}
+.usercp_nav_trash_pmfolder {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/jYN9GXD.png) no-repeat left center !important;
+}
+.usercp_nav_pmtracking {
+    background: url(http://i.imgur.com/LGv11Oh.png) no-repeat left center !important;
+}
+.usercp_nav_pmfolders {
+    background: url(http://i.imgur.com/W5Gpr9S.png) no-repeat left center !important;
+}

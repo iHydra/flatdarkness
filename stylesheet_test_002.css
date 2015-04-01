@@ -623,6 +623,14 @@ img[src$="/img/enable.png"] {
     content: url(http://i.imgur.com/YHDATSF.png) !important;
 }
 
+li[class="printable"] {
+    background: url(http://i.imgur.com/uJA6SMg.png) no-repeat 0px 0px !important;
+}
+
+li[class="subscription_add"] {
+    background: url(http://i.imgur.com/ChjNgZT.png) no-repeat 0px 0px !important;
+}
+
 td.thead strong {
     color: #ffffff !important;
     margin: 5px !important;

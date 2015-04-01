@@ -10,11 +10,11 @@
 // @include       http://nsfw.hackforums.net/*
 // @include       http://www.nsfw.hackforums.net/*
 // @author        iHydra
-// @resource      CustomCSS113 https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_v.1.1.4.css
+// @resource      CustomCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_v.1.1.4.css
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
 // @run-at        document-start
 // ==/UserScript==
 
-var ThemeCSS113 = GM_getResourceText ("CustomCSS113");
-GM_addStyle (ThemeCSS113);
+var ThemeCSS = GM_getResourceText ("CustomCSS");
+GM_addStyle (ThemeCSS);

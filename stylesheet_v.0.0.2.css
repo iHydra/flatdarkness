@@ -191,16 +191,20 @@ div.logo a:before {
     font-family: fantasy;
 }
 
+div.menu {
+    margin-bottom: 20px;	
+}
+
 div.menu ul {
     background: none !important;
-    background-color: #222222 !important;
+    background-color: #202020 !important;
     font-size: 12px !important;
     font-weight: normal !important;
     height: 0px !important;
     margin-top: 0 !important;
-    padding-bottom: 60px !important;
-    padding-left: 25px !important;
-    padding-top: 60px !important;
+    padding-bottom: 50px !important;
+    padding-left: 20px !important;
+    padding-top: 30px !important;
     text-align: left !important;
 }
 

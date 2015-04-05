@@ -2,7 +2,7 @@ div.menu ul:after {
     background-color: #282828 !important;
     border-radius: 2px !important;
     color: #ccc !important;
-    content: "flat darkness v0.0.2" !important;
+    content: "Kondax Flat Darkness Retheme" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -174,6 +174,10 @@ div.largetext {
 div.logo a img {
     background: none !important;
     display: none !important;
+}
+
+div.logo a:before {
+    content: "HackForums";
 }
 
 div.menu ul {

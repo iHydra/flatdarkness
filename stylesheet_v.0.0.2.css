@@ -176,8 +176,19 @@ div.logo a img {
     display: none !important;
 }
 
+div.logo {
+    padding-top: 30px;
+}
+
+div.logo a:hover {
+    text-transform: none !important;
+}
+
 div.logo a:before {
     content: "HackForums";
+    font-size: 90px;
+    letter-spacing: 10px;
+    font-family: fantasy;
 }
 
 div.menu ul {
@@ -203,12 +214,6 @@ div.menu ul a.hover {
 
 div.menu ul.hover {
     color: #ff00ff !important;
-}
-
-div.menu ul:before {
-    color: #ffffff !important;
-    content: "Hack Forums            " !important;
-    font-weight: bold !important;
 }
 
 div.navigation a.active {

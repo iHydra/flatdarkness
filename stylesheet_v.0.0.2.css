@@ -76,12 +76,12 @@ a.bitButton, input.bitButton {
     margin-right: 5px;
 }
 
-a.bitButton, input.bitButton:hover {
+a.bitButton:hover, input.bitButton:hover {
     background-color: #000000 !important;
     border: 0px !important;
 }
 
-a.bitButton, input.bitButton:active {
+a.bitButton:active, input.bitButton:active {
     background-color: #000000 !important;
     border: 0px !important;
 }

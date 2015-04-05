@@ -60,7 +60,7 @@ td.tfoot div strong {
     margin: 10px !important;
 }
 
-input.bitButton {
+a.bitButton, input.bitButton {
     display: inline-block !important;
     color: #FFF !important;
     background-color: #181818 !important;
@@ -76,15 +76,14 @@ input.bitButton {
     margin-right: 5px;
 }
 
-input.bitButton:hover {
+a.bitButton, input.bitButton:hover {
     background-color: #000000 !important;
+    border: 0px !important;
 }
 
-input.bitButton:active {
-    background-color: #555 !important;
+a.bitButton, input.bitButton:active {
+    background-color: #000000 !important;
     border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
 }
 
 td[bgcolor="red"]{
@@ -101,36 +100,6 @@ td[bgcolor="green"]{
     -moz-border-radius: 0px 6px 6px 0px !important;
     -webkit-border-radius: 0px 6px 6px 0px !important;
     color: #FFF !important;
-}
-
-a.bitButton {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
-}
-
-a.bitButton:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-a.bitButton:active {
-    background-color: #555 !important;
-    border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
 }
 
 a.navButton :hover {

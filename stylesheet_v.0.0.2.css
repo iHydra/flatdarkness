@@ -1,24 +1,31 @@
 .cp {
-	width: 30px;
-  height: 30px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  display: block;
-  background: #fff;
-  border-left: 6px solid #393939;
-  border-top: 6px solid #393939;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: #fff;
+    border-left: 6px solid #393939;
+    border-top: 6px solid #393939;
 
 }
 .select {
-	padding: 6px;
-	height: 30px;
-	width: 108px;
-	background: #393939;
-	position: fixed;
-	right: 0;
-	bottom: 30px;
-	display: block;
+    padding: 6px;
+    height: 30px;
+    width: 108px;
+    background: #393939;
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    display: block;
+    padding-right: 0px;
+}
+.select > .part {
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+    display: block;
 }
 div.menu ul:after {
     background-color: #292929 !important;

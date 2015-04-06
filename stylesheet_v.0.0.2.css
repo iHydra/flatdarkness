@@ -22,7 +22,7 @@ div.menu ul:after {
 }
 
 #panel {
-    background-color: #202020 !important;
+    background-color: #292929 !important;
     border-style: none !important;
     line-height: 20px !important;
     padding: 25px !important;
@@ -60,7 +60,7 @@ td.tfoot div strong {
     margin: 10px !important;
 }
 
-a.bitButton, input.bitButton {
+button, a.bitButton, input.bitButton {
     display: inline-block !important;
     color: #FFF !important;
     background-color: #181818 !important;
@@ -76,12 +76,12 @@ a.bitButton, input.bitButton {
     margin-right: 5px;
 }
 
-a.bitButton:hover, input.bitButton:hover {
+button:hover, a.bitButton:hover, input.bitButton:hover {
     background-color: #000000 !important;
     border: 0px !important;
 }
 
-a.bitButton:active, input.bitButton:active {
+button:active, a.bitButton:active, input.bitButton:active {
     background-color: #000000 !important;
     border: 0px !important;
 }
@@ -197,7 +197,7 @@ div.menu {
 
 div.menu ul {
     background: none !important;
-    background-color: #202020 !important;
+    background-color: #292929 !important;
     font-size: 12px !important;
     font-weight: normal !important;
     height: 0px !important;
@@ -318,36 +318,6 @@ div.menu ul li a:Hover {
     color: #FFF !important;
     background: none !important;
     border: none !important;
-}
-
-.button {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
-}
-
-.button:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-.button:active {
-    background-color: #555 !important;
-    border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
 }
 
 span.pagination_current {

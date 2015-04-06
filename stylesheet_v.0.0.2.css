@@ -20,7 +20,7 @@
     padding-right: 0px;
     display: none;
 }
-.select:hover {
+.part:hover, .cp:hover {
     cursor: pointer;
 }
 .select.show {

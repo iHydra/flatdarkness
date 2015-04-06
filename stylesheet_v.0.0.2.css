@@ -1,11 +1,23 @@
 .cp {
 	width: 30px;
-	height: 30px;
+  height: 30px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: #fff;
+  border-left: 6px solid #393939;
+  border-top: 6px solid #393939;
+
+}
+.select {
+	height: 42px;
+	width: 120px;
+	background: #393939;
 	position: fixed;
 	right: 0;
-	bottom: 0;
+	bottom: 30px;
 	display: block;
-	background: #fff;
 }
 div.menu ul:after {
     background-color: #292929 !important;

@@ -4,6 +4,8 @@
 	position: fixed;
 	right: 0;
 	bottom: 0;
+	display: block;
+	background: #fff;
 }
 div.menu ul:after {
     background-color: #292929 !important;

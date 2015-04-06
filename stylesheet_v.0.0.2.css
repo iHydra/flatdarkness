@@ -59,7 +59,9 @@ div.menu ul:after {
 td.tfoot div strong {
     margin: 10px !important;
 }
-
+div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
+    border-bottom: none !important;
+}
 input.button, .button, button, a.bitButton, input.bitButton {
     display: inline-block !important;
     color: #FFF !important;
@@ -70,10 +72,10 @@ input.button, .button, button, a.bitButton, input.bitButton {
     font-size: 12px !important;
     padding: 5px 10px !important;
     border-radius: 1px !important;
-    border: 0px solid #555 !important;
     text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
     box-shadow: none !important;
     margin-right: 5px;
+    border: none !important;
 }
 
 input.button:hover, .button:hover, button:hover, a.bitButton:hover, input.bitButton:hover {

@@ -12,7 +12,6 @@
 }
 .select {
     padding: 6px;
-    height: 30px;
     background: #393939;
     position: fixed;
     right: 0;
@@ -21,10 +20,10 @@
     padding-right: 0px;
 }
 .select > .part {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 25px;
     margin-right: 6px;
-    display: block;
+    display: inline-block;
 }
 div.menu ul:after {
     background-color: #292929 !important;

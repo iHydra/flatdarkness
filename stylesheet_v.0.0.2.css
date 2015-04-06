@@ -65,7 +65,7 @@ div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
 div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
     padding-right: 15px;
 }
-div.quick_keys > table > tbody > tr > td:nth-type(3) > br {
+div.quick_keys > table > tbody > tr > td > br {
 	display: none;
 }
 input.button, .button, button, a.bitButton, input.bitButton {

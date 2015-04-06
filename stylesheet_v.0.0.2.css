@@ -20,6 +20,9 @@
     padding-right: 0px;
     display: none;
 }
+.select.show {
+    display: block;
+}
 .select > .part {
     width: 24px;
     height: 25px;

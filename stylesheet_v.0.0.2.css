@@ -65,6 +65,9 @@ div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
 div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
     padding-right: 15px;
 }
+div.quick_keys > table > tbody > tr > td > table:first-of-type {
+	margin-bottom: 10px;
+}
 div.quick_keys > table > tbody > tr > td > br {
 	display: none;
 }

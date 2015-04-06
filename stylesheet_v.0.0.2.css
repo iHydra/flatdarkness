@@ -62,6 +62,9 @@ td.tfoot div strong {
 div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
     border-bottom: none !important;
 }
+div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
+    padding-right: 15px;
+}
 input.button, .button, button, a.bitButton, input.bitButton {
     display: inline-block !important;
     color: #FFF !important;

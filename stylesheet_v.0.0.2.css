@@ -60,7 +60,7 @@ td.tfoot div strong {
     margin: 10px !important;
 }
 
-button, a.bitButton, input.bitButton {
+input.button, .button, button, a.bitButton, input.bitButton {
     display: inline-block !important;
     color: #FFF !important;
     background-color: #181818 !important;
@@ -76,12 +76,12 @@ button, a.bitButton, input.bitButton {
     margin-right: 5px;
 }
 
-button:hover, a.bitButton:hover, input.bitButton:hover {
+input.button:hover, .button:hover, button:hover, a.bitButton:hover, input.bitButton:hover {
     background-color: #000000 !important;
     border: 0px !important;
 }
 
-button:active, a.bitButton:active, input.bitButton:active {
+input.button:active, .button:active, button:active, a.bitButton:active, input.bitButton:active {
     background-color: #000000 !important;
     border: 0px !important;
 }
@@ -194,7 +194,9 @@ div.logo a:before {
 div.menu {
     margin-bottom: 20px;	
 }
-
+#content > br:first-of-type {
+    display: none;
+}
 div.menu ul {
     background: none !important;
     background-color: #292929 !important;
@@ -206,6 +208,7 @@ div.menu ul {
     padding-left: 20px !important;
     padding-top: 30px !important;
     text-align: left !important;
+    border-radius: 0 !important;
 }
 
 div.menu ul a {
@@ -644,34 +647,4 @@ a.popup_item:hover {
 div.popup_menu {
     background: #555555 !important;
     border: none !important;
-}
-
-input.button {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
-}
-
-input.button:hover {
-    background-color: #777;
-    border-color: #555;
-}
-
-input.button:active {
-    background-color: #555;
-    border: 0px;
-    transform: translate(0px, 2px);
-    -webkit-transform: translate(0px, 2px);
 }

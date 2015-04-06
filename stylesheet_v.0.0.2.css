@@ -20,6 +20,9 @@
     padding-right: 0px;
     display: none;
 }
+.select:hover {
+    cursor: pointer;
+}
 .select.show {
     display: block;
 }

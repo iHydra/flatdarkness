@@ -1,5 +1,5 @@
 div.menu ul:after {
-    background-color: #202020 !important;
+    background-color: #292929 !important;
     border-radius: 2px !important;
     color: #ccc !important;
     content: "Flat Darkness v0.0.3" !important;
@@ -202,7 +202,7 @@ div.menu ul {
     font-weight: normal !important;
     height: 0px !important;
     margin-top: 0 !important;
-    padding-bottom: 50px !important;
+    padding-bottom: 45px !important;
     padding-left: 20px !important;
     padding-top: 30px !important;
     text-align: left !important;

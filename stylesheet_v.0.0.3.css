@@ -1,8 +1,47 @@
+html body {
+    color: white;
+}
+
+.cp {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: #fff;
+    border-left: 6px solid #393939;
+    border-top: 6px solid #393939;
+
+}
+.select {
+    padding: 6px;
+    background: #393939;
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    display: block;
+    padding-right: 0px;
+    display: none;
+}
+.part:hover, .cp:hover {
+    cursor: pointer;
+}
+.select.show {
+    display: block;
+}
+.select > .part {
+    width: 24px;
+    height: 25px;
+    margin-right: 6px;
+    display: inline-block;
+}
+
 div.menu ul:after {
-    background-color: #282828 !important;
+    background-color: #222 !important;
     border-radius: 2px !important;
     color: #ccc !important;
-    content: "flat darkness v0.0.2" !important;
+    content: "white beta v0.0.3" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -11,12 +50,15 @@ div.menu ul:after {
     padding-left: 5px !important;
     padding-right: 5px !important;
     padding-top: 3px !important;
+    border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
     text-transform: uppercase !important;
     float: right !important;
 }
 
 #container {
-    background-color: #222222 !important;
+    background-color: #282828 !important;
     background-image: none !important;
     border-style: none !important;
 }
@@ -60,35 +102,39 @@ td.tfoot div strong {
     margin: 10px !important;
 }
 
-input.bitButton {
+div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
+    padding-right: 15px !important;
+}
+div.quick_keys > table > tbody > tr > td > table:first-of-type {
+    margin-bottom: 10px !important;
+}
+
+input.button, .button, button, a.bitButton, input.bitButton, span.bitButton {
     display: inline-block !important;
     color: #FFF !important;
-    background-color: #888 !important;
+    background-color: #222 !important;
     text-transform: uppercase !important;
     font-weight: bold !important;
     letter-spacing: 1px !important;
     font-size: 12px !important;
     padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
+    border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    -webkit-border-radius: 2px !important;
     text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
     box-shadow: none !important;
     margin-right: 5px;
+    border: none !important;
 }
 
-input.bitButton:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-input.bitButton:active {
-    background-color: #555 !important;
+input.button:hover, .button:hover, button:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
+    background-color: #111 !important;
     border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
+}
+
+input.button:active, .button:active, button:active, a.bitButton:active, input.bitButton:active, span.bitButton:active {
+    background-color: #111 !important;
+    border: 0px !important;
 }
 
 td[bgcolor="red"]{
@@ -105,36 +151,6 @@ td[bgcolor="green"]{
     -moz-border-radius: 0px 6px 6px 0px !important;
     -webkit-border-radius: 0px 6px 6px 0px !important;
     color: #FFF !important;
-}
-
-a.bitButton {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
-}
-
-a.bitButton:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-a.bitButton:active {
-    background-color: #555 !important;
-    border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
 }
 
 a.navButton :hover {
@@ -189,7 +205,7 @@ div strong a {
 }
 
 div.bottommenu {
-    background-color: #292929 !important;
+    background-color: #252525 !important;
     border-style: none !important;
     padding: 10px !important;
 }
@@ -213,14 +229,14 @@ div.logo a img {
 
 div.menu ul {
     background: none !important;
-    background-color: #222222 !important;
+    background-color: #282828 !important;
     font-size: 12px !important;
     font-weight: normal !important;
     height: 0px !important;
     margin-top: 0 !important;
-    padding-bottom: 60px !important;
+    padding-bottom: 30px !important;
     padding-left: 25px !important;
-    padding-top: 60px !important;
+    padding-top: 15px !important;
     text-align: left !important;
 }
 
@@ -238,7 +254,8 @@ div.menu ul.hover {
 
 div.menu ul:before {
     color: #ffffff !important;
-    content: "Hack Forums            " !important;
+    content: "Hack Forums" !important;
+    margin-right: 25px !important;
     font-weight: bold !important;
 }
 
@@ -322,7 +339,7 @@ span.group0 {
 }
 
 span.group9 {
-    color: #7adb6f !important;
+    color: #7ef250 !important;
 }
 
 span.pages {
@@ -411,14 +428,14 @@ td.smalltext.post_author_info {
 }
 
 td.tfoot {
-    background-color: #292929 !important;
+    background-color: #252525 !important;
     background-image: none !important;
     border-radius: 0px !important;
     padding: 10px !important;
 }
 
 td.tfoot form {
-    background-color: #292929 !important;
+    background-color: #252525 !important;
     background-image: none !important;
 }
 
@@ -464,15 +481,15 @@ td.trow2:hover {
     background: #333333 !important;
 }
 td.trow2.post_content hr {
-    background-color: #262626 ;
-    border: none ;
-    margin-bottom: 20px ;
-    margin-top: 20px ;
-    width: 25% ;
+    background-color: #262626  !important;
+    border: none  !important;
+    margin-bottom: 20px  !important;
+    margin-top: 20px !important;
+    width: 25% !important;
 }
 
 tr {
-    padding: 10px ;
+    padding: 10px !important;
 }
 
 ul.shadetabs li a:hover {
@@ -480,23 +497,23 @@ ul.shadetabs li a:hover {
 }
 
 #panel strong {
-    font-weight: normal ;
+    font-weight: normal !important;
 }
 
 #panel strong a {
-    font-weight: bold ;
+    font-weight: bold !important;
 }
 
 td.trow_sep {
-    border-bottom: 1px solid #262626;
-    background-color: #292929;
-    padding: 10px;
-	font-weight: normal;
-    font-size: 11px;
+    border-bottom: 1px solid #262626 !important;
+    background-color: #292929 !important;
+    padding: 10px !important;
+	font-weight: normal !important;
+    font-size: 11px !important;
 }
 
 div.navigation a {
-    color: #696969;
+    color: #696969 !important;
 }
 
 td.thead div strong {
@@ -507,7 +524,7 @@ td.thead div strong {
 }
 
 td.thead div {
-    display: inline-block; !important
+    display: inline-block !important;
 }
 
 span.smalltext.float_right {
@@ -560,7 +577,7 @@ img[src="http://x.hackforums.net/images/modern_bl/starstaff.png"] {
     filter: hue-rotate(15deg) !important;
 }
 
-span.group6 {
+span.group4 {
     color: #ff3eab !important;
     text-shadow: 1px 1px #000000 !important;
 }
@@ -573,15 +590,85 @@ img[src="http://x.hackforums.net/images/modern_bl/staradmin.png"] {
 
 img[src="http://x.hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
     -webkit-filter: hue-rotate(35deg) !important;
-    filter: hue-rotate(35deg);
+    filter: hue-rotate(35deg) !important;
 }
 
 img[src="http://x.hackforums.net/images/modern_bl/add_buddy.gif"] {
-    content:url(http://i.imgur.com/c0BSPEA.png) !important;
+    content:url(http://i.imgur.com/3d5FKNX.png) !important;
+}
+
+img[src="http://x.hackforums.net/images/modern_bl/remove_buddy.gif"] {
+    content:url(http://i.imgur.com/zDwBkq5.png) !important;
 }
 
 img[src="http://x.hackforums.net/images/modern_bl/add_ignore.gif"] {
-    content:url(http://i.imgur.com/iF93kyL.png) !important;
+    content:url(http://i.imgur.com/u3NZbDu.png) !important;
+}
+
+img[src="http://x.hackforums.net/images/modern_bl/remove_ignore.gif"] {
+    content:url(http://i.imgur.com/zDwBkq5.png) !important;
+}
+
+img[src$="/img/disable.png"] {
+    content: url(http://i.imgur.com/LXGekE9.png) !important;
+}
+
+img[src$="/img/enable.png"] {
+    content: url(http://i.imgur.com/YHDATSF.png) !important;
+}
+/**
+img[src="http://x.hackforums.net/images/modern_bl/folder.gif"] {
+    content: url(http://i.imgur.com/BbrrwYq.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/lockfolder.gif"] {
+    content: url(http://i.imgur.com/nqX2AqL.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_folder.gif"] {
+    content: url(http://i.imgur.com/ulTXXHb.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_lockfolder.gif"] {
+    content: url(http://i.imgur.com/lpHkIES.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/newfolder.gif"] {
+    content: url(http://i.imgur.com/QZFauA4.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/hotfolder.gif"] {
+    content: url(http://i.imgur.com/TIFZ5RW.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/newlockfolder.gif"] {
+    content: url(http://i.imgur.com/klYYE8l.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/hotlockfolder.gif"] {
+    content: url(http://i.imgur.com/ESnLT8k.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_hotfolder.gif"] {
+    content: url(http://i.imgur.com/AwHEzIa.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_newfolder.gif"] {
+    content: url(http://i.imgur.com/Xu1hNl8.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_hotlockfolder.gif"] {
+    content: url(http://i.imgur.com/tImSTXU.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_newlockfolder.gif"] {
+    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/newhotfolder.gif"] {
+    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_newhotfolder.gif"] {
+    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+} **/
+
+li[class="printable"] {
+    background: url(http://i.imgur.com/uJA6SMg.png) no-repeat 0px 0px !important;
+}
+
+li[class="subscription_add"] {
+    background: url(http://i.imgur.com/s3ao1YU.png) no-repeat 0px 0px !important;
+}
+li[class="subscription_remove"] {
+    background: url(http://i.imgur.com/dw4vjon.png) no-repeat 0px 0px !important;
 }
 
 td.thead strong {
@@ -605,7 +692,7 @@ td.tcat {
 }
 
 td.thead {
-    background-color: #292929 !important;
+    background-color: #252525 !important;
     background-image: none !important;
     border-radius: 0px !important;
     border-style: none !important;
@@ -682,48 +769,96 @@ div.float_right a {
 }
 
 a.popup_item {
-    background: #505050 !important;
+    background: #292929 !important;
     border: none !important;
     color: #FFF !important;
 }
 
 a.popup_item:hover {
-    background: #656565 !important;
+    background: #222 !important;
     border: none !important;
     color: #FFF !important;
 }
 
 div.popup_menu {
-    background: #555555 !important;
+    background: #292929 !important;
     border: none !important;
 }
 
-input.button {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
+a[id^="thread_options"]>strong {
+    color: #252525 !important;
 }
 
-input.button:hover {
-    background-color: #777;
-    border-color: #555;
+.usercp_container{
+    border: 1px solid #444444 !important;
 }
-
-input.button:active {
-    background-color: #555;
-    border: 0px;
-    transform: translate(0px, 2px);
-    -webkit-transform: translate(0px, 2px);
+.usercp_nav_home {
+    background: url(http://i.imgur.com/8rXcWeo.png) no-repeat left center !important;
+}
+.usercp_nav_composepm {
+    background: url(http://i.imgur.com/rVRzAP6.png) no-repeat left center !important;
+}
+.usercp_nav_pmfolder {
+    background: url(http://i.imgur.com/x6gbgmA.png) no-repeat left center !important;
+}
+.usercp_nav_sub_pmfolder {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/qdHyFZ0.png) no-repeat left center !important;
+}
+.usercp_nav_trash_pmfolder {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/JRO03a9.png) no-repeat left center !important;
+}
+.usercp_nav_pmtracking {
+    background: url(http://i.imgur.com/P1gVL47.png) no-repeat left center !important;
+}
+.usercp_nav_pmfolders {
+    background: url(http://i.imgur.com/vqO8iBQ.png) no-repeat left center !important;
+}
+.usercp_nav_profile {
+    background: url(http://i.imgur.com/El4eUCM.png) no-repeat left center !important;
+}
+.usercp_nav_username {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/FXBSRap.png) no-repeat left center !important;
+}
+.usercp_nav_password {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/R4qyASb.png) no-repeat left center !important;
+}
+.usercp_nav_email {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/G9o7url.png) no-repeat left center !important;
+}
+.usercp_nav_avatar {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/RsGEB1l.png) no-repeat left center !important;
+}
+.usercp_nav_editsig {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/PD5kBXb.png) no-repeat left center !important;
+}
+.usercp_nav_options {
+    background: url(http://i.imgur.com/voq5d7N.png) no-repeat left center !important;
+}
+.usercp_nav_usergroups {
+    background: url(http://i.imgur.com/12LehKH.png) no-repeat left center !important;
+}
+.usercp_nav_editlists {
+    background: url(http://i.imgur.com/bfcL3Wz.png) no-repeat left center !important;
+}
+.usercp_nav_attachments {
+    background: url(http://i.imgur.com/5q8EbgL.png) no-repeat left center !important;
+}
+.usercp_nav_drafts {
+    background: url(http://i.imgur.com/ryliPsU.png) no-repeat left center !important;
+}
+.usercp_nav_subscriptions {
+    background: url(http://i.imgur.com/N9wUWFu.png) no-repeat left center !important;
+}
+.usercp_nav_fsubscriptions {
+    background: url(http://i.imgur.com/0K4Hftt.png) no-repeat left center !important;
+}
+.usercp_nav_viewprofile {
+    background: url(http://i.imgur.com/kUfuaZK.png) no-repeat left center !important;
 }

@@ -1,3 +1,38 @@
+.cp {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: #fff;
+    border-left: 6px solid #393939;
+    border-top: 6px solid #393939;
+
+}
+.select {
+    padding: 6px;
+    background: #393939;
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    display: block;
+    padding-right: 0px;
+    display: none;
+}
+.part:hover, .cp:hover {
+    cursor: pointer;
+}
+.select.show {
+    display: block;
+}
+.select > .part {
+    width: 24px;
+    height: 25px;
+    margin-right: 6px;
+    display: inline-block;
+}
+
 div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
@@ -9,7 +44,7 @@ div.menu ul:after {
     margin-left: 10px !important;
     padding-bottom: 3px !important;
     padding-left: 5px !important;
-    padding-right: 20px !important;
+    padding-right: 5px !important;
     padding-top: 3px !important;
     border-radius: 3px !important;
     -moz-border-radius: 3px !important;
@@ -713,51 +748,26 @@ div.float_right a {
 }
 
 a.popup_item {
-    background: #505050 !important;
+    background: #252525 !important;
     border: none !important;
     color: #FFF !important;
 }
 
 a.popup_item:hover {
-    background: #656565 !important;
+    background: #222 !important;
     border: none !important;
     color: #FFF !important;
 }
 
 div.popup_menu {
-    background: #555555 !important;
+    background: #252525 !important;
     border: none !important;
 }
 
-input.button {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
+a[id^="thread_options"] {
+    color: #222 !important;
 }
 
-input.button:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-input.button:active {
-    background-color: #555 !important;
-    border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
-}
 .usercp_container{
     border: 1px solid #444444 !important;
 }

@@ -2,14 +2,14 @@ div.menu ul:after {
     background-color: #282828 !important;
     border-radius: 2px !important;
     color: #ccc !important;
-    content: "beta.0.0.3" !important;
+    content: "white beta v0.0.3" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
     margin-left: 10px !important;
     padding-bottom: 3px !important;
     padding-left: 5px !important;
-    padding-right: 5px !important;
+    padding-right: 20px !important;
     padding-top: 3px !important;
     text-transform: uppercase !important;
     float: right !important;
@@ -60,10 +60,22 @@ td.tfoot div strong {
     margin: 10px !important;
 }
 
-input.bitButton {
+div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
+    border-bottom: none !important;
+}
+div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
+    padding-right: 15px !important;
+}
+div.quick_keys > table > tbody > tr > td > table:first-of-type {
+    margin-bottom: 10px !important;
+}
+div.quick_keys > table > tbody > tr > td > br {
+    display: none !important;
+}
+input.button, .button, button, a.bitButton, input.bitButton {
     display: inline-block !important;
     color: #FFF !important;
-    background-color: #888 !important;
+    background-color: #181818 !important;
     text-transform: uppercase !important;
     font-weight: bold !important;
     letter-spacing: 1px !important;
@@ -269,7 +281,8 @@ div.menu ul.hover {
 
 div.menu ul:before {
     color: #ffffff !important;
-    content: "Hack Forums            " !important;
+    content: "Hack Forums" !important;
+    margin-right: 25px !important;
     font-weight: bold !important;
 }
 
@@ -495,15 +508,15 @@ td.trow2:hover {
     background: #333333 !important;
 }
 td.trow2.post_content hr {
-    background-color: #262626 ;
-    border: none ;
-    margin-bottom: 20px ;
-    margin-top: 20px ;
-    width: 25% ;
+    background-color: #262626  !important;
+    border: none  !important;
+    margin-bottom: 20px  !important;
+    margin-top: 20px !important;
+    width: 25% !important;
 }
 
 tr {
-    padding: 10px ;
+    padding: 10px !important;
 }
 
 ul.shadetabs li a:hover {
@@ -511,23 +524,23 @@ ul.shadetabs li a:hover {
 }
 
 #panel strong {
-    font-weight: normal ;
+    font-weight: normal !important;
 }
 
 #panel strong a {
-    font-weight: bold ;
+    font-weight: bold !important;
 }
 
 td.trow_sep {
-    border-bottom: 1px solid #262626;
-    background-color: #292929;
-    padding: 10px;
-	font-weight: normal;
-    font-size: 11px;
+    border-bottom: 1px solid #262626 !important;
+    background-color: #292929 !important;
+    padding: 10px !important;
+	font-weight: normal !important;
+    font-size: 11px !important;
 }
 
 div.navigation a {
-    color: #696969;
+    color: #696969 !important;
 }
 
 td.thead div strong {
@@ -538,7 +551,7 @@ td.thead div strong {
 }
 
 td.thead div {
-    display: inline-block; !important
+    display: inline-block !important;
 }
 
 span.smalltext.float_right {
@@ -799,17 +812,19 @@ input.button {
 }
 
 input.button:hover {
-    background-color: #777;
-    border-color: #555;
+    background-color: #777 !important;
+    border-color: #555 !important;
 }
 
 input.button:active {
-    background-color: #555;
-    border: 0px;
-    transform: translate(0px, 2px);
-    -webkit-transform: translate(0px, 2px);
+    background-color: #555 !important;
+    border: 0px !important;
+    transform: translate(0px, 2px) !important;
+    -webkit-transform: translate(0px, 2px) !important;
 }
-
+.usercp_container{
+    border: 1px solid #444444 !important;
+}
 .usercp_nav_home {
     background: url(http://i.imgur.com/8rXcWeo.png) no-repeat left center !important;
 }

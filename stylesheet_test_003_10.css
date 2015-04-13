@@ -1,3 +1,7 @@
+html body {
+    color: white;
+}
+
 .cp {
     width: 30px;
     height: 30px;
@@ -104,9 +108,7 @@ div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
 div.quick_keys > table > tbody > tr > td > table:first-of-type {
     margin-bottom: 10px !important;
 }
-div.quick_keys > table > tbody > tr > td > br {
-    display: none !important;
-}
+
 input.button, .button, button, a.bitButton, input.bitButton, span.bitButton {
     display: inline-block !important;
     color: #FFF !important;

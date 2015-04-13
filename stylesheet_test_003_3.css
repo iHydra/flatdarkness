@@ -859,6 +859,27 @@ input.button:active {
 .usercp_nav_options {
     background: url(http://i.imgur.com/voq5d7N.png) no-repeat left center !important;
 }
+.usercp_nav_usergroups {
+    background: url(http://i.imgur.com/12LehKH.png) no-repeat left center !important;
+}
+.usercp_nav_editlists {
+    background: url(http://i.imgur.com/bfcL3Wz.png) no-repeat left center !important;
+}
+.usercp_nav_attachments {
+    background: url(http://i.imgur.com/5q8EbgL.png) no-repeat left center !important;
+}
+.usercp_nav_drafts {
+    background: url(http://i.imgur.com/ryliPsU.png) no-repeat left center !important;
+}
+.usercp_nav_subscriptions {
+    background: url(http://i.imgur.com/N9wUWFu.png) no-repeat left center !important;
+}
+.usercp_nav_fsubscriptions {
+    background: url(http://i.imgur.com/0K4Hftt.png) no-repeat left center !important;
+}
+.usercp_nav_viewprofile {
+    background: url(http://i.imgur.com/kUfuaZK.png) no-repeat left center !important;
+}
 /**
 
 .star_rating, .star_rating li a:hover, .star_rating .current_rating {

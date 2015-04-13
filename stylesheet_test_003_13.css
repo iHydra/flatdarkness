@@ -616,7 +616,7 @@ img[src$="/img/disable.png"] {
 img[src$="/img/enable.png"] {
     content: url(http://i.imgur.com/YHDATSF.png) !important;
 }
-
+/**
 img[src="http://x.hackforums.net/images/modern_bl/folder.gif"] {
     content: url(http://i.imgur.com/BbrrwYq.png) !important;
 }
@@ -653,16 +653,22 @@ img[src="http://x.hackforums.net/images/modern_bl/dot_hotlockfolder.gif"] {
 img[src="http://x.hackforums.net/images/modern_bl/dot_newlockfolder.gif"] {
     content: url(http://i.imgur.com/h6EuMOc.png) !important;
 }
+img[src="http://x.hackforums.net/images/modern_bl/newhotfolder.gif"] {
+    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_newhotfolder.gif"] {
+    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+} **/
 
 li[class="printable"] {
     background: url(http://i.imgur.com/uJA6SMg.png) no-repeat 0px 0px !important;
 }
 
 li[class="subscription_add"] {
-    background: url(http://i.imgur.com/hVOycHg.png) no-repeat 0px 0px !important;
+    background: url(http://i.imgur.com/s3ao1YU.png) no-repeat 0px 0px !important;
 }
 li[class="subscription_remove"] {
-    background: url(http://i.imgur.com/vYDyXMr.png) no-repeat 0px 0px !important;
+    background: url(http://i.imgur.com/dw4vjon.png) no-repeat 0px 0px !important;
 }
 
 td.thead strong {

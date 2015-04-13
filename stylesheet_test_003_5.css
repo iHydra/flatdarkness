@@ -61,9 +61,6 @@ td.tfoot div strong {
 }
 
 div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
-    border-bottom: none !important;
-}
-div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
     padding-right: 15px !important;
 }
 div.quick_keys > table > tbody > tr > td > table:first-of-type {
@@ -81,26 +78,37 @@ input.button, .button, button, a.bitButton, input.bitButton {
     letter-spacing: 1px !important;
     font-size: 12px !important;
     padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
+    border-radius: 1px !important;
     text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
     box-shadow: none !important;
     margin-right: 5px;
+    border: none !important;
 }
 
-input.bitButton:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-input.bitButton:active {
-    background-color: #555 !important;
+input.button:hover, .button:hover, button:hover, a.bitButton:hover, input.bitButton:hover {
+    background-color: #000000 !important;
     border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
+}
+
+input.button:active, .button:active, button:active, a.bitButton:active, input.bitButton:active {
+    background-color: #000000 !important;
+    border: 0px !important;
+}
+
+td[bgcolor="red"]{
+    border-radius: 6px 0px 0px 6px !important;
+    background-color: #bb3131 !important;
+    -moz-border-radius: 6px 0px 0px 6px !important;
+    -webkit-border-radius: 6px 0px 0px 6px !important;
+    color: #FFF !important;
+}
+
+td[bgcolor="green"]{
+    border-radius: 0px 6px 6px 0px !important;
+    background-color: #31bb4b !important;
+    -moz-border-radius: 0px 6px 6px 0px !important;
+    -webkit-border-radius: 0px 6px 6px 0px !important;
+    color: #FFF !important;
 }
 
 span.bitButton {
@@ -232,7 +240,7 @@ div strong a {
 }
 
 div.bottommenu {
-    background-color: #292929 !important;
+    background-color: #252525 !important;
     border-style: none !important;
     padding: 10px !important;
 }
@@ -256,7 +264,7 @@ div.logo a img {
 
 div.menu ul {
     background: none !important;
-    background-color: #222222 !important;
+    background-color: #282828 !important;
     font-size: 12px !important;
     font-weight: normal !important;
     height: 0px !important;
@@ -455,14 +463,14 @@ td.smalltext.post_author_info {
 }
 
 td.tfoot {
-    background-color: #292929 !important;
+    background-color: #252525 !important;
     background-image: none !important;
     border-radius: 0px !important;
     padding: 10px !important;
 }
 
 td.tfoot form {
-    background-color: #292929 !important;
+    background-color: #252525 !important;
     background-image: none !important;
 }
 
@@ -700,7 +708,7 @@ td.tcat {
 }
 
 td.thead {
-    background-color: #292929 !important;
+    background-color: #252525 !important;
     background-image: none !important;
     border-radius: 0px !important;
     border-style: none !important;

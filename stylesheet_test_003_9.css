@@ -748,7 +748,7 @@ div.float_right a {
 }
 
 a.popup_item {
-    background: #252525 !important;
+    background: #292929 !important;
     border: none !important;
     color: #FFF !important;
 }
@@ -760,12 +760,12 @@ a.popup_item:hover {
 }
 
 div.popup_menu {
-    background: #252525 !important;
+    background: #292929 !important;
     border: none !important;
 }
 
-a[id^="thread_options"] {
-    color: #222 !important;
+a[id^="thread_options"]>strong {
+    color: #252525 !important;
 }
 
 .usercp_container{

@@ -820,11 +820,11 @@ input.button:active {
     background: url(http://i.imgur.com/x6gbgmA.png) no-repeat left center !important;
 }
 .usercp_nav_sub_pmfolder {
-    padding-left: 23px !important;
+    padding-left: 40px !important;
     background: url(http://i.imgur.com/qdHyFZ0.png) no-repeat left center !important;
 }
 .usercp_nav_trash_pmfolder {
-    padding-left: 23px !important;
+    padding-left: 40px !important;
     background: url(http://i.imgur.com/JRO03a9.png) no-repeat left center !important;
 }
 .usercp_nav_pmtracking {
@@ -833,33 +833,33 @@ input.button:active {
 .usercp_nav_pmfolders {
     background: url(http://i.imgur.com/vqO8iBQ.png) no-repeat left center !important;
 }
-/**.usercp_nav_profile {
-    background: url() no-repeat left center !important;
+.usercp_nav_profile {
+    background: url(http://i.imgur.com/El4eUCM.png) no-repeat left center !important;
 }
 .usercp_nav_username {
     padding-left: 40px !important;
-    background: url() no-repeat left center !important;
+    background: url(http://i.imgur.com/FXBSRap.png) no-repeat left center !important;
 }
 .usercp_nav_password {
     padding-left: 40px !important;
-    background: url() no-repeat left center !important;
+    background: url(http://i.imgur.com/R4qyASb.png) no-repeat left center !important;
 }
 .usercp_nav_email {
     padding-left: 40px !important;
-    background: url() no-repeat left center !important;
+    background: url(http://i.imgur.com/G9o7url.png) no-repeat left center !important;
 }
 .usercp_nav_avatar {
     padding-left: 40px !important;
-    background: url() no-repeat left center !important;
+    background: url(http://i.imgur.com/RsGEB1l.png) no-repeat left center !important;
 }
 .usercp_nav_editsig {
     padding-left: 40px !important;
-    background: url() no-repeat left center !important;
+    background: url(http://i.imgur.com/PD5kBXb.png) no-repeat left center !important;
 }
 .usercp_nav_options {
-    background: url() no-repeat left center !important;
+    background: url(http://i.imgur.com/voq5d7N.png) no-repeat left center !important;
 }
-
+/**
 
 .star_rating, .star_rating li a:hover, .star_rating .current_rating {
     background: url(http://i.imgur.com/tZRCG6B.gif) left -1000px repeat-x !important;

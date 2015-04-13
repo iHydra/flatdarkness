@@ -1,15 +1,49 @@
+.cp {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: #fff;
+    border-left: 6px solid #393939;
+    border-top: 6px solid #393939;
+
+}
+.select {
+    padding: 6px;
+    background: #393939;
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    display: block;
+    padding-right: 0px;
+    display: none;
+}
+.part:hover, .cp:hover {
+    cursor: pointer;
+}
+.select.show {
+    display: block;
+}
+.select > .part {
+    width: 24px;
+    height: 25px;
+    margin-right: 6px;
+    display: inline-block;
+}
 div.menu ul:after {
-    background-color: #282828 !important;
+    background-color: #292929 !important;
     border-radius: 2px !important;
     color: #ccc !important;
-    content: "flat darkness v0.0.2" !important;
+    content: "Flat Darkness v0.0.3" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
     margin-left: 10px !important;
     padding-bottom: 3px !important;
     padding-left: 5px !important;
-    padding-right: 5px !important;
+    padding-right: 20px !important;
     padding-top: 3px !important;
     text-transform: uppercase !important;
     float: right !important;
@@ -22,7 +56,7 @@ div.menu ul:after {
 }
 
 #panel {
-    background-color: #202020 !important;
+    background-color: #292929 !important;
     border-style: none !important;
     line-height: 20px !important;
     padding: 25px !important;
@@ -59,36 +93,42 @@ div.menu ul:after {
 td.tfoot div strong {
     margin: 10px !important;
 }
-
-input.bitButton {
+div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
+    border-bottom: none !important;
+}
+div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
+    padding-right: 15px;
+}
+div.quick_keys > table > tbody > tr > td > table:first-of-type {
+	margin-bottom: 10px;
+}
+div.quick_keys > table > tbody > tr > td > br {
+	display: none;
+}
+input.button, .button, button, a.bitButton, input.bitButton {
     display: inline-block !important;
     color: #FFF !important;
-    background-color: #888 !important;
+    background-color: #181818 !important;
     text-transform: uppercase !important;
     font-weight: bold !important;
     letter-spacing: 1px !important;
     font-size: 12px !important;
     padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
+    border-radius: 1px !important;
     text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
     box-shadow: none !important;
     margin-right: 5px;
+    border: none !important;
 }
 
-input.bitButton:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-input.bitButton:active {
-    background-color: #555 !important;
+input.button:hover, .button:hover, button:hover, a.bitButton:hover, input.bitButton:hover {
+    background-color: #000000 !important;
     border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
+}
+
+input.button:active, .button:active, button:active, a.bitButton:active, input.bitButton:active {
+    background-color: #000000 !important;
+    border: 0px !important;
 }
 
 td[bgcolor="red"]{
@@ -105,36 +145,6 @@ td[bgcolor="green"]{
     -moz-border-radius: 0px 6px 6px 0px !important;
     -webkit-border-radius: 0px 6px 6px 0px !important;
     color: #FFF !important;
-}
-
-a.bitButton {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
-}
-
-a.bitButton:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-a.bitButton:active {
-    background-color: #555 !important;
-    border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
 }
 
 a.navButton :hover {
@@ -211,17 +221,39 @@ div.logo a img {
     display: none !important;
 }
 
+div.logo {
+    padding-top: 30px;
+}
+
+div.logo a:hover {
+    text-transform: none !important;
+}
+
+div.logo a:before {
+    content: "HackForums";
+    font-size: 90px;
+    letter-spacing: 10px;
+    font-family: fantasy;
+}
+
+div.menu {
+    margin-bottom: 20px;	
+}
+#content > br:first-of-type {
+    display: none;
+}
 div.menu ul {
     background: none !important;
-    background-color: #222222 !important;
+    background-color: #292929 !important;
     font-size: 12px !important;
     font-weight: normal !important;
     height: 0px !important;
     margin-top: 0 !important;
-    padding-bottom: 60px !important;
-    padding-left: 25px !important;
-    padding-top: 60px !important;
+    padding-bottom: 45px !important;
+    padding-left: 20px !important;
+    padding-top: 30px !important;
     text-align: left !important;
+    border-radius: 0 !important;
 }
 
 div.menu ul a {
@@ -234,12 +266,6 @@ div.menu ul a.hover {
 
 div.menu ul.hover {
     color: #ff00ff !important;
-}
-
-div.menu ul:before {
-    color: #ffffff !important;
-    content: "Hack Forums            " !important;
-    font-weight: bold !important;
 }
 
 div.navigation a.active {
@@ -340,36 +366,6 @@ div.menu ul li a:Hover {
     color: #FFF !important;
     background: none !important;
     border: none !important;
-}
-
-.button {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
-}
-
-.button:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-.button:active {
-    background-color: #555 !important;
-    border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
 }
 
 span.pagination_current {
@@ -696,34 +692,4 @@ a.popup_item:hover {
 div.popup_menu {
     background: #555555 !important;
     border: none !important;
-}
-
-input.button {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
-}
-
-input.button:hover {
-    background-color: #777;
-    border-color: #555;
-}
-
-input.button:active {
-    background-color: #555;
-    border: 0px;
-    transform: translate(0px, 2px);
-    -webkit-transform: translate(0px, 2px);
 }

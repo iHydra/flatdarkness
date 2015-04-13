@@ -1,5 +1,5 @@
 div.menu ul:after {
-    background-color: #282828 !important;
+    background-color: #222 !important;
     border-radius: 2px !important;
     color: #ccc !important;
     content: "white beta v0.0.3" !important;
@@ -11,6 +11,9 @@ div.menu ul:after {
     padding-left: 5px !important;
     padding-right: 20px !important;
     padding-top: 3px !important;
+    border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
     text-transform: uppercase !important;
     float: right !important;
 }
@@ -69,29 +72,31 @@ div.quick_keys > table > tbody > tr > td > table:first-of-type {
 div.quick_keys > table > tbody > tr > td > br {
     display: none !important;
 }
-input.button, .button, button, a.bitButton, input.bitButton {
+input.button, .button, button, a.bitButton, input.bitButton, span.bitButton {
     display: inline-block !important;
     color: #FFF !important;
-    background-color: #181818 !important;
+    background-color: #222 !important;
     text-transform: uppercase !important;
     font-weight: bold !important;
     letter-spacing: 1px !important;
     font-size: 12px !important;
     padding: 5px 10px !important;
-    border-radius: 1px !important;
+    border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    -webkit-border-radius: 2px !important;
     text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
     box-shadow: none !important;
     margin-right: 5px;
     border: none !important;
 }
 
-input.button:hover, .button:hover, button:hover, a.bitButton:hover, input.bitButton:hover {
-    background-color: #000000 !important;
+input.button:hover, .button:hover, button:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
+    background-color: #111 !important;
     border: 0px !important;
 }
 
-input.button:active, .button:active, button:active, a.bitButton:active, input.bitButton:active {
-    background-color: #000000 !important;
+input.button:active, .button:active, button:active, a.bitButton:active, input.bitButton:active, span.bitButton:active {
+    background-color: #111 !important;
     border: 0px !important;
 }
 
@@ -109,83 +114,6 @@ td[bgcolor="green"]{
     -moz-border-radius: 0px 6px 6px 0px !important;
     -webkit-border-radius: 0px 6px 6px 0px !important;
     color: #FFF !important;
-}
-
-span.bitButton {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
-    margin-right: 5px;
-}
-
-span.bitButton:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-span.bitButton:active {
-    background-color: #555 !important;
-    border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
-}
-
-td[bgcolor="red"]{
-    border-radius: 6px 0px 0px 6px !important;
-    background-color: #bb3131 !important;
-    -moz-border-radius: 6px 0px 0px 6px !important;
-    -webkit-border-radius: 6px 0px 0px 6px !important;
-    color: #FFF !important;
-}
-
-td[bgcolor="green"]{
-    border-radius: 0px 6px 6px 0px !important;
-    background-color: #31bb4b !important;
-    -moz-border-radius: 0px 6px 6px 0px !important;
-    -webkit-border-radius: 0px 6px 6px 0px !important;
-    color: #FFF !important;
-}
-
-a.bitButton {
-    display: inline-block !important;
-    color: #FFF !important;
-    background-color: #888 !important;
-    text-transform: uppercase !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    font-size: 12px !important;
-    padding: 5px 10px !important;
-    border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border: 0px solid #555 !important;
-    border-bottom-width: 2px !important;
-    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
-    box-shadow: none !important;
-}
-
-a.bitButton:hover {
-    background-color: #777 !important;
-    border-color: #555 !important;
-}
-
-a.bitButton:active {
-    background-color: #555 !important;
-    border: 0px !important;
-    transform: translate(0px, 2px) !important;
-    -webkit-transform: translate(0px, 2px) !important;
 }
 
 a.navButton :hover {

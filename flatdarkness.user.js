@@ -63,6 +63,7 @@ $(window).load(function(){
     });
     $(".part").click(function(){
         var cl = "cl-" + $(this).attr('cid');
+        $(".cp").css("background", $(this).attr('cid'));
         $("body").alterClass('cl-*', cl);
         localStorage.setItem('theme', cl);
     });

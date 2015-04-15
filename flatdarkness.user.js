@@ -55,6 +55,8 @@ $(window).load(function(){
     $("body").append(cp, select);
     var colours = {'black': '#000', 'white': '#fff', 'blue': '#0C8CE8'};
     $("body").addClass(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'cl-' + Object.keys(colours)[0]);
+    console.log(colours[$("body").attr('class').split(" ")[0].substring(0, $("body").attr('class').split(" ")[0])]);
+    $(".select").css("background", colours[$("body").attr('class').split(" ")[0].substring(0, $("body").attr('class').split(" ")[0])];
     $.each(colours, function(key, value) {
         select.append($("<div class='part' style='background: " + value + " !important;' cid='" + key + "'/>"));
     });

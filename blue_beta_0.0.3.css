@@ -1,0 +1,825 @@
+div.menu ul:after {
+    background-color: #222 !important;
+    border-radius: 2px !important;
+    color: #36c7ff !important;
+    content: "blue beta v0.0.3" !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    line-height: 1 !important;
+    margin-left: 10px !important;
+    padding-bottom: 3px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-top: 3px !important;
+    border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    text-transform: uppercase !important;
+    float: right !important;
+}
+
+#container {
+    background-color: #282828 !important;
+    background-image: none !important;
+    border-style: none !important;
+}
+
+#panel {
+    background-color: #202020 !important;
+    border-style: none !important;
+    line-height: 20px !important;
+    padding: 25px !important;
+    font-size: 11px !important;
+    border-radius: 0 !important
+}
+
+#posts {
+    padding: 0px !important;
+}
+
+.menu ul a:hover {
+    color: #36c7ff !important;
+}
+
+.pagination a:hover {
+    background: none !important;
+    border: none !important;
+    color: #36c7ff !important;
+}
+
+.shadetabs li a.selected {
+    border-style: none !important;
+    color: #36c7ff !important;
+    font-size: 12px !important;
+    top: 0 !important;
+}
+
+.tborder {
+    background: none !important;
+    border: none !important;
+}
+
+td.tfoot div strong {
+    margin: 10px !important;
+}
+
+div.quick_keys > table > tbody > tr > td > table > tbody > tr > td {
+    padding-right: 15px !important;
+}
+div.quick_keys > table > tbody > tr > td > table:first-of-type {
+    margin-bottom: 10px !important;
+}
+
+input.button, .button, button, a.bitButton, input.bitButton, span.bitButton {
+    display: inline-block !important;
+    color: #36c7ff !important;
+    background-color: #384e56 !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    font-size: 12px !important;
+    padding: 5px 10px !important;
+    border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    -webkit-border-radius: 2px !important;
+    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
+    box-shadow: none !important;
+    margin-right: 5px;
+    border: none !important;
+}
+
+input.button:hover, .button:hover, button:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
+    background-color: #002736 !important;
+    border: 0px !important;
+}
+
+input.button:active, .button:active, button:active, a.bitButton:active, input.bitButton:active, span.bitButton:active {
+    background-color: #002736 !important;
+    border: 0px !important;
+}
+
+td[bgcolor="red"]{
+    border-radius: 6px 0px 0px 6px !important;
+    background-color: #bb3131 !important;
+    -moz-border-radius: 6px 0px 0px 6px !important;
+    -webkit-border-radius: 6px 0px 0px 6px !important;
+    color: #FFF !important;
+}
+
+td[bgcolor="green"]{
+    border-radius: 0px 6px 6px 0px !important;
+    background-color: #31bb4b !important;
+    -moz-border-radius: 0px 6px 6px 0px !important;
+    -webkit-border-radius: 0px 6px 6px 0px !important;
+    color: #FFF !important;
+}
+
+a.navButton:hover {
+    color: #41516b !important;
+}
+
+a.navButton hover {
+    color: #41516b !important;
+}
+
+a.pagination_first {
+    border: 1px #252525 !important;
+    border-radius: 5px !important;
+    color: #36c7ff !important;
+    background-color: #252525 !important;
+}
+
+a.pagination_last {
+    border: 1px #252525 !important;
+    border-radius: 5px !important;
+    color: #888 !important;
+    background-color: #252525 !important;
+}
+
+a.pagination_next {
+    border: 1px #252525 !important;
+    border-radius: 5px !important;
+    color: #36c7ff !important;
+    background-color: #252525 !important;
+}
+
+a.pagination_page {
+    border: 1px #252525 !important;
+    border-radius: 5px !important;
+    color: #888 !important;
+    background-color: #252525 !important;
+}
+
+a.pagination_previous {
+    border: 1px #252525 !important;
+    border-radius: 5px !important;
+    color: #36c7ff !important;
+    background-color: #252525 !important;
+}
+
+a.quick_jump {
+    display: none !important;
+}
+
+div strong a {
+    font-weight: normal !important;
+}
+
+div.bottommenu {
+    background-color: #252525 !important;
+    border-style: none !important;
+    padding: 10px !important;
+}
+
+div.float_left.smalltext {
+    color: #3c7eba !important;
+}
+
+div.largetext {
+    display: none !important;
+    font-size: 25px !important;
+    margin-left: 3px !important;
+    margin-top: 55px !important;
+    padding: 20px !important;
+}
+
+div.logo a img {
+    background: none !important;
+    display: none !important;
+}
+
+div.menu ul {
+    background: none !important;
+    background-color: #282828 !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    height: 0px !important;
+    margin-top: 0 !important;
+    padding-bottom: 30px !important;
+    padding-left: 25px !important;
+    padding-top: 15px !important;
+    text-align: left !important;
+}
+
+div.menu ul a {
+    color: #3c7eba !important;
+}
+
+div.menu ul a.hover {
+    color: #36c7ff !important;
+}
+
+div.menu ul.hover {
+    color: #36c7ff !important;
+}
+
+div.menu ul:before {
+    color: #36c7ff !important;
+    content: "Hack Forums" !important;
+    margin-right: 25px !important;
+    font-weight: bold !important;
+}
+
+div.navigation a.active {
+    color: #36c7ff !important;
+}
+
+div.pagination {
+    font-weight: normal !important;
+    margin-bottom: 20px !important;
+    font-size: 11px !important;
+}
+div.navigation a {
+    color: #36c7ff !important;
+}
+div.pm_alert {
+	font-size: 11px !important;
+    background-color: #202020 !important;
+    border-bottom: 1px solid #61a859 !important;
+    border-radius: 0 !important;
+    border-top: 1px solid #61a859 !important;
+    margin-top: 20px !important;
+    padding: 10px !important;
+}
+
+div.post_body {
+    color: #36c7ff !important;
+    margin-bottom: 25px !important;
+    margin-top: 25px !important;
+}
+
+div.author.smalltext a {
+    color: #3c7eba !important;
+}
+
+img.expander {
+    display: none !important;
+}
+
+div.post_body blockquote {
+    background-color: #555 !important;
+    border-color: #353535 !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    color: #f0f0f0 !important;
+    margin-bottom: 5px !important;
+    padding: 10px !important;
+}
+
+div.post_body blockquote cite {
+    border-color: #5f6d80 !important;
+    border-style: solid !important;
+    border-width: 0 !important;
+    color: #ffffff !important;
+    font-weight: normal !important;
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+}
+
+div.smalltext ul li {
+    list-style: square !important;
+    margin-left: -6px !important;
+}
+
+html body {
+    background: none !important;
+    background-color: #222222 !important;
+}
+
+img.subforumicon.ajax_mark_read {
+    display: none !important;
+}
+
+span.active {
+    font-size: 12px !important;
+    color: #FFFFFF !important;
+}
+
+span.group0 {
+    font-weight: bold !important;
+}
+
+span.group9 {
+    color: #7ef250 !important;
+}
+
+span.pages {
+    font-weight: normal !important;
+    margin-right: 20px !important;
+}
+
+div.menu ul li a {
+    font-size: 12px !important;
+    text-shadow: none !important;
+    font-weight: normal !important;
+}
+
+div.menu ul li a:Hover {
+    color: #FFF !important;
+    background: none !important;
+    border: none !important;
+}
+
+.button {
+    display: inline-block !important;
+    color: #FFF !important;
+    background-color: #888 !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    font-size: 12px !important;
+    padding: 5px 10px !important;
+    border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    -webkit-border-radius: 6px !important;
+    border: 0px solid #555 !important;
+    border-bottom-width: 2px !important;
+    text-shadow: 0px 1px rgba(0,0,0,0.5) !important;
+    box-shadow: none !important;
+}
+
+.button:hover {
+    background-color: #777 !important;
+    border-color: #555 !important;
+}
+
+.button:active {
+    background-color: #555 !important;
+    border: 0px !important;
+    transform: translate(0px, 2px) !important;
+    -webkit-transform: translate(0px, 2px) !important;
+}
+
+span.pagination_current {
+    background: none !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+span.smalltext a {
+    color: #ffffff !important;
+}
+
+span.smalltext strong {
+    font-weight: normal !important;
+}
+
+table {
+    border: none !important;
+    border-collapse: none !important;
+    border-color: none !important;
+    border-spacing: none !important;
+    padding: 0 !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+
+table.tborder {
+    border-spacing: 0px !important;
+    border-style: none !important;
+}
+
+tborder {
+    padding: 0 !important;
+}
+
+td.smalltext.post_author_info {
+    line-height: 16px !important;
+}
+
+td.tfoot {
+    background-color: #252525 !important;
+    background-image: none !important;
+    border-radius: 0px !important;
+    padding: 10px !important;
+}
+
+td.tfoot form {
+    background-color: #252525 !important;
+    background-image: none !important;
+}
+
+td.tfoot form select {
+    border: none !important;
+    color: #606060 !important;
+    font-weight: normal !important;
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    padding: 3px !important;
+}
+
+td.trow {
+    border-style: none !important;
+    padding: 10px !important;
+}
+
+td.trow1:hover {
+    background: #333 !important;
+}
+
+td.trow1 strong a {
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+td.trow1.post_buttons {
+    border-bottom: none !important;
+    border-radius: 0px !important;
+    border-top: 1px solid #262626 !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+td.trow2 strong a {
+    font-weight: bold !important;
+}
+
+td.trow2.post_content {
+    border: none !important;
+}
+td.trow2:hover {
+    background: #333333 !important;
+}
+td.trow2.post_content hr {
+    background-color: #262626  !important;
+    border: none  !important;
+    margin-bottom: 20px  !important;
+    margin-top: 20px !important;
+    width: 25% !important;
+}
+
+tr {
+    padding: 10px !important;
+}
+
+ul.shadetabs li a:hover {
+    color: #ffffff !important;
+}
+
+#panel strong {
+    font-weight: normal !important;
+}
+
+#panel strong a {
+    font-weight: bold !important;
+}
+
+td.trow_sep {
+    border-bottom: 1px solid #262626 !important;
+    background-color: #292929 !important;
+    padding: 10px !important;
+	font-weight: normal !important;
+    font-size: 11px !important;
+}
+
+div.navigation a {
+    color: #696969 !important;
+}
+
+td.thead div strong {
+    display: inline-block !important;
+    color: #ffffff !important;
+    font-weight: normal !important;
+    font-size: 12px !important;
+}
+
+td.thead div {
+    display: inline-block !important;
+}
+
+span.smalltext.float_right {
+    display: none !important;
+}
+
+span.button a:Hover {
+    color: #fff !important;
+}
+
+div.smalltext {
+    line-height: 20px !important;
+    font-size: 11px !important;
+}
+
+td.trow2 {
+    background-color: #333333 !important;
+    border-bottom: 1px solid #262626 !important;
+    border-radius: 0px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 15px !important;
+    font-size: 12px !important;
+}
+
+span.smalltext a strong {
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+
+td.trow1 {
+    border-bottom: 1px solid #262626 !important;
+    border-radius: 0px !important;
+    padding: 15px !important;
+    font-size: 12px !important;
+}
+
+span.group29 {
+    color: #389aff !important;
+    text-shadow: none !important;
+}
+
+span.group3 {
+    color: #bf50ff !important;
+    text-shadow: 1px 1px #000000 !important;
+}
+
+img[src="http://x.hackforums.net/images/modern_bl/starstaff.png"] {
+    content:url(http://i.imgur.com/2dS5exk.png) !important;
+    filter: hue-rotate(15deg) !important;
+}
+
+span.group4 {
+    color: #ff3eab !important;
+    text-shadow: 1px 1px #000000 !important;
+}
+
+img[src="http://x.hackforums.net/images/modern_bl/staradmin.png"] {
+    -webkit-filter: hue-rotate(35deg) !important;
+    filter: hue-rotate(35deg);
+
+}
+
+img[src="http://x.hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
+    -webkit-filter: hue-rotate(35deg) !important;
+    filter: hue-rotate(35deg) !important;
+}
+
+img[src="http://x.hackforums.net/images/modern_bl/add_buddy.gif"] {
+    content:url(http://i.imgur.com/3d5FKNX.png) !important;
+}
+
+img[src="http://x.hackforums.net/images/modern_bl/remove_buddy.gif"] {
+    content:url(http://i.imgur.com/zDwBkq5.png) !important;
+}
+
+img[src="http://x.hackforums.net/images/modern_bl/add_ignore.gif"] {
+    content:url(http://i.imgur.com/u3NZbDu.png) !important;
+}
+
+img[src="http://x.hackforums.net/images/modern_bl/remove_ignore.gif"] {
+    content:url(http://i.imgur.com/zDwBkq5.png) !important;
+}
+
+img[src$="/img/disable.png"] {
+    content: url(http://i.imgur.com/LXGekE9.png) !important;
+}
+
+img[src$="/img/enable.png"] {
+    content: url(http://i.imgur.com/YHDATSF.png) !important;
+}
+/**
+img[src="http://x.hackforums.net/images/modern_bl/folder.gif"] {
+    content: url(http://i.imgur.com/BbrrwYq.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/lockfolder.gif"] {
+    content: url(http://i.imgur.com/nqX2AqL.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_folder.gif"] {
+    content: url(http://i.imgur.com/ulTXXHb.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_lockfolder.gif"] {
+    content: url(http://i.imgur.com/lpHkIES.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/newfolder.gif"] {
+    content: url(http://i.imgur.com/QZFauA4.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/hotfolder.gif"] {
+    content: url(http://i.imgur.com/TIFZ5RW.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/newlockfolder.gif"] {
+    content: url(http://i.imgur.com/klYYE8l.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/hotlockfolder.gif"] {
+    content: url(http://i.imgur.com/ESnLT8k.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_hotfolder.gif"] {
+    content: url(http://i.imgur.com/AwHEzIa.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_newfolder.gif"] {
+    content: url(http://i.imgur.com/Xu1hNl8.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_hotlockfolder.gif"] {
+    content: url(http://i.imgur.com/tImSTXU.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_newlockfolder.gif"] {
+    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/newhotfolder.gif"] {
+    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+}
+img[src="http://x.hackforums.net/images/modern_bl/dot_newhotfolder.gif"] {
+    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+} **/
+
+li[class="printable"] {
+    background: url(http://i.imgur.com/uJA6SMg.png) no-repeat 0px 0px !important;
+}
+
+li[class="subscription_add"] {
+    background: url(http://i.imgur.com/s3ao1YU.png) no-repeat 0px 0px !important;
+}
+li[class="subscription_remove"] {
+    background: url(http://i.imgur.com/dw4vjon.png) no-repeat 0px 0px !important;
+}
+
+td.thead strong {
+    color: #ffffff !important;
+    margin: 5px !important;
+    font-size: 12px !important;
+}
+
+td.tcat {
+    background-color: #393939 !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0px !important;
+    border-style: none !important;
+    color: #ffffff !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+    padding-left: 11px !important;
+    padding-bottom: 10px !important;
+}
+
+td.thead {
+    background-color: #252525 !important;
+    background-image: none !important;
+    border-radius: 0px !important;
+    border-style: none !important;
+    padding-top: 10px !important;
+    padding-right: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 6px !important;
+}
+
+td.trow2 strong a:hover {
+    color: #ffffff !important;
+}
+
+a:hover {
+    color: #ffffff !important;
+}
+
+span.smalltext {
+    font-size: 11px !important;
+}
+
+div.navigation{
+    font-size: 12px !important;
+    color: #cfcfcf !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+div.navigation a {
+    color: #cfcfcf !important;
+    font-weight: normal;
+}
+
+div.navigation a:hover {
+    color: #eee !important;
+}
+
+ul.shadetabs li a {
+    background: none !important;
+    border: none !important;
+    border-style: none !important;
+    box-shadow: none !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    margin: 5px !important;
+    color: #7a7a7a !important;
+    text-shadow: none !important;
+}
+
+a.selected {
+    border-style: none !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    text-shadow: none !important;
+    top: 0px !important;
+}
+
+ul.shadetabs {
+    margin: 0 !important;
+    padding-bottom: 20px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 20px !important;
+    background-color: #202020 !important;
+}
+
+a.usercp_nav_item {
+    font-size: 11px !important;
+}
+
+div.float_right a {
+    font-size: 11px !important;
+}
+
+a.popup_item {
+    background: #292929 !important;
+    border: none !important;
+    color: #FFF !important;
+}
+
+a.popup_item:hover {
+    background: #222 !important;
+    border: none !important;
+    color: #FFF !important;
+}
+
+div.popup_menu {
+    background: #292929 !important;
+    border: none !important;
+}
+
+a[id^="thread_options"]>strong {
+    color: #252525 !important;
+}
+
+.usercp_container{
+    border: 1px solid #444444 !important;
+}
+.usercp_nav_home {
+    background: url(http://i.imgur.com/8rXcWeo.png) no-repeat left center !important;
+}
+.usercp_nav_composepm {
+    background: url(http://i.imgur.com/rVRzAP6.png) no-repeat left center !important;
+}
+.usercp_nav_pmfolder {
+    background: url(http://i.imgur.com/x6gbgmA.png) no-repeat left center !important;
+}
+.usercp_nav_sub_pmfolder {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/qdHyFZ0.png) no-repeat left center !important;
+}
+.usercp_nav_trash_pmfolder {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/JRO03a9.png) no-repeat left center !important;
+}
+.usercp_nav_pmtracking {
+    background: url(http://i.imgur.com/P1gVL47.png) no-repeat left center !important;
+}
+.usercp_nav_pmfolders {
+    background: url(http://i.imgur.com/vqO8iBQ.png) no-repeat left center !important;
+}
+.usercp_nav_profile {
+    background: url(http://i.imgur.com/El4eUCM.png) no-repeat left center !important;
+}
+.usercp_nav_username {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/FXBSRap.png) no-repeat left center !important;
+}
+.usercp_nav_password {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/R4qyASb.png) no-repeat left center !important;
+}
+.usercp_nav_email {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/G9o7url.png) no-repeat left center !important;
+}
+.usercp_nav_avatar {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/RsGEB1l.png) no-repeat left center !important;
+}
+.usercp_nav_editsig {
+    padding-left: 40px !important;
+    background: url(http://i.imgur.com/PD5kBXb.png) no-repeat left center !important;
+}
+.usercp_nav_options {
+    background: url(http://i.imgur.com/voq5d7N.png) no-repeat left center !important;
+}
+.usercp_nav_usergroups {
+    background: url(http://i.imgur.com/12LehKH.png) no-repeat left center !important;
+}
+.usercp_nav_editlists {
+    background: url(http://i.imgur.com/bfcL3Wz.png) no-repeat left center !important;
+}
+.usercp_nav_attachments {
+    background: url(http://i.imgur.com/5q8EbgL.png) no-repeat left center !important;
+}
+.usercp_nav_drafts {
+    background: url(http://i.imgur.com/ryliPsU.png) no-repeat left center !important;
+}
+.usercp_nav_subscriptions {
+    background: url(http://i.imgur.com/N9wUWFu.png) no-repeat left center !important;
+}
+.usercp_nav_fsubscriptions {
+    background: url(http://i.imgur.com/0K4Hftt.png) no-repeat left center !important;
+}
+.usercp_nav_viewprofile {
+    background: url(http://i.imgur.com/kUfuaZK.png) no-repeat left center !important;
+}

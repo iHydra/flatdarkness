@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness Hack Forums Theme
 // @namespace     https://github.com/TaylerKing
-// @version       0.0.3
+// @version       0.0.4
 // @description   Custom theme for Hack Forums. Base theme by Sasori.
 // @updateURL     https://raw.githubusercontent.com/iHydra/flatdarkness/master/flatdarkness.meta.js
 // @downloadURL   https://raw.githubusercontent.com/iHydra/flatdarkness/master/flatdarkness.user.js
@@ -53,7 +53,7 @@ $(window).load(function(){
     var cp = $("<div class='cp'/>");
     var select = $("<div class='select'/>");
     $("body").append(cp, select);
-    var colours = {'black': '#000', 'white': '#fff', 'blue': '#0C8CE8'};
+    var colours = {'black': '#000', 'white': '#fff', 'blue': '#0C8CE8', 'green': '#93cd2b', 'red': '#da3f3f'};
     $("body").addClass(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'cl-' + Object.keys(colours)[0]);
     $.each(colours, function(key, value) {
         select.append($("<div class='part' style='background: " + value + " !important;' cid='" + key + "'/>"));
@@ -63,6 +63,7 @@ $(window).load(function(){
     });
     $(".part").click(function(){
         var cl = "cl-" + $(this).attr('cid');
+        $(".cp").css("background", colours[$(this).attr('cid')]);
         $("body").alterClass('cl-*', cl);
         localStorage.setItem('theme', cl);
     });

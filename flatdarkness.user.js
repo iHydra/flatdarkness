@@ -55,7 +55,7 @@ $(window).load(function(){
     if(!localStorage.getItem('theme')) 
     	localStorage.setItem('theme', 'cl-' + Object.keys(colours)[0]);
     $("body").addClass(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'cl-' + Object.keys(colours)[0]);
-    $(".select").css("background", colours[$("body").attr('class').split(" ")[0].substring(3, $("body").attr('class').split(" ")[0].length)]);
+    $(".cp").css("background", colours[$("body").attr('class').split(" ")[0].substring(3, $("body").attr('class').split(" ")[0].length)]);
     $.each(colours, function(key, value) {
         select.append($("<div class='part' style='background: " + value + " !important;' cid='" + key + "'/>"));
     });

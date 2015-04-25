@@ -41,7 +41,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: #ccc !important;
-    content: "white beta v0.0.3" !important;
+    content: "white beta v0.0.4" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -196,8 +196,15 @@ a.pagination_previous {
     background-color: #252525 !important;
 }
 
-a.quick_jump {
-    display: none !important;
+.quick_jump, a.quick_jump {
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    width: 13px !important;
+    height: 13px !important;
+    padding-left: 3px !important;
+    vertical-align: middle !important;
+    border: none !important;
 }
 
 div strong a {

@@ -196,8 +196,15 @@ a.pagination_previous {
     background-color: #252525 !important;
 }
 
-a.quick_jump {
-    display: none !important;
+.quick_jump, a.quick_jump {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    width: 13px;
+    height: 13px;
+    padding-left: 3px;
+    vertical-align: middle;
+    border: none;
 }
 
 div strong a {

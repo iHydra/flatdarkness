@@ -1,8 +1,8 @@
 div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
-    color: #2D9ACC !important;
-    content: "BLUE beta v0.0.5" !important;
+    color: #0C8DFF !important;
+    content: "BLUE beta v0.0.6" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -25,7 +25,7 @@ div.menu ul:after {
 .pagination a:hover {
     background: none !important;
     border: none !important;
-    color: #46BEF5 !important;
+    color: #2CA3FF !important;
 }
 
 .shadetabs li a.selected {
@@ -104,23 +104,23 @@ a.pagination_last {
 }
 
 a.pagination_next {
-    border: 1px #3A4754 !important;
+    border: 1px #1C1F26 !important;
     border-radius: 5px !important;
-    color: #2D9ACC !important;
-    background-color: #3A4754 !important;
+    color: #0C8DFF !important;
+    background-color: #1C1F26 !important;
 }
 
 a.pagination_page {
-    border: 1px #2A333C !important;
+    border: 1px #292E38 !important;
     border-radius: 5px !important;
-    color: #2787B3 !important;
-    background-color: #2A333C !important;
+    color: #0C8DFF !important;
+    background-color: #292E38 !important;
 }
 
 a.pagination_previous {
     border: 1px #3A4754 !important;
     border-radius: 5px !important;
-    color: #2D9ACC !important;
+    color: #0C8DFF !important;
     background-color: #3A4754 !important;
 }
 
@@ -228,7 +228,7 @@ span.group9 {
 }
 
 div.menu ul li a:Hover {
-    color: #FFF !important;
+    color: #2CA3FF !important;
     background: none !important;
     border: none !important;
 }
@@ -266,7 +266,7 @@ div.menu ul li a:Hover {
 span.pagination_current {
     background: none !important;
     border: none !important;
-    color: #ffffff !important;
+    color: #2CA3FF !important;
     font-weight: bold;
 }
 

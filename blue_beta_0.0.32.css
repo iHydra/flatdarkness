@@ -25,7 +25,7 @@ div.menu ul:after {
 .pagination a:hover {
     background: none !important;
     border: none !important;
-    color: #2CA3FF !important;
+    color: #111E2C !important;
 }
 
 .shadetabs li a.selected {
@@ -37,8 +37,8 @@ div.menu ul:after {
 
 input.button, .button, button, a.bitButton, input.bitButton, span.bitButton {
     display: inline-block !important;
-    color: #2D9ACC !important;
-    background-color: #3A4754 !important;
+    color: #111E2C !important;
+    background-color: #102234 !important;
     text-transform: uppercase !important;
     font-weight: bold !important;
     letter-spacing: 1px !important;
@@ -54,14 +54,14 @@ input.button, .button, button, a.bitButton, input.bitButton, span.bitButton {
 }
 
 input.button:hover, .button:hover, button:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
-    color: #2787B3 !important;
-    background-color: #2A333C !important;
+    color: #111E2C !important;
+    background-color: #142435 !important;
     border: 0px !important;
 }
 
 input.button:active, .button:active, button:active, a.bitButton:active, input.bitButton:active, span.bitButton:active {
-    color: #2787B3 !important;
-    background-color: #2A333C !important;
+    color: #111E2C !important;
+    background-color: #142435 !important;
     border: 0px !important;
 }
 
@@ -90,24 +90,24 @@ a.navButton hover {
 }
 
 a.pagination_first {
-    border: 1px #3A4754 !important;
+    border: 1px #102234 !important;
     border-radius: 5px !important;
-    color: #2D9ACC !important;
-    background-color: #3A4754 !important;
+    color: #111E2C !important;
+    background-color: #102234 !important;
 }
 
 a.pagination_last {
-    border: 1px #3A4754 !important;
+    border: 1px #102234 !important;
     border-radius: 5px !important;
-    color: #2D9ACC !important;
-    background-color: #3A4754 !important;
+    color: #111E2C !important;
+    background-color: #102234 !important;
 }
 
 a.pagination_next {
-    border: 1px #1C1F26 !important;
+    border: 1px #102234 !important;
     border-radius: 5px !important;
-    color: #0C8DFF !important;
-    background-color: #1C1F26 !important;
+    color: #111E2C !important;
+    background-color: #102234 !important;
 }
 
 a.pagination_page {
@@ -118,10 +118,10 @@ a.pagination_page {
 }
 
 a.pagination_previous {
-    border: 1px #3A4754 !important;
+    border: 1px #102234 !important;
     border-radius: 5px !important;
-    color: #0C8DFF !important;
-    background-color: #3A4754 !important;
+    color: #111E2C !important;
+    background-color: #102234 !important;
 }
 
 div.bottommenu {

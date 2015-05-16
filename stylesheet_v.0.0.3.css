@@ -36,7 +36,7 @@ div.menu ul:after {
     background-color: #292929 !important;
     border-radius: 2px !important;
     color: #ccc !important;
-    content: "Flat Darkness v0.0.3" !important;
+    content: "KONDAX DESIGN" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -229,12 +229,12 @@ div.logo a:hover {
     text-transform: none !important;
 }
 
-div.logo a:before {
+/*div.logo a:before {
     content: "HackForums";
     font-size: 90px;
     letter-spacing: 10px;
     font-family: fantasy;
-}
+}*/
 
 div.menu {
     margin-bottom: 20px;	

@@ -41,7 +41,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: #ccc !important;
-    content: "white beta v0.0.3" !important;
+    content: "white beta v0.0.5" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -197,14 +197,16 @@ a.pagination_previous {
 }
 
 .quick_jump, a.quick_jump {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    width: 13px;
-    height: 13px;
-    padding-left: 3px;
-    vertical-align: middle;
-    border: none;
+    color: white !important;
+    content: '';
+    background-image:url('http://i.imgur.com/LKctNTL.png');
+    text-decoration: none !important;
+    font-size: 18px !important;
+    width: 13px !important;
+    height: 13px !important;
+    padding-left: 3px !important;
+    vertical-align: middle !important;
+    border: none !important;
 }
 
 div strong a {

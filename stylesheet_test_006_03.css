@@ -4,16 +4,30 @@ html body {
 
 .cp {
     width: 30px;
+    opacity: .35;
     height: 30px;
     position: fixed;
     right: 0;
     bottom: 0;
     display: block;
     background: #fff;
-    border-left: 6px solid #393939;
-    border-top: 6px solid #393939;
+    border-left: 3px solid #151515;
+    border-top: 3px solid #151515;
 
 }
+
+.cp:hover, .cp:active {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: #fff;
+    border-left: 3px solid #151515;
+    border-top: 3px solid #151515;
+}
+
 .select {
     padding: 6px;
     background: #393939;

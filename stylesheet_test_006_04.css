@@ -16,8 +16,9 @@ html body {
 
 }
 
-.cp:hover, .cp:active {
+.cp:hover {
     width: 30px;
+    opacity: 1.0;
     height: 30px;
     position: fixed;
     right: 0;
@@ -887,4 +888,8 @@ a[id^="thread_options"]>strong {
 }
 .usercp_nav_viewprofile {
     background: url(http://i.imgur.com/kUfuaZK.png) no-repeat left center !important;
+}
+
+.star_rating, .star_rating li a:hover, .star_rating .current_rating {
+    background: url(http://i.imgur.com/HfNTwYD.png) left -1000px repeat-x !important;
 }

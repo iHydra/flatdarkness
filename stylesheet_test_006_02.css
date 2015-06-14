@@ -197,16 +197,19 @@ a.pagination_previous {
 }
 
 .quick_jump, a.quick_jump {
-    color: white !important;
-    content: '';
-    background-image:url('http://i.imgur.com/LKctNTL.png');
+    color: transparent !important;
+    background: url('http://i.imgur.com/LKctNTL.png') no-repeat;
     text-decoration: none !important;
     font-size: 18px !important;
-    width: 13px !important;
-    height: 13px !important;
-    padding-left: 3px !important;
-    vertical-align: middle !important;
+    width: 16px !important;
+    height: 12px !important;
+    padding-left: 0px !important;
+    vertical-align: top !important;
     border: none !important;
+}
+
+.quick_jump:hover, a.quick_jump:hover {
+    color: transparent !important;
 }
 
 div strong a {

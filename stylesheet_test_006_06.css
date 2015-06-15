@@ -82,7 +82,7 @@ div.menu ul:after {
     background-color: #202020 !important;
     border-style: none !important;
     line-height: 20px !important;
-    padding: 25px !important;
+    padding: 10px !important;
     font-size: 11px !important;
     border-radius: 0 !important
 }
@@ -744,8 +744,9 @@ span.smalltext {
 div.navigation{
     font-size: 12px !important;
     color: #cfcfcf !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-bottom: -35px !important;
 }
 
 div.navigation a {
@@ -892,4 +893,14 @@ a[id^="thread_options"]>strong {
 
 .star_rating, .star_rating li a:hover, .current_rating, .star_rating li a {
     background: url('http://i.imgur.com/HfNTwYD.png') left -1000px repeat-x !important;
+}
+
+div[style="padding: 5px 2px;"] {
+    padding-top: 35px !important;
+}
+
+div[style="margin-top: 6px; padding-right: 10px;"] {
+    margin-top: 30px !important;
+    padding-bottom: 10px !important;
+    padding-right: 10px !important;
 }

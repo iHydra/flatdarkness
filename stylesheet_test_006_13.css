@@ -220,6 +220,7 @@ a.pagination_previous {
     height: 12px !important;
     padding-left: 0px !important;
     vertical-align: top !important;
+    display: inline-flex !important;
     border: none !important;
 }
 
@@ -436,9 +437,11 @@ span.pagination_current {
     font-weight: bold;
 }
 
+/*
 span.smalltext a {
     color: #ffffff !important;
 }
+*/
 
 span.smalltext strong {
     font-weight: normal !important;

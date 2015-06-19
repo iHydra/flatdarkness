@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness Hack Forums Theme
 // @namespace     https://github.com/TaylerKing
-// @version       0.0.5
+// @version       0.0.6
 // @description   Custom theme for Hack Forums. Base theme by Sasori.
 // @updateURL     https://raw.githubusercontent.com/iHydra/flatdarkness/master/flatdarkness.meta.js
 // @downloadURL   https://raw.githubusercontent.com/iHydra/flatdarkness/master/flatdarkness.user.js
@@ -10,7 +10,7 @@
 // @include       http://nsfw.hackforums.net/*
 // @include       http://www.nsfw.hackforums.net/*
 // @author        iHydra/Kondax/Sasori
-// @resource      CustomCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_v.0.0.5.css
+// @resource      CustomCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_v.0.0.6.css
 // @require       http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
@@ -67,4 +67,23 @@ $(window).load(function(){
         $("body").alterClass('cl-*', cl);
         localStorage.setItem('theme', cl);
     });
+});
+
+
+/*
+ *Javascript Editing
+ */
+$(document).ready(function(){
+    $('span:contains("Moderated")').addClass("sevenpad");
+});
+
+/*
+$(document).ready(function(){
+    $('[div:contains("Group Leader Notice:")][.pm_alert]').attr('id', 'group-alert');
+    $('#group-alert').removeClass("pm_alert").addClass("group_alert");
+});
+*/
+
+$(document).ready(function(){
+    $('#pm_notice').removeClass("pm_alert").addClass("pm_alert2");
 });

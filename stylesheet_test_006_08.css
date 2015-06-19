@@ -294,6 +294,8 @@ div.pagination {
     font-weight: normal !important;
     margin-bottom: 20px !important;
     font-size: 11px !important;
+    padding-top: 25px !important;
+    padding-left: 7px !important;
 }
 div.navigation a {
     color: #cfcfcf !important;
@@ -746,7 +748,8 @@ div.navigation{
     color: #cfcfcf !important;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
-    margin-bottom: -35px !important;
+    margin-bottom: -10px !important;
+    padding-left: 7px !important;
 }
 
 div.navigation a {

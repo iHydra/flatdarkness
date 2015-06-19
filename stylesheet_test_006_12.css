@@ -223,7 +223,7 @@ a.pagination_previous {
     border: none !important;
 }
 
-.quick_jump:hover, a.quick_jump:hover {
+.quick_jump:hover, a.quick_jump:hover,.quick_jump:visited, a.quick_jump:visited,.quick_jump:active, a.quick_jump:active {
     color: transparent !important;
 }
 

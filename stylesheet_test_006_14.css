@@ -2,6 +2,26 @@ html body {
     color: white;
 }
 
+div.menu ul:after {
+    background-color: #222 !important;
+    border-radius: 2px !important;
+    color: #ccc !important;
+    content: "beta v0.0.6" !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    line-height: 1 !important;
+    margin-left: 10px !important;
+    padding-bottom: 3px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-top: 3px !important;
+    border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    text-transform: uppercase !important;
+    float: right !important;
+}
+
 .cp {
     width: 30px;
     opacity: .35;
@@ -39,37 +59,20 @@ html body {
     padding-right: 0px;
     display: none;
 }
+
 .part:hover, .cp:hover {
     cursor: pointer;
 }
+
 .select.show {
     display: block;
 }
+
 .select > .part {
     width: 24px;
     height: 25px;
     margin-right: 6px;
     display: inline-block;
-}
-
-div.menu ul:after {
-    background-color: #222 !important;
-    border-radius: 2px !important;
-    color: #ccc !important;
-    content: "white beta v0.0.5" !important;
-    font-size: 10px !important;
-    font-weight: bold !important;
-    line-height: 1 !important;
-    margin-left: 10px !important;
-    padding-bottom: 3px !important;
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-    padding-top: 3px !important;
-    border-radius: 3px !important;
-    -moz-border-radius: 3px !important;
-    -webkit-border-radius: 3px !important;
-    text-transform: uppercase !important;
-    float: right !important;
 }
 
 #container {
@@ -909,7 +912,7 @@ a[id^="thread_options"]>strong {
 }
 
 .star_rating, .star_rating li a:hover, .current_rating, .star_rating li a {
-    background: url('http://i.imgur.com/HfNTwYD.png') left -1000px repeat-x !important;
+    background: repeat-x url('http://i.imgur.com/HfNTwYD.png') !important;
 }
 
 div[style="padding: 5px 2px;"] {

@@ -301,7 +301,7 @@ div.navigation a {
     color: #cfcfcf !important;
 }
 
-div.group_alert {
+div.pm_alert {
     font-size: 11px !important;
     background-color: #242424 !important;
     border: 1px solid rgba(114,74,158,.5) !important;
@@ -310,7 +310,7 @@ div.group_alert {
     padding: 10px !important;
 }
 
-div.pm_alert {
+div.pm_alert2 {
     font-size: 11px !important;
     background-color: #242424 !important;
     border: 1px solid rgba(97,168,89,.5) !important;

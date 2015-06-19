@@ -300,13 +300,22 @@ div.pagination {
 div.navigation a {
     color: #cfcfcf !important;
 }
-div.pm_alert {
-	font-size: 11px !important;
-    background-color: #202020 !important;
-    border-bottom: 1px solid #61a859 !important;
+
+div.group_alert {
+    font-size: 11px !important;
+    background-color: #242424 !important;
+    border: 1px solid rgba(114,74,158,.5) !important;
     border-radius: 0 !important;
-    border-top: 1px solid #61a859 !important;
-    margin-top: 20px !important;
+    margin-top: -15px !important;
+    padding: 10px !important;
+}
+
+div.pm_alert {
+    font-size: 11px !important;
+    background-color: #242424 !important;
+    border: 1px solid rgba(97,168,89,.5) !important;
+    border-radius: 0 !important;
+    margin-top: 0px !important;
     padding: 10px !important;
 }
 
@@ -906,4 +915,8 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     margin-top: 30px !important;
     padding-bottom: 10px !important;
     padding-right: 10px !important;
+}
+
+.sevenpad {
+    padding-left: 7px !important;
 }

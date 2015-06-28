@@ -127,6 +127,11 @@ div.quick_keys > table > tbody > tr > td > table:first-of-type {
     margin-bottom: 10px !important;
 }
 
+.button {
+    border: none !important;
+    box-shadow: none !important;
+}
+
 input.button, .button, button, a.bitButton, input.bitButton, span.bitButton {
     display: inline-block !important;
     color: #FFF !important;

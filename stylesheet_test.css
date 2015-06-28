@@ -927,3 +927,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 .cl-blue td.trow2 strong a:hover {
     color: #A2D7FF !important;
 }
+
+.cl-blue div.float_left.smalltext {
+    color: white !important;
+}

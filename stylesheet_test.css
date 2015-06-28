@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: #ccc !important;
-    content: "beta v0.0.7" !important;
+    content: "beta v0.0.6" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -50,8 +50,8 @@ div.menu ul:after {
 }
 
 .select {
-    padding: 6px;
-    background: #393939;
+    padding: 5px;
+    background: #222;
     position: fixed;
     right: 0;
     bottom: 30px;

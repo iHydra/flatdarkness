@@ -151,12 +151,12 @@ input.button, .button2, button2, a.bitButton, input.bitButton, span.bitButton {
 }
 
 input.button:hover, .button2:hover, button2:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
-    background-color: #111 !important;
+    background-color: #619ECB !important;
     border: 0px !important;
 }
 
 input.button:active, .button:active, button:active, a.bitButton:active, input.bitButton:active, span.bitButton:active {
-    background-color: #111 !important;
+    background-color: #619ECB !important;
     border: 0px !important;
 }
 

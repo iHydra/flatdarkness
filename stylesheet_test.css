@@ -949,3 +949,10 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     border: 0px !important;
 }
 
+.cl-blue td.trow1 strong a:hover {
+    color: #619ECB !important;
+}
+
+.cl-blue td.trow2 strong a:hover {
+    color: #619ECB !important;
+}

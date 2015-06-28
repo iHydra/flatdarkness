@@ -938,3 +938,14 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 .cl-blue a:hover {
     color: #619ECB !important;
 }
+
+.cl-blue .button:hover {
+    background-color: #619ECB !important;
+    border-color: #555 !important;
+}
+
+.cl-blue input.button:hover, .cl-blue .button:hover, .cl-blue button:hover, .cl-blue a.bitButton:hover, .cl-blue input.bitButton:hover, .cl-blue span.bitButton:hover {
+    background-color: #619ECB !important;
+    border: 0px !important;
+}
+

@@ -127,12 +127,12 @@ div.quick_keys > table > tbody > tr > td > table:first-of-type {
     margin-bottom: 10px !important;
 }
 
-.button {
+.button2 {
     border: none !important;
     box-shadow: none !important;
 }
 
-input.button, .button, button, a.bitButton, input.bitButton, span.bitButton {
+input.button, .button2, button2, a.bitButton, input.bitButton, span.bitButton {
     display: inline-block !important;
     color: #FFF !important;
     background-color: #222 !important;
@@ -150,7 +150,7 @@ input.button, .button, button, a.bitButton, input.bitButton, span.bitButton {
     border: none !important;
 }
 
-input.button:hover, .button:hover, button:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
+input.button:hover, .button2:hover, button2:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
     background-color: #111 !important;
     border: 0px !important;
 }
@@ -552,7 +552,7 @@ span.smalltext.float_right {
     display: none !important;
 }
 
-span.button a:Hover {
+span.button2 a:Hover {
     color: #fff !important;
 }
 
@@ -911,7 +911,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-blue a:hover {
-    color: #619ECB !important;
+    color: #A2D7FF !important;
 }
 
 .cl-blue input.button:hover, .cl-blue .button:hover, .cl-blue button:hover, .cl-blue a.bitButton:hover, .cl-blue input.bitButton:hover, .cl-blue span.bitButton:hover {
@@ -921,9 +921,9 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-blue td.trow1 strong a:hover {
-    color: #619ECB !important;
+    color: #A2D7FF !important;
 }
 
 .cl-blue td.trow2 strong a:hover {
-    color: #619ECB !important;
+    color: #A2D7FF !important;
 }

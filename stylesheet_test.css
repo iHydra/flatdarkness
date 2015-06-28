@@ -928,3 +928,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 .sevenpad {
     padding-left: 7px !important;
 }
+
+/** BLUE THEME **/
+.cl-blue td.tcat {
+    background-color: #393939 !important;

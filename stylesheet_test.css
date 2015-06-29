@@ -617,6 +617,11 @@ img[src="http://x.hackforums.net/images/modern_bl/staradmin.png"] {
 
 }
 
+img[src="http://hackforums.net/images/modern_bl/dismiss_notice.gif"] {
+    content: url(http://i.imgur.com/uxvQQDI.png) !important;
+
+}
+
 img[src="http://x.hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
     -webkit-filter: hue-rotate(35deg) !important;
     filter: hue-rotate(35deg) !important;
@@ -894,9 +899,10 @@ a[id^="thread_options"]>strong {
     background: url(http://i.imgur.com/kUfuaZK.png) no-repeat left center !important;
 }
 
+/**
 .star_rating, .star_rating li a:hover, .current_rating, .star_rating li a {
     background: repeat-x url('http://i.imgur.com/HfNTwYD.png') !important;
-}
+} **/
 
 div[style="padding: 5px 2px;"] {
     padding-top: 35px !important;

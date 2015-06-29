@@ -236,7 +236,15 @@ a.pagination_previous {
     color: transparent !important;
 }
 
-.quick_jump a:hover {
+span.quick_jump a:hover {
+    color: transparent !important;
+}
+
+div.quick_jump a:hover {
+    color: transparent !important;
+}
+
+a.quick_jump:hover {
     color: transparent !important;
 }
 

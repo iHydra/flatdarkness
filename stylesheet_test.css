@@ -331,11 +331,11 @@ div.pm_alert2 {
 }
 
 .pm_alert a:hover {
-    color: rgba(114,74,158,1) !important;
+    color: #724a9e !important;
 }
 
 .pm_alert2 a:hover {
-    color: rgba(97,168,89,1) !important;
+    color: #61a859 !important;
 }
 
 div.post_body {

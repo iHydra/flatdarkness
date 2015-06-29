@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          Flat Darkness Hack Forums Theme
-// @namespace     https://github.com/TaylerKing
+// @namespace     https://github.com/iHydra
 // @version       0.0.7
 // @description   Custom theme for Hack Forums. Base theme by Sasori.
 // @updateURL     https://github.com/iHydra/flatdarkness/raw/master/flatdarkness.meta.js

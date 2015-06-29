@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: #ccc !important;
-    content: "v0.0.7" !important;
+    content: "BETA 0.0.7" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -18,7 +18,7 @@ div.menu ul:after {
     border-radius: 3px !important;
     -moz-border-radius: 3px !important;
     -webkit-border-radius: 3px !important;
-    text-transform: lowercase !important;
+    text-transform: uppercase !important;
     float: right !important;
 }
 

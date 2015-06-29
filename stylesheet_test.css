@@ -1056,18 +1056,14 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     border: none !important;
 }
 
-.quick_jump:hover, a.quick_jump:hover,.quick_jump:visited, a.quick_jump:visited,.quick_jump:active, a.quick_jump:active {
+.quick_jump:hover, a.quick_jump:hover, .quick_jump:visited, a.quick_jump:visited, .quick_jump:active, a.quick_jump:active {
     color: transparent !important;
 }
 
-span.quick_jump a:hover {
+.quick_jump a:hover {
     color: transparent !important;
 }
 
-div.quick_jump a:hover {
-    color: transparent !important;
-}
-
-a.quick_jump:hover {
+a.quick_jump {
     color: transparent !important;
 }

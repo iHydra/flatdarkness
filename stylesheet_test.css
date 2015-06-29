@@ -236,6 +236,10 @@ a.pagination_previous {
     color: transparent !important;
 }
 
+.quick_jump a:hover {
+    color: transparent !important;
+}
+
 div strong a {
     font-weight: normal !important;
 }

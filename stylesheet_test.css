@@ -330,11 +330,11 @@ div.pm_alert2 {
     text-align: center !important;
 }
 
-.pm_alert a:hover {
+div.pm_alert a:hover {
     color: #724a9e !important;
 }
 
-.pm_alert2 a:hover {
+div.pm_alert2 a:hover {
     color: #61a859 !important;
 }
 

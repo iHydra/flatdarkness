@@ -150,7 +150,7 @@ input.button, .button2, button2, a.bitButton, input.bitButton, span.bitButton {
     border: none !important;
 }
 
-input.button:hover, .button2:hover, button2:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
+input.button:hover, .cl-red .button2:hover, .cl-red button2:hover .button2:hover, button2:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
     background-color: #619ECB !important;
     border: 0px !important;
 }
@@ -328,6 +328,14 @@ div.pm_alert2 {
     margin-top: -15px !important;
     padding: 10px !important;
     text-align: center !important;
+}
+
+div.pm_alert:hover {
+    color: rgba(114,74,158,1) !important;
+}
+
+div.pm_alert2:hover {
+    color: rgba(97,168,89,1) !important;
 }
 
 div.post_body {
@@ -914,7 +922,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #A2D7FF !important;
 }
 
-.cl-blue input.button:hover, .cl-blue .button:hover, .cl-blue button:hover, .cl-blue a.bitButton:hover, .cl-blue input.bitButton:hover, .cl-blue span.bitButton:hover {
+.cl-blue input.button:hover, .cl-blue .button2:hover, .cl-blue button2:hover .cl-blue .button:hover, .cl-blue button:hover, .cl-blue a.bitButton:hover, .cl-blue input.bitButton:hover, .cl-blue span.bitButton:hover {
     background-color: #619ECB !important;
     border: 0px !important;
     color: white !important;
@@ -942,7 +950,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #A1FB80 !important;
 }
 
-.cl-green input.button:hover, .cl-green .button:hover, .cl-green button:hover, .cl-green a.bitButton:hover, .cl-green input.bitButton:hover, .cl-green span.bitButton:hover {
+.cl-green input.button:hover, .cl-green .button2:hover, .cl-green button2:hover .cl-green .button:hover, .cl-green button:hover, .cl-green a.bitButton:hover, .cl-green input.bitButton:hover, .cl-green span.bitButton:hover {
     background-color: #7ECB61 !important;
     border: 0px !important;
     color: white !important;
@@ -970,7 +978,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #FFC144 !important;
 }
 
-.cl-orange input.button:hover, .cl-orange .button:hover, .cl-orange button:hover, .cl-orange a.bitButton:hover, .cl-orange input.bitButton:hover, .cl-orange span.bitButton:hover {
+.cl-orange input.button:hover, .cl-orange .button2:hover, .cl-orange button2:hover .cl-orange .button:hover, .cl-orange button:hover, .cl-orange a.bitButton:hover, .cl-orange input.bitButton:hover, .cl-orange span.bitButton:hover {
     background-color: #D29C2D !important;
     border: 0px !important;
     color: white !important;
@@ -998,7 +1006,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #AD7CFF !important;
 }
 
-.cl-purple input.button:hover, .cl-purple .button:hover, .cl-purple button:hover, .cl-purple a.bitButton:hover, .cl-purple input.bitButton:hover, .cl-purple span.bitButton:hover {
+.cl-purple input.button:hover, .cl-purple .button2:hover, .cl-purple button2:hover .cl-purple .button:hover, .cl-purple button:hover, .cl-purple a.bitButton:hover, .cl-purple input.bitButton:hover, .cl-purple span.bitButton:hover {
     background-color: #724FAD !important;
     border: 0px !important;
     color: white !important;
@@ -1026,7 +1034,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #FF7B7B !important;
 }
 
-.cl-red input.button:hover, .cl-red .button:hover, .cl-red button:hover, .cl-red a.bitButton:hover, .cl-red input.bitButton:hover, .cl-red span.bitButton:hover {
+.cl-red input.button:hover, .cl-red .button2:hover, .cl-red button2:hover .cl-red .button:hover, .cl-red button:hover, .cl-red a.bitButton:hover, .cl-red input.bitButton:hover, .cl-red span.bitButton:hover {
     background-color: #CB6161 !important;
     border: 0px !important;
     color: white !important;

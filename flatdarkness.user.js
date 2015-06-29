@@ -10,7 +10,7 @@
 // @include       http://nsfw.hackforums.net/*
 // @include       http://www.nsfw.hackforums.net/*
 // @author        iHydra/Kondax/Sasori
-// @resource      CustomCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_v.0.0.7.css
+// @resource      MainCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_v.0.0.7.css
 // @require       http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js
 // @grant         GM_addStyle
 // @grant         GM_getResourceText

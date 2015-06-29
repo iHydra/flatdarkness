@@ -18,7 +18,7 @@ div.menu ul:after {
     border-radius: 3px !important;
     -moz-border-radius: 3px !important;
     -webkit-border-radius: 3px !important;
-    text-transform: uppercase !important;
+    text-transform: lowercase !important;
     float: right !important;
 }
 
@@ -520,7 +520,7 @@ td.trow_sep {
     border-bottom: 1px solid #262626 !important;
     background-color: #292929 !important;
     padding: 10px !important;
-	font-weight: normal !important;
+    font-weight: normal !important;
     font-size: 11px !important;
 }
 

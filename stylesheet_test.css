@@ -5,7 +5,7 @@ html body {
 div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
-    color: #ccc !important;
+    color: white !important;
     content: "BETA 0.0.7" !important;
     font-size: 10px !important;
     font-weight: bold !important;
@@ -929,6 +929,10 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: white !important;
 }
 
+.cl-blue div.menu ul:after {
+    background-color: #619ECB !important;
+}
+
 /** GREEN THEME **/
 
 .cl-green td.tcat {
@@ -955,6 +959,10 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 .cl-green div.float_left.smalltext {
     color: white !important;
+}
+
+.cl-green div.menu ul:after {
+    background-color: #7ECB61 !important;
 }
 
 /** ORANGE THEME **/
@@ -985,6 +993,10 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: white !important;
 }
 
+.cl-orange div.menu ul:after {
+    background-color: #D29C2D !important;
+}
+
 /** PURPLE THEME **/
 
 .cl-purple td.tcat {
@@ -1013,6 +1025,10 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: white !important;
 }
 
+.cl-purple div.menu ul:after {
+    background-color: #724FAD !important;
+}
+
 /** RED THEME **/
 
 .cl-red td.tcat {
@@ -1039,6 +1055,10 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 .cl-red div.float_left.smalltext {
     color: white !important;
+}
+
+.cl-red div.menu ul:after {
+    background-color: #CB6161 !important;
 }
 
 /** ------------------------------- **/

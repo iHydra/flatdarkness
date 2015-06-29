@@ -219,35 +219,6 @@ a.pagination_previous {
     background-color: #252525 !important;
 }
 
-.quick_jump, a.quick_jump {
-    color: transparent !important;
-    background: url('http://i.imgur.com/LKctNTL.png') no-repeat;
-    text-decoration: none !important;
-    font-size: 18px !important;
-    width: 16px !important;
-    height: 12px !important;
-    padding-left: 0px !important;
-    vertical-align: top !important;
-    display: inline-flex !important;
-    border: none !important;
-}
-
-.quick_jump:hover, a.quick_jump:hover,.quick_jump:visited, a.quick_jump:visited,.quick_jump:active, a.quick_jump:active {
-    color: transparent !important;
-}
-
-span.quick_jump a:hover {
-    color: transparent !important;
-}
-
-div.quick_jump a:hover {
-    color: transparent !important;
-}
-
-a.quick_jump:hover {
-    color: transparent !important;
-}
-
 div strong a {
     font-weight: normal !important;
 }
@@ -1068,4 +1039,35 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 .cl-red div.float_left.smalltext {
     color: white !important;
+}
+
+/** ------------------------------- **/
+
+.quick_jump, a.quick_jump {
+    color: transparent !important;
+    background: url('http://i.imgur.com/LKctNTL.png') no-repeat;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    width: 16px !important;
+    height: 12px !important;
+    padding-left: 0px !important;
+    vertical-align: top !important;
+    display: inline-flex !important;
+    border: none !important;
+}
+
+.quick_jump:hover, a.quick_jump:hover,.quick_jump:visited, a.quick_jump:visited,.quick_jump:active, a.quick_jump:active {
+    color: transparent !important;
+}
+
+span.quick_jump a:hover {
+    color: transparent !important;
+}
+
+div.quick_jump a:hover {
+    color: transparent !important;
+}
+
+a.quick_jump:hover {
+    color: transparent !important;
 }

@@ -503,10 +503,9 @@ td.trow2.post_content hr {
 td.trow2.post_body hr {
     display: block !important;
     border: none !important;
-    color: white !important;
     height: 1px !important;
     width: 100% !important;
-    background: black !important;
+    background: #262626 !important;
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#888), to(#333)) !important;
 }
 

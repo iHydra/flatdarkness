@@ -500,6 +500,15 @@ td.trow2.post_content hr {
     width: 25% !important;
 }
 
+.mod_hr {
+    display: block !important;
+    border: none !important;
+    color: white !important;
+    height: 1px !important;
+    background: black !important;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#888), to(#333)) !important;
+}
+
 tr {
     padding: 10px !important;
 }

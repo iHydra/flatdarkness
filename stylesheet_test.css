@@ -500,7 +500,7 @@ td.trow2.post_content hr {
     width: 25% !important;
 }
 
-td.trow2.post_body hr {
+div.post_body hr {
     display: block !important;
     border: none !important;
     height: 1px !important;

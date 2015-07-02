@@ -187,7 +187,7 @@ a.navButton hover {
 a.pagination_first {
     border: 1px #252525 !important;
     border-radius: 5px !important;
-    color: #FFF !important;
+    color: #888 !important;
     background-color: #252525 !important;
 }
 
@@ -323,8 +323,8 @@ div.pm_alert2 a:hover {
 
 div.post_body {
     color: #cfcfcf !important;
-    margin-bottom: 15px !important;
-    margin-top: 15px !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
 }
 
 div.author.smalltext a {
@@ -336,23 +336,25 @@ img.expander {
 }
 
 div.post_body blockquote {
-    background-color: #555 !important;
-    border-color: #353535 !important;
-    border-style: solid !important;
+    background-color: #2F2F2F !important;
+    border-color: #444 !important;
+    border-style: dotted !important;
     border-width: 1px !important;
-    color: #f0f0f0 !important;
+    color: #FFF8F8 !important;
     margin-bottom: 5px !important;
     padding: 10px !important;
+    box-shadow: #222 0px 0px 2px;
 }
 
 div.post_body blockquote cite {
-    border-color: #5f6d80 !important;
+    border-color: transparent !important;
     border-style: solid !important;
-    border-width: 0 !important;
-    color: #ffffff !important;
+    border-width: 0px !important;
+    color: #FFF !important;
     font-weight: normal !important;
-    margin-bottom: 20px !important;
-    padding: 0 !important;
+    margin-bottom: 10px !important;
+    padding: 0px !important;
+    border-bottom: 1px dotted #444 !important;
 }
 
 div.smalltext ul li {
@@ -1094,4 +1096,8 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 a.quick_jump {
     color: transparent !important;
+}
+
+ul.star-rating { 
+    background: url('http://i.imgur.com/HfNTwYD.png') left -1000px repeat-x; 
 }

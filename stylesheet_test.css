@@ -1099,10 +1099,33 @@ a.quick_jump {
     color: transparent !important;
 }
 
-.star_rating,
-.star_rating li a:hover,
-.star_rating .current_rating {
-    background: url(http://i.imgur.com/OSFPZuD.png) left -1000px repeat-x !important;
+.cl-black .star_rating, .cl-black .star_rating li a:hover, .cl-black .star_rating .current_rating {
+    background: url(http://i.imgur.com/X4YRP6q.png) left -1000px repeat-x !important;
+    vertical-align: middle !important;
+}
+
+.cl-blue .star_rating, .cl-blue .star_rating li a:hover, .cl-blue .star_rating .current_rating {
+    background: url(http://i.imgur.com/oro9qsz.png) left -1000px repeat-x !important;
+    vertical-align: middle !important;
+}
+
+.cl-green .star_rating, .cl-green .star_rating li a:hover, .cl-green .star_rating .current_rating {
+    background: url(http://i.imgur.com/Ys1KX7s.png) left -1000px repeat-x !important;
+    vertical-align: middle !important;
+}
+
+.cl-orange .star_rating, .cl-orange .star_rating li a:hover, .cl-orange .star_rating .current_rating {
+    background: url(http://i.imgur.com/L0jDVrt.png) left -1000px repeat-x !important;
+    vertical-align: middle !important;
+}
+
+.cl-purple .star_rating, .cl-purple .star_rating li a:hover, .cl-purple .star_rating .current_rating {
+    background: url(http://i.imgur.com/yWfONLv.png) left -1000px repeat-x !important;
+    vertical-align: middle !important;
+}
+
+.cl-red .star_rating, .cl-red .star_rating li a:hover, .cl-red .star_rating .current_rating {
+    background: url(http://i.imgur.com/iFpPZXA.png) left -1000px repeat-x !important;
     vertical-align: middle !important;
 }
 

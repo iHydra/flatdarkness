@@ -1104,6 +1104,7 @@ a.quick_jump {
     vertical-align: middle !important;
 }
 
+/*
 .cl-blue .star_rating, .cl-blue .star_rating li a:hover, .cl-blue .star_rating .current_rating {
     background: url(http://i.imgur.com/oro9qsz.png) left -1000px repeat-x !important;
     vertical-align: middle !important;
@@ -1128,6 +1129,7 @@ a.quick_jump {
     background: url(http://i.imgur.com/iFpPZXA.png) left -1000px repeat-x !important;
     vertical-align: middle !important;
 }
+*/
 
 .star_rating {
     position: relative !important;

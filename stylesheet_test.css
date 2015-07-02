@@ -1099,7 +1099,7 @@ a.quick_jump {
     color: transparent !important;
 }
 
-.cl-black .star_rating, .cl-black .star_rating li a:hover, .cl-black .star_rating .current_rating {
+.star_rating, .star_rating li a:hover, .star_rating .current_rating {
     background: url(http://i.imgur.com/X4YRP6q.png) left -1000px repeat-x !important;
     vertical-align: middle !important;
 }

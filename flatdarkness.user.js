@@ -7,8 +7,6 @@
 // @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdarkness.user.js
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
-// @include       http://nsfw.hackforums.net/*
-// @include       http://www.nsfw.hackforums.net/*
 // @author        iHydra/Kondax/Sasori
 // @resource      MainCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_v.0.0.8.css
 // @require       http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js

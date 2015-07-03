@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "BETA 0.0.7" !important;
+    content: "BETA 0.0.8" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -132,7 +132,7 @@ div.quick_keys > table > tbody > tr > td > table:first-of-type {
     box-shadow: none !important;
 }
 
-input.button, .button2, button2, a.bitButton, input.bitButton, span.bitButton {
+input.button, .button2, a.bitButton, input.bitButton, span.bitButton {
     display: inline-block !important;
     color: #FFF !important;
     background-color: #222 !important;
@@ -150,13 +150,13 @@ input.button, .button2, button2, a.bitButton, input.bitButton, span.bitButton {
     border: none !important;
 }
 
-input.button:hover, .cl-red .button2:hover, .cl-red button2:hover .button2:hover, button2:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
-    background-color: #619ECB !important;
+input.button:hover, .button2:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
+    background-color: #151515 !important;
     border: 0px !important;
 }
 
-input.button:active, .button:active, button:active, a.bitButton:active, input.bitButton:active, span.bitButton:active {
-    background-color: #619ECB !important;
+input.button:active, .button2:active, a.bitButton:active, input.bitButton:active, span.bitButton:active {
+    background-color: #151515 !important;
     border: 0px !important;
 }
 
@@ -187,7 +187,7 @@ a.navButton hover {
 a.pagination_first {
     border: 1px #252525 !important;
     border-radius: 5px !important;
-    color: #FFF !important;
+    color: #888 !important;
     background-color: #252525 !important;
 }
 
@@ -323,8 +323,8 @@ div.pm_alert2 a:hover {
 
 div.post_body {
     color: #cfcfcf !important;
-    margin-bottom: 25px !important;
-    margin-top: 25px !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
 }
 
 div.author.smalltext a {
@@ -336,23 +336,26 @@ img.expander {
 }
 
 div.post_body blockquote {
-    background-color: #555 !important;
-    border-color: #353535 !important;
-    border-style: solid !important;
+    background-color: #2F2F2F !important;
+    border-color: #444 !important;
+    border-style: dotted !important;
     border-width: 1px !important;
-    color: #f0f0f0 !important;
-    margin-bottom: 5px !important;
-    padding: 10px !important;
+    color: #FFF8F8 !important;
+    margin-bottom: 8px !important;
+    margin-top: 8px !important;
+    padding: 8px !important;
+    box-shadow: #222 0px 0px 2px;
 }
 
 div.post_body blockquote cite {
-    border-color: #5f6d80 !important;
+    border-color: transparent !important;
     border-style: solid !important;
-    border-width: 0 !important;
-    color: #ffffff !important;
+    border-width: 0px !important;
+    color: #CCC !important;
     font-weight: normal !important;
-    margin-bottom: 20px !important;
-    padding: 0 !important;
+    margin-bottom: 5px !important;
+    padding-bottom: 2px !important;
+    border-bottom: 1px dotted #444 !important;
 }
 
 div.smalltext ul li {
@@ -405,12 +408,6 @@ span.pagination_current {
     color: #ffffff !important;
     font-weight: bold;
 }
-
-/*
-span.smalltext a {
-    color: #ffffff !important;
-}
-*/
 
 span.smalltext strong {
     font-weight: normal !important;
@@ -497,7 +494,15 @@ td.trow2.post_content hr {
     border: none  !important;
     margin-bottom: 20px  !important;
     margin-top: 20px !important;
-    width: 25% !important;
+}
+
+div.post_body hr {
+    display: block !important;
+    border: none !important;
+    height: 1px !important;
+    width: 100% !important;
+    background: #262626 !important;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#888), to(#333)) !important;
 }
 
 tr {
@@ -882,11 +887,6 @@ a[id^="thread_options"]>strong {
     background: url(http://i.imgur.com/kUfuaZK.png) no-repeat left center !important;
 }
 
-/**
-.star_rating, .star_rating li a:hover, .current_rating, .star_rating li a {
-    background: repeat-x url('http://i.imgur.com/HfNTwYD.png') !important;
-} **/
-
 div[style="padding: 5px 2px;"] {
     padding-top: 35px !important;
 }
@@ -901,6 +901,14 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     padding-left: 7px !important;
 }
 
+/** BLACK THEME **/
+
+.cl-black input.button:hover, .cl-black .button2:hover, .cl-black button2:hover, .cl-black .button:hover, .cl-black button:hover, .cl-black a.bitButton:hover, .cl-black input.bitButton:hover, .cl-black span.bitButton:hover {
+    background-color: #151515 !important;
+    border: 0px !important;
+    color: white !important;
+}
+
 /** BLUE THEME **/
 
 .cl-blue td.tcat {
@@ -911,7 +919,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #A2D7FF !important;
 }
 
-.cl-blue input.button:hover, .cl-blue .button2:hover, .cl-blue button2:hover .cl-blue .button:hover, .cl-blue button:hover, .cl-blue a.bitButton:hover, .cl-blue input.bitButton:hover, .cl-blue span.bitButton:hover {
+.cl-blue input.button:hover, .cl-blue .button2:hover, .cl-blue button2:hover, .cl-blue .button:hover, .cl-blue button:hover, .cl-blue a.bitButton:hover, .cl-blue input.bitButton:hover, .cl-blue span.bitButton:hover {
     background-color: #619ECB !important;
     border: 0px !important;
     color: white !important;
@@ -943,7 +951,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #A1FB80 !important;
 }
 
-.cl-green input.button:hover, .cl-green .button2:hover, .cl-green button2:hover .cl-green .button:hover, .cl-green button:hover, .cl-green a.bitButton:hover, .cl-green input.bitButton:hover, .cl-green span.bitButton:hover {
+.cl-green input.button:hover, .cl-green .button2:hover, .cl-green button2:hover, .cl-green .button:hover, .cl-green button:hover, .cl-green a.bitButton:hover, .cl-green input.bitButton:hover, .cl-green span.bitButton:hover {
     background-color: #7ECB61 !important;
     border: 0px !important;
     color: white !important;
@@ -975,7 +983,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #FFC144 !important;
 }
 
-.cl-orange input.button:hover, .cl-orange .button2:hover, .cl-orange button2:hover .cl-orange .button:hover, .cl-orange button:hover, .cl-orange a.bitButton:hover, .cl-orange input.bitButton:hover, .cl-orange span.bitButton:hover {
+.cl-orange input.button:hover, .cl-orange .button2:hover, .cl-orange button2:hover, .cl-orange .button:hover, .cl-orange button:hover, .cl-orange a.bitButton:hover, .cl-orange input.bitButton:hover, .cl-orange span.bitButton:hover {
     background-color: #D29C2D !important;
     border: 0px !important;
     color: white !important;
@@ -1007,7 +1015,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #AD7CFF !important;
 }
 
-.cl-purple input.button:hover, .cl-purple .button2:hover, .cl-purple button2:hover .cl-purple .button:hover, .cl-purple button:hover, .cl-purple a.bitButton:hover, .cl-purple input.bitButton:hover, .cl-purple span.bitButton:hover {
+.cl-purple input.button:hover, .cl-purple .button2:hover, .cl-purple button2:hover, .cl-purple .button:hover, .cl-purple button:hover, .cl-purple a.bitButton:hover, .cl-purple input.bitButton:hover, .cl-purple span.bitButton:hover {
     background-color: #724FAD !important;
     border: 0px !important;
     color: white !important;
@@ -1039,7 +1047,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #FF7B7B !important;
 }
 
-.cl-red input.button:hover, .cl-red .button2:hover, .cl-red button2:hover .cl-red .button:hover, .cl-red button:hover, .cl-red a.bitButton:hover, .cl-red input.bitButton:hover, .cl-red span.bitButton:hover {
+.cl-red input.button:hover, .cl-red .button2:hover, .cl-red button2:hover, .cl-red .button:hover, .cl-red button:hover, .cl-red a.bitButton:hover, .cl-red input.bitButton:hover, .cl-red span.bitButton:hover {
     background-color: #CB6161 !important;
     border: 0px !important;
     color: white !important;
@@ -1086,4 +1094,91 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 a.quick_jump {
     color: transparent !important;
+}
+
+.star_rating, 
+.star_rating li a:hover, 
+.star_rating .current_rating {
+    background: url(http://i.imgur.com/X4YRP6q.png) left -1000px repeat-x !important;
+    vertical-align: middle !important;
+}
+
+.star_rating {
+    position: relative !important;
+    width:80px !important;
+    height:16px !important;
+    overflow: hidden !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-position: left top !important;
+}
+
+td .star_rating {
+    margin: auto !important;
+}
+
+.star_rating li {
+    display: inline !important;
+}
+
+.star_rating li a,
+.star_rating .current_rating {
+    position: absolute !important;
+    text-indent: -1000px !important;
+    height: 16px !important;
+    line-height: 16px !important;
+    outline: none !important;
+    overflow: hidden !important;
+    border: none !important;
+    top:0 !important;
+    left:0 !important;
+}
+
+.star_rating_notrated li a:hover {
+    background-position: left bottom !important;
+}
+
+.star_rating li a.one_star {
+    width:20% !important;
+    z-index:6 !important;
+}
+
+.star_rating li a.two_stars {
+    width:40% !important;
+    z-index:5 !important;
+}
+
+.star_rating li a.three_stars {
+    width:60% !important;
+    z-index:4 !important;
+}
+
+.star_rating li a.four_stars {
+    width:80% !important;
+    z-index:3 !important;
+}
+
+.star_rating li a.five_stars {
+    width:100% !important;
+    z-index:2 !important;
+}
+
+.star_rating .current_rating {
+    z-index:1 !important;
+    background-position: left center !important;
+}
+
+.star_rating_success, .success_message {
+    color: #bae9ba !important;
+    font-weight: bold !important;
+    font-size: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.inline_rating {
+    float: left !importan;
+    vertical-align: middle !important;
+    padding-right: 5px !important;
+    padding-top: 3px !important;
 }

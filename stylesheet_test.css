@@ -1170,7 +1170,7 @@ td .star_rating {
 }
 
 .star_rating_success, .success_message {
-    color: #00FF00 !important;
+    color: #bae9ba !important;
     font-weight: bold !important;
     font-size: 10px !important;
     margin-bottom: 10px !important;

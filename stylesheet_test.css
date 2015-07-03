@@ -409,12 +409,6 @@ span.pagination_current {
     font-weight: bold;
 }
 
-/*
-span.smalltext a {
-    color: #ffffff !important;
-}
-*/
-
 span.smalltext strong {
     font-weight: normal !important;
 }
@@ -892,11 +886,6 @@ a[id^="thread_options"]>strong {
 .usercp_nav_viewprofile {
     background: url(http://i.imgur.com/kUfuaZK.png) no-repeat left center !important;
 }
-
-/**
-.star_rating, .star_rating li a:hover, .current_rating, .star_rating li a {
-    background: repeat-x url('http://i.imgur.com/HfNTwYD.png') !important;
-} **/
 
 div[style="padding: 5px 2px;"] {
     padding-top: 35px !important;

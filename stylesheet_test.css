@@ -683,11 +683,21 @@ li[class="subscription_remove"] {
 }
 
 img[src="http://hackforums.net/images/modern_bl/minioff.gif"] {
-    content: url(http://i.imgur.com/2MUA1U8.png) !important;
+    content: url(http://i.imgur.com/AP6vLRo.png) !important;
+    padding-bottom: 2px !important;
+    margin-left: -3px !important;
+}
+
+img[src="http://hackforums.net/images/modern_bl/miniofflock.gif"] {
+    content: url(http://i.imgur.com/AP6vLRo.png) !important;
+    padding-bottom: 2px !important;
+    margin-left: -3px !important;
 }
 
 img[src="http://hackforums.net/images/modern_bl/minion.gif"] {
-    content: url(http://i.imgur.com/uv0BPCR.png) !important;
+    content: url(http://i.imgur.com/Wsl1Gfc.png) !important;
+    padding-bottom: 3px !important;
+    margin-left: -3px !important;
 }
 
 td.thead strong {

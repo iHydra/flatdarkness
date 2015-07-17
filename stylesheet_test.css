@@ -358,18 +358,9 @@ div.post_body blockquote cite {
     border-bottom: 1px dotted #444 !important;
 }
 
-div.smalltext ul li {
-    list-style: square !important;
-    margin-left: -6px !important;
-}
-
 html body {
     background: none !important;
     background-color: #222222 !important;
-}
-
-img.subforumicon.ajax_mark_read {
-    display: none !important;
 }
 
 span.active {
@@ -602,12 +593,10 @@ span.group4 {
 img[src="http://x.hackforums.net/images/modern_bl/staradmin.png"] {
     -webkit-filter: hue-rotate(35deg) !important;
     filter: hue-rotate(35deg);
-
 }
 
 img[src="http://hackforums.net/images/modern_bl/dismiss_notice.gif"] {
     content: url(http://i.imgur.com/uxvQQDI.png) !important;
-
 }
 
 img[src="http://x.hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
@@ -691,6 +680,14 @@ li[class="subscription_add"] {
 }
 li[class="subscription_remove"] {
     background: url(http://i.imgur.com/dw4vjon.png) no-repeat 0px 0px !important;
+}
+
+img[src="http://hackforums.net/images/modern_bl/minioff.gif"] {
+    content: url(http://i.imgur.com/2MUA1U8.png) !important;
+}
+
+img[src="http://hackforums.net/images/modern_bl/minion.gif"] {
+    content: url(http://i.imgur.com/uv0BPCR.png) !important;
 }
 
 td.thead strong {

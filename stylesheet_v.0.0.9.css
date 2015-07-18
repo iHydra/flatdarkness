@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "BETA 0.0.8" !important;
+    content: "BETA 0.0.9" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -127,12 +127,12 @@ div.quick_keys > table > tbody > tr > td > table:first-of-type {
     margin-bottom: 10px !important;
 }
 
-.button2 {
+.button2, .button, button {
     border: none !important;
     box-shadow: none !important;
 }
 
-input.button, .button2, a.bitButton, input.bitButton, span.bitButton {
+input.button, .button2, .button, a.bitButton, input.bitButton, span.bitButton {
     display: inline-block !important;
     color: #FFF !important;
     background-color: #222 !important;
@@ -358,18 +358,60 @@ div.post_body blockquote cite {
     border-bottom: 1px dotted #444 !important;
 }
 
-div.smalltext ul li {
-    list-style: square !important;
-    margin-left: -6px !important;
+.codeblock {
+    background-color: #2F2F2F !important;
+    border-color: #444 !important;
+    border-style: dotted !important;
+    border-width: 1px !important;
+    color: #FFF8F8 !important;
+    margin-bottom: 8px !important;
+    margin-top: 8px !important;
+    padding: 8px !important;
+    box-shadow: #222 0px 0px 2px;
+}
+
+.codeblock .title {
+	border-bottom: 0px !important;
+	margin: 0px !important;
+}
+
+.codeblock code {
+	padding-top: 2px;
+	padding-left: 5px;
+	background-color: #222 !important;
+	border: 1px dotted #444;
+	margin-bottom: 7px;
+}
+
+#codeBlock1::-webkit-scrollbar-track {
+	background-color: rgba(32, 32, 32, 0.7);
+}
+
+#codeBlock1::-webkit-scrollbar {
+	width: 15px;
+	background-color: #181818;
+}
+
+#codeBlock1::-webkit-scrollbar-thumb {
+	background-color: #181818;
+}
+
+#codeBlock2::-webkit-scrollbar-track {
+	background-color: rgba(32, 32, 32, 0.7);
+}
+
+#codeBlock2::-webkit-scrollbar {
+	width: 15px;
+	background-color: #181818;
+}
+
+#codeBlock2::-webkit-scrollbar-thumb {
+	background-color: #181818;
 }
 
 html body {
     background: none !important;
     background-color: #222222 !important;
-}
-
-img.subforumicon.ajax_mark_read {
-    display: none !important;
 }
 
 span.active {
@@ -490,7 +532,7 @@ td.trow2:hover {
     background: #333333 !important;
 }
 td.trow2.post_content hr {
-    background-color: #262626  !important;
+    background-color: #222  !important;
     border: none  !important;
     margin-bottom: 20px  !important;
     margin-top: 20px !important;
@@ -501,8 +543,7 @@ div.post_body hr {
     border: none !important;
     height: 1px !important;
     width: 100% !important;
-    background: #262626 !important;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#888), to(#333)) !important;
+    box-shadow: rgba(34, 34, 34, 0.5) 0px 1px 1px !important;
 }
 
 tr {
@@ -602,12 +643,10 @@ span.group4 {
 img[src="http://x.hackforums.net/images/modern_bl/staradmin.png"] {
     -webkit-filter: hue-rotate(35deg) !important;
     filter: hue-rotate(35deg);
-
 }
 
 img[src="http://hackforums.net/images/modern_bl/dismiss_notice.gif"] {
     content: url(http://i.imgur.com/uxvQQDI.png) !important;
-
 }
 
 img[src="http://x.hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
@@ -691,6 +730,21 @@ li[class="subscription_add"] {
 }
 li[class="subscription_remove"] {
     background: url(http://i.imgur.com/dw4vjon.png) no-repeat 0px 0px !important;
+}
+
+img[src="http://hackforums.net/images/modern_bl/minioff.gif"] {
+    content: url(http://i.imgur.com/AP6vLRo.png) !important;
+    padding-bottom: 2px !important;
+}
+
+img[src="http://hackforums.net/images/modern_bl/miniofflock.gif"] {
+    content: url(http://i.imgur.com/AP6vLRo.png) !important;
+    padding-bottom: 2px !important;
+}
+
+img[src="http://hackforums.net/images/modern_bl/minion.gif"] {
+    content: url(http://i.imgur.com/Wsl1Gfc.png) !important;
+    padding-bottom: 3px !important;
 }
 
 td.thead strong {
@@ -1099,7 +1153,7 @@ a.quick_jump {
 .star_rating, 
 .star_rating li a:hover, 
 .star_rating .current_rating {
-    background: url(http://i.imgur.com/X4YRP6q.png) left -1000px repeat-x !important;
+    background: url(http://i.imgur.com/Ut8dLFN.png) left -1000px repeat-x !important;
     vertical-align: middle !important;
 }
 

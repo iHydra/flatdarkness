@@ -358,6 +358,18 @@ div.post_body blockquote cite {
     border-bottom: 1px dotted #444 !important;
 }
 
+.codeblock {
+    background-color: #2F2F2F !important;
+    border-color: #444 !important;
+    border-style: dotted !important;
+    border-width: 1px !important;
+    color: #FFF8F8 !important;
+    margin-bottom: 8px !important;
+    margin-top: 8px !important;
+    padding: 8px !important;
+    box-shadow: #222 0px 0px 2px;
+}
+
 html body {
     background: none !important;
     background-color: #222222 !important;

@@ -394,15 +394,10 @@ div.post_body blockquote cite {
 }
 
 #codeBlock1::-webkit-scrollbar-thumb {
-	background-color: #555;	
-	background-image: -webkit-linear-gradient(90deg,
-		rgba(255, 255, 255, .2) 25%,
-		transparent 25%,
-		transparent 50%,
-		rgba(255, 255, 255, .2) 50%,
-		rgba(255, 255, 255, .2) 75%,
-		transparent 75%,
-		transparent)
+	background-color: #333;	
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
 }
 
 #codeBlock2::-webkit-scrollbar-track {
@@ -416,15 +411,10 @@ div.post_body blockquote cite {
 }
 
 #codeBlock2::-webkit-scrollbar-thumb {
-	background-color: #555;	
-	background-image: -webkit-linear-gradient(90deg,
-		rgba(255, 255, 255, .2) 25%,
-		transparent 25%,
-		transparent 50%,
-		rgba(255, 255, 255, .2) 50%,
-		rgba(255, 255, 255, .2) 75%,
-		transparent 75%,
-		transparent)
+	background-color: #333;	
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
 }
 
 html body {

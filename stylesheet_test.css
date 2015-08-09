@@ -410,7 +410,8 @@ div.post_body blockquote cite {
 }
 
 ::-webkit-resizer {
-    background-image: url('http://i.imgur.com/dQf95i0.png') !important;
+    background-color: transparent !important;
+    background-image: url(http://i.imgur.com/dQf95i0.png) !important;
 }
 
 textarea {

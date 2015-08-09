@@ -383,29 +383,29 @@ div.post_body blockquote cite {
 	margin-bottom: 7px;
 }
 
-#codeBlock1::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
 	background-color: rgba(32, 32, 32, 0.7);
 }
 
-#codeBlock1::-webkit-scrollbar {
+::-webkit-scrollbar {
 	width: 15px;
 	background-color: #181818;
 }
 
-#codeBlock1::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	background-color: #181818;
 }
 
-#codeBlock2::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
 	background-color: rgba(32, 32, 32, 0.7);
 }
 
-#codeBlock2::-webkit-scrollbar {
+::-webkit-scrollbar {
 	width: 15px;
 	background-color: #181818;
 }
 
-#codeBlock2::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	background-color: #181818;
 }
 

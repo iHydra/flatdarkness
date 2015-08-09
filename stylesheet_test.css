@@ -417,6 +417,10 @@ textarea {
     font-size: 12px !important;
 }
 
+textarea:focus {
+    outline-color: #222 !important;
+}
+
 html body {
     background: none !important;
     background-color: #222222 !important;

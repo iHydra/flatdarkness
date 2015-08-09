@@ -409,6 +409,14 @@ div.post_body blockquote cite {
 	background-color: #181818;
 }
 
+textarea {
+    background: #333 !important;
+    color: #ccc !important;
+    border: 1px dotted #444 !important;
+    padding: 4px !important:
+    font-size: 12px !important;
+}
+
 html body {
     background: none !important;
     background-color: #222222 !important;

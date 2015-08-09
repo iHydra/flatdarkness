@@ -409,6 +409,10 @@ div.post_body blockquote cite {
 	background-color: #181818;
 }
 
+::-webkit-resizer {
+    background-color: #1d1d1d !important;
+}
+
 textarea {
     background: #333 !important;
     color: #ccc !important;

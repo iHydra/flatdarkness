@@ -418,7 +418,8 @@ textarea {
 }
 
 textarea:focus {
-    outline-color: #222 !important;
+    outline: none !important;
+    border: 1px dotted #1d1d1d !important;
 }
 
 html body {

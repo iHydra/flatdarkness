@@ -410,21 +410,23 @@ div.post_body blockquote cite {
 }
 
 ::-webkit-resizer {
-    background-color: transparent !important;
-    background-image: url(http://i.imgur.com/dQf95i0.png) !important;
+    background-color: #1D1D1D !important;
+    background-image: url(https://i.imgur.com/DgAZaxK.png) !important;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 textarea {
-    background: #333 !important;
+    background: #222 !important;
     color: #ccc !important;
     border: 1px dotted #444 !important;
-    padding: 4px !important:
-    font-size: 12px !important;
+    padding: 4px !important;
+    font-size: 14px !important;
 }
 
 textarea:focus {
     outline: none !important;
-    border: 1px dotted #1d1d1d !important;
+    border: 1px dotted #111 !important;
 }
 
 html body {

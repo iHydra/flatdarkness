@@ -383,30 +383,17 @@ div.post_body blockquote cite {
 	margin-bottom: 7px;
 }
 
-::-webkit-scrollbar-track {
-	background-color: rgba(32, 32, 32, 0.7);
-}
-
 ::-webkit-scrollbar {
 	width: 15px;
 	background-color: #181818;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #181818;
+	background-color: #111;
 }
 
 ::-webkit-scrollbar-track {
 	background-color: rgba(32, 32, 32, 0.7);
-}
-
-::-webkit-scrollbar {
-	width: 15px;
-	background-color: #181818;
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: #181818;
 }
 
 ::-webkit-resizer {
@@ -427,6 +414,54 @@ textarea {
 textarea:focus {
     outline: none !important;
     border: 1px dotted #111 !important;
+}
+
+.pm_left_read {
+    border-radius: 0px !important;
+    border: 1px dotted #444 !important;
+    width: 98% !important;
+    padding: 5px !important;
+    background-color: #2F2F2F !important;
+    color: #CCC !important;
+    float:left !important;
+    text-align:left !important;
+    box-shadow: #222 0px 0px 2px !important;
+}
+
+.pm_left_unread {
+    border-radius: 0px !important;
+    border: 1px dotted #444 !important;
+    width: 98% !important;
+    padding: 5px !important;
+    background-color: #282828 !important;
+    color: #EEE !important;
+    float:left !important;
+    text-align:left !important;
+    box-shadow: #222 0px 0px 2px !important;
+}
+
+.pm_right_read {
+    border-radius: 0px !important;
+    border: 1px dotted #444 !important;
+    width: 98% !important;
+    padding: 5px !important;
+    background-color: #2F2F2F !important;
+    color: #CCC !important;
+    float: right !important;
+    text-align: left !important;
+    box-shadow: #222 0px 0px 2px !important;
+}
+
+.pm_right_unread {
+    border-radius: 0px !important;
+    border: 1px dotted #444 !important;
+    width: 98% !important;
+    padding: 5px !important;
+    background-color: #282828 !important;
+    color: #EEE !important;
+    float:left !important;
+    text-align:left !important;
+    box-shadow: #222 0px 0px 2px !important;
 }
 
 html body {

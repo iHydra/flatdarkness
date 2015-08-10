@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "BETA 0.0.9" !important;
+    content: "BETA 0.1.0" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -383,30 +383,92 @@ div.post_body blockquote cite {
 	margin-bottom: 7px;
 }
 
-#codeBlock1::-webkit-scrollbar-track {
-	background-color: rgba(32, 32, 32, 0.7);
-}
-
-#codeBlock1::-webkit-scrollbar {
+::-webkit-scrollbar {
 	width: 15px;
 	background-color: #181818;
 }
 
-#codeBlock1::-webkit-scrollbar-thumb {
-	background-color: #181818;
+::-webkit-scrollbar-thumb {
+	background-color: #111;
 }
 
-#codeBlock2::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
 	background-color: rgba(32, 32, 32, 0.7);
 }
 
-#codeBlock2::-webkit-scrollbar {
-	width: 15px;
-	background-color: #181818;
+::-webkit-resizer {
+    background-color: #1D1D1D !important;
+    background-image: url(https://i.imgur.com/DgAZaxK.png) !important;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-#codeBlock2::-webkit-scrollbar-thumb {
-	background-color: #181818;
+textarea {
+    background: #222 !important;
+    color: #ccc !important;
+    border: 1px dotted #444 !important;
+    padding: 4px !important;
+    font-size: 14px !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
+textarea:focus {
+    outline: none !important;
+    border: 1px dotted #111 !important;
+}
+
+.pm_left_read {
+    border-radius: 0px !important;
+    border: 1px dotted #444 !important;
+    width: 98% !important;
+    padding: 5px !important;
+    background-color: #2F2F2F !important;
+    color: #CCC !important;
+    float:left !important;
+    text-align:left !important;
+    box-shadow: #222 0px 0px 2px !important;
+}
+
+.pm_left_unread {
+    border-radius: 0px !important;
+    border: 1px dotted #444 !important;
+    width: 98% !important;
+    padding: 5px !important;
+    background-color: #282828 !important;
+    color: #EEE !important;
+    float:left !important;
+    text-align:left !important;
+    box-shadow: #222 0px 0px 2px !important;
+}
+
+.pm_right_read {
+    border-radius: 0px !important;
+    border: 1px dotted #444 !important;
+    width: 98% !important;
+    padding: 5px !important;
+    background-color: #2F2F2F !important;
+    color: #CCC !important;
+    float: right !important;
+    text-align: left !important;
+    box-shadow: #222 0px 0px 2px !important;
+}
+
+.pm_right_unread {
+    border-radius: 0px !important;
+    border: 1px dotted #444 !important;
+    width: 98% !important;
+    padding: 5px !important;
+    background-color: #282828 !important;
+    color: #EEE !important;
+    float:left !important;
+    text-align:left !important;
+    box-shadow: #222 0px 0px 2px !important;
+}
+
+div.error {
+    
 }
 
 html body {

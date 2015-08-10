@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "BETA 0.0.7" !important;
+    content: "BETA 0.1.0" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -409,6 +409,9 @@ textarea {
     border: 1px dotted #444 !important;
     padding: 4px !important;
     font-size: 14px !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
 }
 
 textarea:focus {
@@ -462,6 +465,10 @@ textarea:focus {
     float:left !important;
     text-align:left !important;
     box-shadow: #222 0px 0px 2px !important;
+}
+
+div.error {
+    
 }
 
 html body {

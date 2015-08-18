@@ -1313,6 +1313,10 @@ td .star_rating {
     background: rgba(17,17,17,0.5) !important;
 }
 
+img[src="http://hackforums.net/images/modern_bl/spinner_big.gif"] {
+    content: url(http://i.imgur.com/VGzgfl4.gif) !important;
+}
+
 .editor_control_bar {
     background: #222 !important;
     border: 1px dotted #111 !important;

@@ -1153,6 +1153,39 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     background-color: #724FAD !important;
 }
 
+/** DARK PURPLE THEME **/
+
+.cl-darkpurple td.tcat {
+    background-color: #580584 !important;
+}
+
+.cl-darkpurple a:hover {
+    color: #AD7CFF !important;
+}
+
+.cl-darkpurple input.button:hover, .cl-darkpurple .button2:hover, .cl-darkpurple button2:hover, .cl-darkpurple .button:hover, .cl-darkpurple button:hover, .cl-darkpurple a.bitButton:hover, .cl-darkpurple input.bitButton:hover, .cl-darkpurple span.bitButton:hover {
+    background-color: #580584 !important;
+    border: 0px !important;
+    color: white !important;
+}
+
+.cl-darkpurple td.trow1 strong a:hover {
+    color: #AD7CFF !important;
+}
+
+.cl-darkpurple td.trow2 strong a:hover {
+    color: #AD7CFF !important;
+}
+
+.cl-darkpurple div.float_left.smalltext {
+    color: white !important;
+}
+
+.cl-darkpurple div.menu ul:after {
+    background-color: #580584 !important;
+}
+
+
 /** RED THEME **/
 
 .cl-red td.tcat {
@@ -1188,7 +1221,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 /** DARK RED THEME **/
 
 .cl-darkred td.tcat {
-    background-color: #9e0000 !important;
+    background-color: #701313 !important;
 }
 
 .cl-darkred a:hover {
@@ -1196,7 +1229,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-darkred input.button:hover, .cl-darkred .button2:hover, .cl-darkred button2:hover, .cl-darkred .button:hover, .cl-darkred button:hover, .cl-darkred a.bitButton:hover, .cl-darkred input.bitButton:hover, .cl-darkred span.bitButton:hover {
-    background-color: #9e0000 !important;
+    background-color: #701313 !important;
     border: 0px !important;
     color: white !important;
 }
@@ -1214,7 +1247,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-darkred div.menu ul:after {
-    background-color: #9e0000 !important;
+    background-color: #701313 !important;
 }
 
 /** ------------------------------- **/

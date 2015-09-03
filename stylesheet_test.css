@@ -1185,6 +1185,38 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     background-color: #CB6161 !important;
 }
 
+/** DARK RED THEME **/
+
+.cl-darkred td.tcat {
+    background-color: #9e0000 !important;
+}
+
+.cl-darkred a:hover {
+    color: #FF7B7B !important;
+}
+
+.cl-darkred input.button:hover, .cl-darkred .button2:hover, .cl-darkred button2:hover, .cl-darkred .button:hover, .cl-darkred button:hover, .cl-darkred a.bitButton:hover, .cl-darkred input.bitButton:hover, .cl-darkred span.bitButton:hover {
+    background-color: #9e0000 !important;
+    border: 0px !important;
+    color: white !important;
+}
+
+.cl-darkred td.trow1 strong a:hover {
+    color: #FF7B7B !important;
+}
+
+.cl-darkred td.trow2 strong a:hover {
+    color: #FF7B7B !important;
+}
+
+.cl-darkred div.float_left.smalltext {
+    color: white !important;
+}
+
+.cl-darkred div.menu ul:after {
+    background-color: #9e0000 !important;
+}
+
 /** ------------------------------- **/
 
 .quick_jump, a.quick_jump {
@@ -1643,5 +1675,4 @@ img[src="http://hackforums.net/images/modern_bl/spinner_big.gif"] {
 }
 
 /* End MyBB Editor */
-
 

@@ -692,53 +692,21 @@ span.group3 {
     text-shadow: 1px 1px #000000 !important;
 }
 
-img[src="http://x.hackforums.net/images/modern_bl/starstaff.png"] {
-    content:url(http://i.imgur.com/2dS5exk.png) !important;
-    filter: hue-rotate(15deg) !important;
-}
-
 span.group4 {
     color: #ff3eab !important;
     text-shadow: 1px 1px #000000 !important;
 }
 
-img[src="http://x.hackforums.net/images/modern_bl/staradmin.png"] {
-    -webkit-filter: hue-rotate(35deg) !important;
-    filter: hue-rotate(35deg);
-}
-
-img[src="http://hackforums.net/images/modern_bl/dismiss_notice.gif"] {
-    content: url(http://i.imgur.com/uxvQQDI.png) !important;
-}
-
-img[src="http://x.hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
+img[src$="hackforums.net/images/modern_bl/staradmin.png"] {
     -webkit-filter: hue-rotate(35deg) !important;
     filter: hue-rotate(35deg) !important;
 }
 
-img[src="http://x.hackforums.net/images/modern_bl/add_buddy.gif"] {
-    content:url(http://i.imgur.com/3d5FKNX.png) !important;
+img[src$="hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
+    -webkit-filter: hue-rotate(35deg) !important;
+    filter: hue-rotate(35deg) !important;
 }
 
-img[src="http://x.hackforums.net/images/modern_bl/remove_buddy.gif"] {
-    content:url(http://i.imgur.com/zDwBkq5.png) !important;
-}
-
-img[src="http://x.hackforums.net/images/modern_bl/add_ignore.gif"] {
-    content:url(http://i.imgur.com/u3NZbDu.png) !important;
-}
-
-img[src="http://x.hackforums.net/images/modern_bl/remove_ignore.gif"] {
-    content:url(http://i.imgur.com/zDwBkq5.png) !important;
-}
-
-img[src$="/img/disable.png"] {
-    content: url(http://i.imgur.com/LXGekE9.png) !important;
-}
-
-img[src$="/img/enable.png"] {
-    content: url(http://i.imgur.com/YHDATSF.png) !important;
-}
 /**
 img[src="http://x.hackforums.net/images/modern_bl/folder.gif"] {
     content: url(http://i.imgur.com/BbrrwYq.png) !important;
@@ -792,21 +760,6 @@ li[class="subscription_add"] {
 }
 li[class="subscription_remove"] {
     background: url(http://i.imgur.com/dw4vjon.png) no-repeat 0px 0px !important;
-}
-
-img[src="http://hackforums.net/images/modern_bl/minioff.gif"] {
-    content: url(http://i.imgur.com/AP6vLRo.png) !important;
-    padding-bottom: 2px !important;
-}
-
-img[src="http://hackforums.net/images/modern_bl/miniofflock.gif"] {
-    content: url(http://i.imgur.com/AP6vLRo.png) !important;
-    padding-bottom: 2px !important;
-}
-
-img[src="http://hackforums.net/images/modern_bl/minion.gif"] {
-    content: url(http://i.imgur.com/Wsl1Gfc.png) !important;
-    padding-bottom: 3px !important;
 }
 
 td.thead strong {
@@ -1378,10 +1331,6 @@ td .star_rating {
     background: rgba(17,17,17,0.5) !important;
 }
 
-img[src="http://hackforums.net/images/modern_bl/spinner_big.gif"] {
-    content: url(http://i.imgur.com/y3wDcUA.gif) !important;
-}
-
 .editor_control_bar {
     background: #222 !important;
     border: 1px dotted #111 !important;
@@ -1708,4 +1657,3 @@ img[src="http://hackforums.net/images/modern_bl/spinner_big.gif"] {
 }
 
 /* End MyBB Editor */
-

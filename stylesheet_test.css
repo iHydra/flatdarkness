@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "BETA 0.1.0" !important;
+    content: "BETA 0.1.3" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -1293,7 +1293,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 /** DARK RED THEME **/
 
 .cl-darkred td.tcat {
-    background-color: #641c1c !important;
+    background-color: #682626 !important;
 }
 
 .cl-darkred a:hover {
@@ -1301,7 +1301,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-darkred input.button:hover, .cl-darkred .button2:hover, .cl-darkred button2:hover, .cl-darkred .button:hover, .cl-darkred button:hover, .cl-darkred a.bitButton:hover, .cl-darkred input.bitButton:hover, .cl-darkred span.bitButton:hover {
-    background-color: #641c1c !important;
+    background-color: #682626 !important;
     border: 0px !important;
     color: white !important;
 }
@@ -1319,7 +1319,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-darkred div.menu ul:after {
-    background-color: #641c1c !important;
+    background-color: #682626 !important;
 }
 
 /** ------------------------------- **/

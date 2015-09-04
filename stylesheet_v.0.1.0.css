@@ -335,8 +335,31 @@ img.expander {
     display: none !important;
 }
 
+div.post_content blockquote {
+    background-color: #252525 !important;
+    border-color: #444 !important;
+    border-style: dotted !important;
+    border-width: 1px !important;
+    color: #FFF8F8 !important;
+    margin-bottom: 8px !important;
+    margin-top: 8px !important;
+    padding: 8px !important;
+    box-shadow: #222 0px 0px 2px;
+}
+
+div.post_content blockquote cite {
+    border-color: transparent !important;
+    border-style: solid !important;
+    border-width: 0px !important;
+    color: #CCC !important;
+    font-weight: normal !important;
+    margin-bottom: 5px !important;
+    padding-bottom: 2px !important;
+    border-bottom: 1px dotted #444 !important;
+}
+
 div.post_body blockquote {
-    background-color: #2F2F2F !important;
+    background-color: #252525 !important;
     border-color: #444 !important;
     border-style: dotted !important;
     border-width: 1px !important;
@@ -371,29 +394,29 @@ div.post_body blockquote cite {
 }
 
 .codeblock .title {
-	border-bottom: 0px !important;
-	margin: 0px !important;
+    border-bottom: 0px !important;
+    margin: 0px !important;
 }
 
 .codeblock code {
-	padding-top: 2px;
-	padding-left: 5px;
-	background-color: #222 !important;
-	border: 1px dotted #444;
-	margin-bottom: 7px;
+    padding-top: 2px;
+    padding-left: 5px;
+    background-color: #222 !important;
+    border: 1px dotted #444;
+    margin-bottom: 7px;
 }
 
 ::-webkit-scrollbar {
-	width: 15px;
-	background-color: #181818;
+    width: 15px;
+    background-color: #181818;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #111;
+    background-color: #111;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: rgba(32, 32, 32, 0.7);
+    background-color: rgba(32, 32, 32, 0.7);
 }
 
 ::-webkit-resizer {
@@ -436,7 +459,7 @@ textarea:focus {
     border: 1px dotted #444 !important;
     width: 98% !important;
     padding: 5px !important;
-    background-color: #282828 !important;
+    background-color: #252525 !important;
     color: #EEE !important;
     float:left !important;
     text-align:left !important;
@@ -479,14 +502,6 @@ html body {
 span.active {
     font-size: 12px !important;
     color: #FFFFFF !important;
-}
-
-span.group0 {
-    font-weight: bold !important;
-}
-
-span.group9 {
-    color: #7ef250 !important;
 }
 
 span.pages {
@@ -682,63 +697,35 @@ td.trow1 {
     font-size: 12px !important;
 }
 
-span.group29 {
+.group29 {
     color: #389aff !important;
     text-shadow: none !important;
 }
 
-span.group3 {
+.group3 {
     color: #bf50ff !important;
     text-shadow: 1px 1px #000000 !important;
 }
 
-img[src="http://x.hackforums.net/images/modern_bl/starstaff.png"] {
-    content:url(http://i.imgur.com/2dS5exk.png) !important;
-    filter: hue-rotate(15deg) !important;
-}
-
-span.group4 {
+.group4 {
     color: #ff3eab !important;
     text-shadow: 1px 1px #000000 !important;
 }
 
-img[src="http://x.hackforums.net/images/modern_bl/staradmin.png"] {
-    -webkit-filter: hue-rotate(35deg) !important;
-    filter: hue-rotate(35deg);
+.group0 {
+    font-weight: bold !important;
 }
 
-img[src="http://hackforums.net/images/modern_bl/dismiss_notice.gif"] {
-    content: url(http://i.imgur.com/uxvQQDI.png) !important;
-}
-
-img[src="http://x.hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
+img[src$="hackforums.net/images/modern_bl/staradmin.png"] {
     -webkit-filter: hue-rotate(35deg) !important;
     filter: hue-rotate(35deg) !important;
 }
 
-img[src="http://x.hackforums.net/images/modern_bl/add_buddy.gif"] {
-    content:url(http://i.imgur.com/3d5FKNX.png) !important;
+img[src$="hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
+    -webkit-filter: hue-rotate(35deg) !important;
+    filter: hue-rotate(35deg) !important;
 }
 
-img[src="http://x.hackforums.net/images/modern_bl/remove_buddy.gif"] {
-    content:url(http://i.imgur.com/zDwBkq5.png) !important;
-}
-
-img[src="http://x.hackforums.net/images/modern_bl/add_ignore.gif"] {
-    content:url(http://i.imgur.com/u3NZbDu.png) !important;
-}
-
-img[src="http://x.hackforums.net/images/modern_bl/remove_ignore.gif"] {
-    content:url(http://i.imgur.com/zDwBkq5.png) !important;
-}
-
-img[src$="/img/disable.png"] {
-    content: url(http://i.imgur.com/LXGekE9.png) !important;
-}
-
-img[src$="/img/enable.png"] {
-    content: url(http://i.imgur.com/YHDATSF.png) !important;
-}
 /**
 img[src="http://x.hackforums.net/images/modern_bl/folder.gif"] {
     content: url(http://i.imgur.com/BbrrwYq.png) !important;
@@ -792,21 +779,6 @@ li[class="subscription_add"] {
 }
 li[class="subscription_remove"] {
     background: url(http://i.imgur.com/dw4vjon.png) no-repeat 0px 0px !important;
-}
-
-img[src="http://hackforums.net/images/modern_bl/minioff.gif"] {
-    content: url(http://i.imgur.com/AP6vLRo.png) !important;
-    padding-bottom: 2px !important;
-}
-
-img[src="http://hackforums.net/images/modern_bl/miniofflock.gif"] {
-    content: url(http://i.imgur.com/AP6vLRo.png) !important;
-    padding-bottom: 2px !important;
-}
-
-img[src="http://hackforums.net/images/modern_bl/minion.gif"] {
-    content: url(http://i.imgur.com/Wsl1Gfc.png) !important;
-    padding-bottom: 3px !important;
 }
 
 td.thead strong {
@@ -1025,6 +997,10 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: white !important;
 }
 
+.cl-black a:hover {
+    color: #ccc !important;
+}
+
 /** BLUE THEME **/
 
 .cl-blue td.tcat {
@@ -1055,6 +1031,38 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 .cl-blue div.menu ul:after {
     background-color: #619ECB !important;
+}
+
+/** DARK BLUE THEME **/
+
+.cl-darkblue td.tcat {
+    background-color: #235F8C !important;
+}
+
+.cl-darkblue a:hover {
+    color: #A2D7FF !important;
+}
+
+.cl-darkblue input.button:hover, .cl-darkblue .button2:hover, .cl-darkblue button2:hover, .cl-darkblue .button:hover, .cl-darkblue button:hover, .cl-darkblue a.bitButton:hover, .cl-darkblue input.bitButton:hover, .cl-darkblue span.bitButton:hover {
+    background-color: #235F8C !important;
+    border: 0px !important;
+    color: white !important;
+}
+
+.cl-darkblue td.trow1 strong a:hover {
+    color: #A2D7FF !important;
+}
+
+.cl-darkblue td.trow2 strong a:hover {
+    color: #A2D7FF !important;
+}
+
+.cl-darkblue div.float_left.smalltext {
+    color: white !important;
+}
+
+.cl-darkblue div.menu ul:after {
+    background-color: #235F8C !important;
 }
 
 /** GREEN THEME **/
@@ -1089,6 +1097,38 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     background-color: #7ECB61 !important;
 }
 
+/** DARK GREEN THEME **/
+
+.cl-darkgreen td.tcat {
+    background-color: #35713F !important;
+}
+
+.cl-darkgreen a:hover {
+    color: #A1FB80 !important;
+}
+
+.cl-darkgreen input.button:hover, .cl-darkgreen .button2:hover, .cl-darkgreen button2:hover, .cl-darkgreen .button:hover, .cl-darkgreen button:hover, .cl-darkgreen a.bitButton:hover, .cl-darkgreen input.bitButton:hover, .cl-darkgreen span.bitButton:hover {
+    background-color: #35713F !important;
+    border: 0px !important;
+    color: white !important;
+}
+
+.cl-darkgreen td.trow1 strong a:hover {
+    color: #A1FB80 !important;
+}
+
+.cl-darkgreen td.trow2 strong a:hover {
+    color: #A1FB80 !important;
+}
+
+.cl-darkgreen div.float_left.smalltext {
+    color: white !important;
+}
+
+.cl-darkgreen div.menu ul:after {
+    background-color: #35713F !important;
+}
+
 /** ORANGE THEME **/
 
 .cl-orange td.tcat {
@@ -1119,6 +1159,38 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 .cl-orange div.menu ul:after {
     background-color: #D29C2D !important;
+}
+
+/** DARK ORANGE THEME **/
+
+.cl-darkorange td.tcat {
+    background-color: #9A782E !important;
+}
+
+.cl-darkorange a:hover {
+    color: #FFC144 !important;
+}
+
+.cl-darkorange input.button:hover, .cl-darkorange .button2:hover, .cl-darkorange button2:hover, .cl-darkorange .button:hover, .cl-darkorange button:hover, .cl-darkorange a.bitButton:hover, .cl-darkorange input.bitButton:hover, .cl-darkorange span.bitButton:hover {
+    background-color: #9A782E !important;
+    border: 0px !important;
+    color: white !important;
+}
+
+.cl-darkorange td.trow1 strong a:hover {
+    color: #FFC144 !important;
+}
+
+.cl-darkorange td.trow2 strong a:hover {
+    color: #FFC144 !important;
+}
+
+.cl-darkorange div.float_left.smalltext {
+    color: white !important;
+}
+
+.cl-darkorange div.menu ul:after {
+    background-color: #9A782E !important;
 }
 
 /** PURPLE THEME **/
@@ -1153,6 +1225,39 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     background-color: #724FAD !important;
 }
 
+/** DARK PURPLE THEME **/
+
+.cl-darkpurple td.tcat {
+    background-color: #4d2d5e !important;
+}
+
+.cl-darkpurple a:hover {
+    color: #AD7CFF !important;
+}
+
+.cl-darkpurple input.button:hover, .cl-darkpurple .button2:hover, .cl-darkpurple button2:hover, .cl-darkpurple .button:hover, .cl-darkpurple button:hover, .cl-darkpurple a.bitButton:hover, .cl-darkpurple input.bitButton:hover, .cl-darkpurple span.bitButton:hover {
+    background-color: #4d2d5e !important;
+    border: 0px !important;
+    color: white !important;
+}
+
+.cl-darkpurple td.trow1 strong a:hover {
+    color: #AD7CFF !important;
+}
+
+.cl-darkpurple td.trow2 strong a:hover {
+    color: #AD7CFF !important;
+}
+
+.cl-darkpurple div.float_left.smalltext {
+    color: white !important;
+}
+
+.cl-darkpurple div.menu ul:after {
+    background-color: #4d2d5e !important;
+}
+
+
 /** RED THEME **/
 
 .cl-red td.tcat {
@@ -1183,6 +1288,38 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 .cl-red div.menu ul:after {
     background-color: #CB6161 !important;
+}
+
+/** DARK RED THEME **/
+
+.cl-darkred td.tcat {
+    background-color: #641c1c !important;
+}
+
+.cl-darkred a:hover {
+    color: #FF7B7B !important;
+}
+
+.cl-darkred input.button:hover, .cl-darkred .button2:hover, .cl-darkred button2:hover, .cl-darkred .button:hover, .cl-darkred button:hover, .cl-darkred a.bitButton:hover, .cl-darkred input.bitButton:hover, .cl-darkred span.bitButton:hover {
+    background-color: #641c1c !important;
+    border: 0px !important;
+    color: white !important;
+}
+
+.cl-darkred td.trow1 strong a:hover {
+    color: #FF7B7B !important;
+}
+
+.cl-darkred td.trow2 strong a:hover {
+    color: #FF7B7B !important;
+}
+
+.cl-darkred div.float_left.smalltext {
+    color: white !important;
+}
+
+.cl-darkred div.menu ul:after {
+    background-color: #641c1c !important;
 }
 
 /** ------------------------------- **/
@@ -1298,3 +1435,344 @@ td .star_rating {
     padding-right: 5px !important;
     padding-top: 3px !important;
 }
+
+#spinner {
+    border: 1px solid #666 !important;
+    color: #CCC !important;
+    position: absolute !important;
+    z-index: 1000 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    font-size: 13px !important;
+    width: 150px !important;
+    height: auto !important;
+    padding: 5px !important;
+    background: rgba(17,17,17,0.5) !important;
+}
+
+.editor_control_bar {
+    background: #222 !important;
+    border: 1px dotted #111 !important;
+    width: auto !important;
+    display: inline-block !important;
+    text-align: left !important;
+    float: right !important;
+    margin-right: 17px !important;
+}
+
+/* MyBB Editor */
+
+.messageEditor {
+    background: #f5f5f5;
+    border: 1px solid #aaa;
+    padding: 3px;
+}
+
+.messageEditor .toolbar_container {
+    height: 28px;
+    padding: 2px;
+}
+
+.toolbar {
+    height: 28px;
+}
+
+.messageEditor .toolbar_dropdown {
+    margin-top: 3px;
+    margin-right: 4px;
+}
+
+.messageEditor .toolbar_button {
+    margin: 2px;
+    height: 22px;
+    width: 23px;
+    float: left;
+    display: block;
+    z-index: 1;
+}
+
+.messageEditor .toolbar_button img, .messageEditor .toolbar_button span {
+    width: 23px;
+    height: 22px;
+    float: left;
+}
+
+.messageEditor .toolbar_sprite {
+    display: block;
+    background: url('images/toolbar.gif') no-repeat;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_italic {
+    background-position: -46px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_underline {
+    background-position: -23px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_align_left {
+    background-position: -69px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_align_center {
+    background-position: -92px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_align_right {
+    background-position: -115px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_align_justify {
+    background-position: -138px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_list_num {
+    background-position: -161px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_list_bullet {
+    background-position: -184px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_image {
+    background-position: -207px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_link {
+    background-position: -230px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_email {
+    background-position: -253px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_quote {
+    background-position: -276px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_code {
+    background-position: -299px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_php {
+    background-position: -322px 0;
+}
+
+.messageEditor .toolbar_button_close_tags {
+    width: 90px;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_close_tags {
+    width: 87px;
+    background-position: -345px 0;
+}
+
+.messageEditor .toolbar_normal {
+    background: #f5f5f5;
+    border: 1px solid #f5f5f5;
+}
+
+.messageEditor .toolbar_hover {
+    background: #c1d2ee;
+    border: 1px solid #5296f7;
+}
+
+.messageEditor .toolbar_clicked {
+    background: #e1F2fe;
+    border: 1px solid #5296f7;
+}
+
+.messageEditor .toolbar_sep {
+    background: url('images/separator.gif');
+    width: 4px;
+    height: 23px;
+    margin: 2px;
+    margin-top: 4px;
+    float: left;
+}
+
+.messageEditor .toolbar_dropdown, .messageEditor .toolbar_dropdown_image {
+    font-size: 11px;
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 100;
+    cursor: default;
+}
+
+.messageEditor .toolbar_dropdown {
+    min-width: 130px;
+}
+
+/* IE 6 */
+.messageEditor .toolbar_dropdown {
+    width: 130px;
+}
+
+.messageEditor .toolbar_dropdown .editor_dropdown_label, .messageEditor .toolbar_dropdown_image .editor_dropdown_label {
+    display: block;
+}
+
+.messageEditor .toolbar_dropdown .editor_dropdown_label {
+    min-width: 120px;
+    background: #fff;
+    padding: 3px 4px;
+    margin-right: 14px;
+    border: 1px solid #aaa;
+    border-right: 0;
+    height: 14px;
+    overflow: hidden;
+}
+
+.messageEditor .toolbar_dropdown .editor_dropdown_arrow, .messageEditor .toolbar_dropdown_image .editor_dropdown_arrow {
+    top: 0;
+    position: absolute;
+    right: 0;
+    float: left;
+    display: block;
+    height: 20px;
+    border: 1px solid #aaa;
+    background: #efefef url(images/dropdown.gif) no-repeat center center;
+    width: 12px;
+}
+
+.messageEditor .toolbar_dropdown_over .editor_dropdown_label, .messageEditor .editor_dropdown_menu_open .editor_dropdown_label {
+    border-color: #5296f7;
+    color: navy;
+}
+
+.messageEditor .toolbar_dropdown_over .editor_dropdown_arrow {
+    background-color: #c1d2ee;
+    border-color: #5296f7;
+}
+
+.messageEditor .toolbar_dropdown_image.toolbar_dropdown_over .editor_dropdown_label,
+.messageEditor .toolbar_dropdown_image.toolbar_dropdown_over .editor_dropdown_arrow {
+    background-color: #fff;
+}
+
+.messageEditor .editor_dropdown_menu_open .editor_dropdown_arrow {
+    background-color: #c1d2ee;
+    border-color: #5296f7;
+}
+
+.messageEditor .editor_dropdown_menu {
+    margin: 0;
+    padding: 0;
+    margin-top: -3px;
+    padding-bottom: 1px;
+    top: 24px;
+    left: 0;
+    border: 1px solid #5296f7;
+    position: absolute;
+    width: 160px;
+    background: #fff;
+    z-index: 10000;
+    max-height: 200px;
+    overflow: auto;
+    -moz-border-radius: 2px;
+}
+
+.messageEditor .toolbar_dropdown_image .editor_dropdown_menu {
+    margin-top: -1px;
+}
+
+.messageEditor .editor_dropdown_menu li {
+    list-style: none;
+    padding: 3px 3px 3px 12px;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.messageEditor .editor_dropdown_menu li.editor_dropdown_menu_item_active {
+    background-image: url(images/dropdown2.gif);
+    background-repeat: no-repeat;
+    background-position: 2px center;    
+}
+
+.messageEditor .editor_dropdown_menu_title {
+    background: #efefef;
+    padding-left: 3px;
+    border-bottom: 1px solid #aaa;
+    color: #999;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.messageEditor .editor_dropdown_menu li.editor_dropdown_menu_item_over {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.messageEditor .toolbar_button_color .editor_dropdown_menu {
+    width: 153px;
+    height: 98px;   
+    padding: 1px;
+    background: #EFEFEF;
+    margin-left: -1px;
+}
+
+.messageEditor .toolbar_button_color li.editor_dropdown_color_item {
+    float: left;
+    padding: 3px;
+    margin: 1px;
+    width: 11px;
+    height: 11px;
+}
+
+.messageEditor .toolbar_button_color a {
+    width: 9px;
+    height: 9px;
+    display: block;
+    border: 1px solid #FFF;
+}
+
+.messageEditor .toolbar_button_color li.editor_dropdown_menu_item_active {
+    background: #81A2C4;
+}
+
+.messageEditor .toolbar_button_color {
+    position: relative;
+}
+
+.messageEditor .toolbar_button_video {
+    position: relative;
+}
+
+.messageEditor .editor_button_color_selected {
+    position: absolute;
+    z-index: 100;
+    width: 16px;
+    height: 4px;
+    top: 15px;
+    left: 3px;
+    display: block;
+    background: transparent;
+}
+
+.messageEditor .toolbar_button_color li.editor_dropdown_menu_item_over {
+    border: 1px solid #5296f7;
+    background: transparent;
+    margin: 0px;    
+}
+
+.messageEditor .toolbar_button_with_arrow {
+    width: 34px;
+}
+
+.messageEditor .toolbar_button_arrow {
+    top: 0px;
+    float: left;
+    display: block;
+    width: 8px;
+    background: url(images/dropdown.gif) no-repeat center center;
+    height: 20px;
+    border: 1px solid transparent;
+}
+
+.messageEditor .toolbar_hover .toolbar_button_arrow, .messageEditor .toolbar_clicked .toolbar_button_arrow {
+    border-left-color: #5296f7;
+}
+
+/* End MyBB Editor */

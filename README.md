@@ -1,2 +1,2 @@
-# flatdarkness
-HF Custom Theme - Flat Darkness - Userscript
+# Flat Darkness
+Hack Forums Custom Theme - Flat Darkness - Userscript

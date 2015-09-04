@@ -504,14 +504,6 @@ span.active {
     color: #FFFFFF !important;
 }
 
-span.group0 {
-    font-weight: bold !important;
-}
-
-span.group9 {
-    color: #7ef250 !important;
-}
-
 span.pages {
     font-weight: normal !important;
     margin-right: 20px !important;
@@ -705,19 +697,23 @@ td.trow1 {
     font-size: 12px !important;
 }
 
-span.group29 {
+.group29 {
     color: #389aff !important;
     text-shadow: none !important;
 }
 
-span.group3 {
+.group3 {
     color: #bf50ff !important;
     text-shadow: 1px 1px #000000 !important;
 }
 
-span.group4 {
+.group4 {
     color: #ff3eab !important;
     text-shadow: 1px 1px #000000 !important;
+}
+
+.group0 {
+    font-weight: bold !important;
 }
 
 img[src$="hackforums.net/images/modern_bl/staradmin.png"] {
@@ -1001,6 +997,10 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: white !important;
 }
 
+.cl-black a:hover {
+    color: #ccc !important;
+}
+
 /** BLUE THEME **/
 
 .cl-blue td.tcat {
@@ -1031,6 +1031,38 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 .cl-blue div.menu ul:after {
     background-color: #619ECB !important;
+}
+
+/** DARK BLUE THEME **/
+
+.cl-darkblue td.tcat {
+    background-color: #235F8C !important;
+}
+
+.cl-darkblue a:hover {
+    color: #A2D7FF !important;
+}
+
+.cl-darkblue input.button:hover, .cl-darkblue .button2:hover, .cl-darkblue button2:hover, .cl-darkblue .button:hover, .cl-darkblue button:hover, .cl-darkblue a.bitButton:hover, .cl-darkblue input.bitButton:hover, .cl-darkblue span.bitButton:hover {
+    background-color: #235F8C !important;
+    border: 0px !important;
+    color: white !important;
+}
+
+.cl-darkblue td.trow1 strong a:hover {
+    color: #A2D7FF !important;
+}
+
+.cl-darkblue td.trow2 strong a:hover {
+    color: #A2D7FF !important;
+}
+
+.cl-darkblue div.float_left.smalltext {
+    color: white !important;
+}
+
+.cl-darkblue div.menu ul:after {
+    background-color: #235F8C !important;
 }
 
 /** GREEN THEME **/
@@ -1065,6 +1097,38 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     background-color: #7ECB61 !important;
 }
 
+/** DARK GREEN THEME **/
+
+.cl-darkgreen td.tcat {
+    background-color: #35713F !important;
+}
+
+.cl-darkgreen a:hover {
+    color: #A1FB80 !important;
+}
+
+.cl-darkgreen input.button:hover, .cl-darkgreen .button2:hover, .cl-darkgreen button2:hover, .cl-darkgreen .button:hover, .cl-darkgreen button:hover, .cl-darkgreen a.bitButton:hover, .cl-darkgreen input.bitButton:hover, .cl-darkgreen span.bitButton:hover {
+    background-color: #35713F !important;
+    border: 0px !important;
+    color: white !important;
+}
+
+.cl-darkgreen td.trow1 strong a:hover {
+    color: #A1FB80 !important;
+}
+
+.cl-darkgreen td.trow2 strong a:hover {
+    color: #A1FB80 !important;
+}
+
+.cl-darkgreen div.float_left.smalltext {
+    color: white !important;
+}
+
+.cl-darkgreen div.menu ul:after {
+    background-color: #35713F !important;
+}
+
 /** ORANGE THEME **/
 
 .cl-orange td.tcat {
@@ -1095,6 +1159,38 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 .cl-orange div.menu ul:after {
     background-color: #D29C2D !important;
+}
+
+/** DARK ORANGE THEME **/
+
+.cl-darkorange td.tcat {
+    background-color: #9A782E !important;
+}
+
+.cl-darkorange a:hover {
+    color: #FFC144 !important;
+}
+
+.cl-darkorange input.button:hover, .cl-darkorange .button2:hover, .cl-darkorange button2:hover, .cl-darkorange .button:hover, .cl-darkorange button:hover, .cl-darkorange a.bitButton:hover, .cl-darkorange input.bitButton:hover, .cl-darkorange span.bitButton:hover {
+    background-color: #9A782E !important;
+    border: 0px !important;
+    color: white !important;
+}
+
+.cl-darkorange td.trow1 strong a:hover {
+    color: #FFC144 !important;
+}
+
+.cl-darkorange td.trow2 strong a:hover {
+    color: #FFC144 !important;
+}
+
+.cl-darkorange div.float_left.smalltext {
+    color: white !important;
+}
+
+.cl-darkorange div.menu ul:after {
+    background-color: #9A782E !important;
 }
 
 /** PURPLE THEME **/
@@ -1132,7 +1228,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 /** DARK PURPLE THEME **/
 
 .cl-darkpurple td.tcat {
-    background-color: #580584 !important;
+    background-color: #4d2d5e !important;
 }
 
 .cl-darkpurple a:hover {
@@ -1140,7 +1236,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-darkpurple input.button:hover, .cl-darkpurple .button2:hover, .cl-darkpurple button2:hover, .cl-darkpurple .button:hover, .cl-darkpurple button:hover, .cl-darkpurple a.bitButton:hover, .cl-darkpurple input.bitButton:hover, .cl-darkpurple span.bitButton:hover {
-    background-color: #580584 !important;
+    background-color: #4d2d5e !important;
     border: 0px !important;
     color: white !important;
 }
@@ -1158,7 +1254,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-darkpurple div.menu ul:after {
-    background-color: #580584 !important;
+    background-color: #4d2d5e !important;
 }
 
 
@@ -1197,7 +1293,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 /** DARK RED THEME **/
 
 .cl-darkred td.tcat {
-    background-color: #701313 !important;
+    background-color: #641c1c !important;
 }
 
 .cl-darkred a:hover {
@@ -1205,7 +1301,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-darkred input.button:hover, .cl-darkred .button2:hover, .cl-darkred button2:hover, .cl-darkred .button:hover, .cl-darkred button:hover, .cl-darkred a.bitButton:hover, .cl-darkred input.bitButton:hover, .cl-darkred span.bitButton:hover {
-    background-color: #701313 !important;
+    background-color: #641c1c !important;
     border: 0px !important;
     color: white !important;
 }
@@ -1223,7 +1319,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-darkred div.menu ul:after {
-    background-color: #701313 !important;
+    background-color: #641c1c !important;
 }
 
 /** ------------------------------- **/

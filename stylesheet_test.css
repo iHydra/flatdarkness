@@ -358,6 +358,29 @@ div.post_content blockquote cite {
     border-bottom: 1px dotted #444 !important;
 }
 
+div.post_body blockquote {
+    background-color: #252525 !important;
+    border-color: #444 !important;
+    border-style: dotted !important;
+    border-width: 1px !important;
+    color: #FFF8F8 !important;
+    margin-bottom: 8px !important;
+    margin-top: 8px !important;
+    padding: 8px !important;
+    box-shadow: #222 0px 0px 2px;
+}
+
+div.post_body blockquote cite {
+    border-color: transparent !important;
+    border-style: solid !important;
+    border-width: 0px !important;
+    color: #CCC !important;
+    font-weight: normal !important;
+    margin-bottom: 5px !important;
+    padding-bottom: 2px !important;
+    border-bottom: 1px dotted #444 !important;
+}
+
 .codeblock {
     background-color: #2F2F2F !important;
     border-color: #444 !important;

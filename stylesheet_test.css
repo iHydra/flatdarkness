@@ -1460,6 +1460,10 @@ td .star_rating {
     margin-right: 17px !important;
 }
 
+.repbox {
+    background-color: #252525 !important;
+}
+
 /* MyBB Editor */
 
 .messageEditor {

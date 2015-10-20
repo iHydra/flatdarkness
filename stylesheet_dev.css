@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "v1.5.0" !important;
+    content: "DEV v1.5.0" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -382,7 +382,7 @@ div.post_body blockquote cite {
 }
 
 .codeblock {
-    background-color: #2F2F2F !important;
+    background-color: #2B2B2B !important;
     border-color: #444 !important;
     border-style: dotted !important;
     border-width: 1px !important;

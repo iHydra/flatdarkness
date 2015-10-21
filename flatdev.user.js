@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.0d
+// @version       1.5.1a
 // @description   Custom theme for Hack Forums. Base theme by Sasori.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
@@ -10,7 +10,7 @@
 // @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdev.user.js
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_dev.css?v=0519
+// @resource      MainCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_dev.css?v=07316
 // @resource      HLCSS https://github.com/isagalaev/highlight.js/raw/master/src/styles/monokai_sublime.css 
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
@@ -174,7 +174,7 @@ $(document).ready(function () {
       $('strong[class="reputation_negative"]:contains("Negatives")').remove(); // Legend Text Remove
       $('span[class="smalltext"]:contains("Total Reputation:")').find("br").remove(); // Received Rep Boxes Layout
       $('strong:contains("Total Reputation:")').before("<br/><br/>"); // Received Rep Boxes Layout
-      $('span[class="repbox _plus"]').after("<br/><br/>"); // Received Rep Boxes Layout
+      $('span[class^="repbox"]').after("<br/><br/>"); // Received Rep Boxes Layout
   }
 
   $('img[src$="hackforums.net/images/modern_bl/groupimages/english/ub3r.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Userbar Color Change

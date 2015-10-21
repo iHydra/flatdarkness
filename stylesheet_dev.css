@@ -669,7 +669,7 @@ div.smalltext {
 }
 
 td.trow2 {
-    background-color: #333333 !important;
+    background-color: #333333;
     border-bottom: 1px solid #262626 !important;
     border-radius: 0px !important;
     margin-top: 0 !important;
@@ -688,11 +688,6 @@ td.trow1 {
     border-radius: 0px !important;
     padding: 10px !important;
     font-size: 12px !important;
-}
-
-.group29 {
-    color: #389aff !important;
-    text-shadow: none !important;
 }
 
 .group3 {
@@ -781,7 +776,7 @@ td.thead strong {
 }
 
 td.tcat {
-    background-color: #393939 !important;
+    background-color: #393939;
     background-image: none !important;
     border: none !important;
     border-radius: 0px !important;
@@ -792,6 +787,10 @@ td.tcat {
     padding-top: 10px !important;
     padding-left: 11px !important;
     padding-bottom: 10px !important;
+}
+
+.trow_selected td {
+    background: #E91E63;
 }
 
 td.thead {

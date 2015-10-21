@@ -790,7 +790,7 @@ td.tcat {
 }
 
 .trow_selected td {
-    background: #E91E63;
+    background: #E91E63 !important;
 }
 
 td.thead {

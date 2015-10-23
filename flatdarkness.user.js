@@ -10,7 +10,7 @@
 // @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdarkness.user.js
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_1.5.0.css
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_1.5.1.css
 // @resource      HLCSS https://github.com/isagalaev/highlight.js/raw/master/src/styles/monokai_sublime.css 
 // @grant         GM_addStyle
 // @grant         GM_getResourceText

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.1a
+// @version       1.5.1b
 // @description   Custom theme for Hack Forums. Base theme by Sasori.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*

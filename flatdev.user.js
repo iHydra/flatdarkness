@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.1a
+// @version       1.5.1
 // @description   Custom theme for Hack Forums. Base theme by Sasori.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
@@ -21,31 +21,8 @@
 // You can change Highlighter Theme: https://github.com/isagalaev/highlight.js/tree/master/src/styles || Demo of Themes: https://highlightjs.org/static/demo/
 // You can change the preview button shortcut key if you scroll down to USER EDITING.
 
-/*
- * Copyright (c) 2011 Pete Boere (the-echoplex.net)
- * Free under terms of the MIT license: http://www.opensource.org/licenses/mit-license.php
- */
-
-(function ($) {
-  $.fn.alterClass = function (removals, additions) {
-    var self = this;
-    if (removals.indexOf('*') === - 1) {
-      self.removeClass(removals);
-      return !additions ? self : self.addClass(additions);
-    }
-    var patt = new RegExp('\\s' +
-    removals.replace(/\*/g, '[A-Za-z0-9-_]+').split(' ').join('\\s|\\s') +
-    '\\s', 'g');
-    self.each(function (i, it) {
-      var cn = ' ' + it.className + ' ';
-      while (patt.test(cn)) {
-        cn = cn.replace(patt, ' ');
-      }
-      it.className = $.trim(cn);
-    });
-    return !additions ? self : self.addClass(additions);
-  };
-}) (jQuery);
+// Copyright (c) 2011 Pete Boere (the-echoplex.net) Free under terms of the MIT license: http://www.opensource.org/licenses/mit-license.php
+!function(s){s.fn.alterClass=function(a,e){var r=this;if(-1===a.indexOf("*"))return r.removeClass(a),e?r.addClass(e):r;var n=new RegExp("\\s"+a.replace(/\*/g,"[A-Za-z0-9-_]+").split(" ").join("\\s|\\s")+"\\s","g");return r.each(function(a,e){for(var r=" "+e.className+" ";n.test(r);)r=r.replace(n," ");e.className=s.trim(r)}),e?r.addClass(e):r}}(jQuery);
 
 var MainCSS = GM_getResourceText('MainCSS');
 GM_addStyle(MainCSS);
@@ -56,8 +33,11 @@ GM_addStyle(HLCSS);
  * USER EDITING
  */
 
+var showLogo = false; // true to show logo, false to hide logo
+var enableNSFW = false; // true to enable NSFW, false to disable NSFW (Not Safe For Work)
+
 $(document).ready(function () {
-     $('.button2[name="previewpost"]').attr('accesskey', 'w'); // CHANGE "W" TO KEY YOU PREFER - Chrome Only                  
+     $('.button2[name="previewpost"]').attr('accesskey', 'w'); // CHANGE "w" TO KEY YOU PREFER - Chrome Only                  
 });
 
 /*
@@ -98,6 +78,13 @@ $(window).load(function () { // Theme Color Scheme Changer
     localStorage.setItem('theme', cl);
   });
 });
+
+/** START SETTINGS PANEL **/
+
+        // TBA
+
+/** END SETTINGS PANEL **/
+
 
 /** Custom Functions **/
 
@@ -152,16 +139,16 @@ $(document).ready(function () {
       $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', ''); // Online Status
       $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', ''); // Offline Status  
   }else if(window.location.href == "http://hackforums.net/usercp.php?action=editlists"){
-      $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', ''); // Away Status
-      $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', ''); // Online Status
-      $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', ''); // Offline Status  
+      $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', 'vertical-align: top;'); // Away Status
+      $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', 'vertical-align: top;'); // Online Status
+      $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', 'vertical-align: top;'); // Offline Status  
   }else{
       $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', 'position: absolute; padding-top: 4px;'); // Away Status
       $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', 'position: absolute; padding-top: 4px;'); // Online Status
       $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', 'position: absolute; padding-top: 4px;'); // Offline Status
   }
 
-  if(window.location.href == "http://hackforums.net/gauth.php"){
+  if(window.location.pathname == "/gauth.php"){
       $('span[class="float_right smalltext"]').attr('style','display: block !important'); // Gauth Reset Link Reveal
   }
     
@@ -176,7 +163,17 @@ $(document).ready(function () {
       $('strong:contains("Total Reputation:")').before("<br/><br/>"); // Received Rep Boxes Layout
       $('span[class^="repbox"]').after("<br/><br/>"); // Received Rep Boxes Layout
   }
-
+  
+  if(showLogo == true){ // Show Logo
+      $('img[src$="http://hackforums.net/images/modern_bl/logo_bl.gif"]').attr('src', 'http://i.imgur.com/fAzkq6w.png');
+      $('div[class="logo"]').removeClass("logo").attr('style','text-align:center');
+  }
+  
+  if(enableNSFW == true) { // Enable Not-Safe-For-Work
+      $('div[style="overflow:hidden; max-height:200px;"] img').attr('style','display:none;');
+      $('td[class="post_avatar"]').attr('style','display:none;');  
+  }    
+    
   $('img[src$="hackforums.net/images/modern_bl/groupimages/english/ub3r.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Userbar Color Change
   $('img[src$="hackforums.net/images/modern_bl/starub3r2.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Stars Color Change
   $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color

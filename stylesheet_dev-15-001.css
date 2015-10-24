@@ -374,8 +374,8 @@ div.post_body blockquote cite {
     border-color: transparent !important;
     border-style: solid !important;
     border-width: 0px !important;
-    color: #CCC !important;
-    font-weight: normal !important;
+    color: #CCC;
+    font-weight: normal;
     margin-bottom: 5px !important;
     padding-bottom: 2px !important;
     border-bottom: 1px dotted #444 !important;

@@ -1446,7 +1446,6 @@ td .star_rating {
     background: #222 !important;
     border: 1px dotted #111 !important;
     width: auto !important;
-    display: inline-block !important;
     text-align: left !important;
     float: right !important;
     margin-right: 17px !important;

@@ -1455,6 +1455,10 @@ td .star_rating {
     background-color: #252525 !important;
 }
 
+.mQ {
+    background-color: #6DB547;
+}
+
 /* MyBB Editor */
 
 .messageEditor {

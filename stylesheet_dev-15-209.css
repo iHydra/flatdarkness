@@ -1460,7 +1460,7 @@ td .star_rating {
 }
 
 .sigReveal {
-    display: inline;
+    display: inline !important;
 }
 
 /* MyBB Editor */

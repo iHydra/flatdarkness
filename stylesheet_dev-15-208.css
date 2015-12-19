@@ -1459,6 +1459,10 @@ td .star_rating {
     background-color: #6DB547;
 }
 
+.sigReveal {
+    display: inline;
+}
+
 /* MyBB Editor */
 
 .messageEditor {

@@ -1463,6 +1463,10 @@ td .star_rating {
     display: inline !important;
 }
 
+.sigResize {
+    max-height: 220px !important;
+}
+
 /* MyBB Editor */
 
 .messageEditor {

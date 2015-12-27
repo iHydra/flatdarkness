@@ -1,17 +1,17 @@
 // ==UserScript==
 // @name          Flat Darkness - Stable
 // @namespace     https://github.com/iHydra
-// @version       1.5.2
+// @version       1.5.3
 // @description   Custom theme for Hack Forums. Base theme by Sasori.
-// @include       http://www.hackforums.net/*
-// @include       http://hackforums.net/*
+// @match         http://www.hackforums.net/*
+// @match         http://hackforums.net/*
 // @author        iHydra/Kondax/Sasori
 // @updateURL     https://github.com/iHydra/flatdarkness/raw/master/flatdarkness.meta.js
 // @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdarkness.user.js
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_1.5.1.css
-// @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css 
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_1.5.3.css
+// @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
 // @run-at        document-start
@@ -33,150 +33,155 @@ GM_addStyle(HLCSS);
  * USER EDITING
  */
 
+var userColor = "#00ffd2"; // Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
 var showLogo = false; // true to show logo, false to hide logo
-var enableNSFW = false; // true to enable NSFW, false to disable NSFW (Not Safe For Work)
-
-$(document).ready(function () {
-     $('.button2[name="previewpost"]').attr('accesskey', 'w'); // CHANGE "w" TO KEY YOU PREFER - Chrome Only                  
-});
+var enableSFW = false; // true to enable SFW, false to disable SFW (Safe For Work)
+var previewKey = 'w'; // ALT + {KEY} for Chrome || ALT + SHIFT + {KEY} for Firefox - More Info: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey
 
 /*
- * END OF USER EDITING
+ * END USER EDITING
  */
 
 $(window).load(function () { // Theme Color Scheme Changer
-  var cp = $('<div class=\'cp\'/>');
-  var select = $('<div class=\'select\'/>');
-  $('body').append(cp, select);
-  var colours = {
-    'black': '#393939',
-    'blue': '#619ECB',
-    'green': '#7ECB61',
-    'orange': '#D29C2D',
-    'purple': '#724FAD',
-    'red': '#CB6161',
-    'darkblue': '#00528f',
-    'darkgreen': '#35713F',
-    'darkorange': '#9A782E',
-    'darkpurple': '#4D2D5E',
-    'darkred': '#641C1C'
-  };
-  if (!localStorage.getItem('theme'))
-  localStorage.setItem('theme', 'cl-' + Object.keys(colours) [0]);
-  $('body').addClass(localStorage.getItem('theme') ? localStorage.getItem('theme')  : 'cl-' + Object.keys(colours) [0]);
-  $('.cp').css('background', colours[$('body').attr('class').split(' ') [0].substring(3, $('body').attr('class').split(' ') [0].length)]);
-  $.each(colours, function (key, value) {
-    select.append($('<div class=\'part\' style=\'background: ' + value + ' !important;\' cid=\'' + key + '\'/>'));
-  });
-  $('.cp').click(function () {
-    $('.select').toggleClass('show');
-  });
-  $('.part').click(function () {
-    var cl = 'cl-' + $(this).attr('cid');
-    $('.cp').css('background', colours[$(this).attr('cid')]);
-    $('body').alterClass('cl-*', cl);
-    localStorage.setItem('theme', cl);
-  });
+    var cp = $('<div class=\'cp\'/>');
+    var select = $('<div class=\'select\'/>');
+    $('body').append(cp, select);
+    var colours = {
+        'black': '#393939',
+        'blue': '#619ECB',
+        'green': '#7ECB61',
+        'orange': '#D29C2D',
+        'purple': '#724FAD',
+        'red': '#CB6161',
+        'darkblue': '#00528f',
+        'darkgreen': '#35713F',
+        'darkorange': '#9A782E',
+        'darkpurple': '#4D2D5E',
+        'darkred': '#641C1C'
+    };
+    if (!localStorage.getItem('theme'))
+        localStorage.setItem('theme', 'cl-' + Object.keys(colours) [0]);
+    $('body').addClass(localStorage.getItem('theme') ? localStorage.getItem('theme')  : 'cl-' + Object.keys(colours) [0]);
+    $('.cp').css('background', colours[$('body').attr('class').split(' ') [0].substring(3, $('body').attr('class').split(' ') [0].length)]);
+    $.each(colours, function (key, value) {
+        select.append($('<div class=\'part\' style=\'background: ' + value + ' !important;\' cid=\'' + key + '\'/>'));
+    });
+    $('.cp').click(function () {
+        $('.select').toggleClass('show');
+    });
+    $('.part').click(function () {
+        var cl = 'cl-' + $(this).attr('cid');
+        $('.cp').css('background', colours[$(this).attr('cid')]);
+        $('body').alterClass('cl-*', cl);
+        localStorage.setItem('theme', cl);
+    });
 });
 
 /** START SETTINGS PANEL **/
 
-        // TBA
+// TBA
 
 /** END SETTINGS PANEL **/
 
 
 /** Custom Functions **/
 
-  $(document).ready(function() { // Highlight Syntax
-  $('code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
+$(document).ready(function() { 
+    $('code').each(function(i, block) { // Highlight Syntax
+        hljs.highlightBlock(block);
+    });   
 });
-
-copyLink = function (element) { // Working on adding a copy url for Post # links
-    var $temp = $("<input />");
-    $("body").append($temp);
-    $temp.val($(element).attr('href')).select();
-    var result = false;
-    try {
-        result = document.execCommand("copy");
-        console.log("Copy Success? " + result);
-    } catch (err) {
-        console.log("Copy error: " + err);
-    }
-
-    $temp.remove();
-    return result;
-}
 
 
 /*
  * CSS Modification (jQuery/jS for multi-browser support)
  */
+ 
 
 $(document).ready(function () {
-  $('img[src$="hackforums.net/images/modern_bl/starstaff.png"]').attr('style', 'filter: hue-rotate(5deg) saturate(8); -webkit-filter: hue-rotate(5deg) saturate(8)'); // Staff Stars Color Change
-  $('img[src$="hackforums.net/images/modern_bl/dismiss_notice.gif"]').attr('src', 'http://i.imgur.com/uxvQQDI.png'); // PM Notif Dismiss Icon
-  $('img[src$="hackforums.net/images/modern_bl/add_buddy.gif"]').attr('src', 'http://i.imgur.com/3d5FKNX.png'); // Add Buddy Icon
-  $('img[src$="hackforums.net/images/modern_bl/remove_buddy.gif"]').attr('src', 'http://i.imgur.com/zDwBkq5.png'); // Remove Buddy Icon
-  $('img[src$="hackforums.net/images/modern_bl/add_ignore.gif"]').attr('src', 'http://i.imgur.com/u3NZbDu.png'); // Add Ignore Icon
-  $('img[src$="hackforums.net/images/modern_bl/remove_ignore.gif"]').attr('src', 'http://i.imgur.com/zDwBkq5.png'); // Remove Ignore Icon
-  $('img[src$="/img/disable.png"]').attr('src', 'http://i.imgur.com/LXGekE9.png'); // Disable icon for multi-page loader userscript(not included)
-  $('img[src$="/img/enable.png"]').attr('src', 'http://i.imgur.com/YHDATSF.png'); // Enable icon for multi-page loader userscript(not included)
-  $('img[src$="hackforums.net/images/modern_bl/minioff.gif"]').attr('src', 'http://i.imgur.com/AP6vLRo.png').attr('style', 'padding-bottom: 2px;'); // No Posts SF Icon
-  $('img[src$="hackforums.net/images/modern_bl/miniofflock.gif"]').attr('src', 'http://i.imgur.com/AP6vLRo.png').attr('style', 'padding-bottom: 2px;'); // No Posts SF Icon Locked
-  $('img[src$="hackforums.net/images/modern_bl/minion.gif"]').attr('src', 'http://i.imgur.com/Wsl1Gfc.png').attr('style', 'padding-bottom: 3px;'); // New Posts SF icon
-  $('img[src$="http://hackforums.net/images/modern_bl/spinner_big.gif"]').attr('src', 'http://i.imgur.com/y3wDcUA.gif'); // Quick Reply Spinner Change
-  $('span:contains("Moderated")').addClass('sevenpad'); // Padding fix
-  $('link[href*="star_ratings"]').remove(); // Star Ratings Change
-  $('#pm_notice').removeClass('pm_alert').addClass('pm_alert2'); // Group vs. PM Alert
-  $('.button').removeClass('button').addClass('button2'); // Button fix
-  $('div[id="quickreply_multiquote"]').remove(); // Remove Multiquote - Disabled by Omni and it's showing because of some CSS changes
-    
-  if(window.location.href == "http://hackforums.net/misc.php?action=buddypopup"){ // Buddy List Online Status Fix
-      $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', ''); // Away Status
-      $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', ''); // Online Status
-      $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', ''); // Offline Status  
-  }else if(window.location.href == "http://hackforums.net/usercp.php?action=editlists"){
-      $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', 'vertical-align: top;'); // Away Status
-      $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', 'vertical-align: top;'); // Online Status
-      $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', 'vertical-align: top;'); // Offline Status  
-  }else{
-      $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', 'position: absolute; padding-top: 4px;'); // Away Status
-      $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', 'position: absolute; padding-top: 4px;'); // Online Status
-      $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', 'position: absolute; padding-top: 4px;'); // Offline Status
-  }
+    $('div.menu > ul').attr('style','text-align:center !important;');
+    $('img[src$="hackforums.net/images/modern_bl/starstaff.png"]').attr('style', 'filter: hue-rotate(5deg) saturate(8); -webkit-filter: hue-rotate(5deg) saturate(8)'); // Staff Stars Color Change
+    $('img[src$="hackforums.net/images/modern_bl/dismiss_notice.gif"]').attr('src', 'http://i.imgur.com/uxvQQDI.png'); // PM Notif Dismiss Icon
+    $('img[src$="hackforums.net/images/modern_bl/add_buddy.gif"]').attr('src', 'http://i.imgur.com/3d5FKNX.png'); // Add Buddy Icon
+    $('img[src$="hackforums.net/images/modern_bl/remove_buddy.gif"]').attr('src', 'http://i.imgur.com/zDwBkq5.png'); // Remove Buddy Icon
+    $('img[src$="hackforums.net/images/modern_bl/add_ignore.gif"]').attr('src', 'http://i.imgur.com/u3NZbDu.png'); // Add Ignore Icon
+    $('img[src$="hackforums.net/images/modern_bl/remove_ignore.gif"]').attr('src', 'http://i.imgur.com/zDwBkq5.png'); // Remove Ignore Icon
+    $('img[src$="/img/disable.png"]').attr('src', 'http://i.imgur.com/LXGekE9.png'); // Disable icon for multi-page loader userscript(not included)
+    $('img[src$="/img/enable.png"]').attr('src', 'http://i.imgur.com/YHDATSF.png'); // Enable icon for multi-page loader userscript(not included)
+    $('img[src$="hackforums.net/images/modern_bl/minioff.gif"]').attr('src', 'http://i.imgur.com/AP6vLRo.png').attr('style', 'padding-bottom: 2px;'); // No Posts SF Icon
+    $('img[src$="hackforums.net/images/modern_bl/miniofflock.gif"]').attr('src', 'http://i.imgur.com/AP6vLRo.png').attr('style', 'padding-bottom: 2px;'); // No Posts SF Icon Locked
+    $('img[src$="hackforums.net/images/modern_bl/minion.gif"]').attr('src', 'http://i.imgur.com/Wsl1Gfc.png').attr('style', 'padding-bottom: 3px;'); // New Posts SF icon
+    $('img[src$="http://hackforums.net/images/modern_bl/spinner_big.gif"]').attr('src', 'http://i.imgur.com/y3wDcUA.gif'); // Quick Reply Spinner Change
+    $('span:contains("Moderated")').addClass('sevenpad'); // Padding fix
+    $('link[href*="star_ratings"]').remove(); // Star Ratings Change
+    $('#pm_notice').removeClass('pm_alert').addClass('pm_alert2'); // Group vs. PM Alert
+    $('.button').removeClass('button').addClass('button2'); // Button fix
+    $('.button2[name="previewpost"]').attr('accesskey',previewKey); // Preview Key Hotkey Shortcut
 
-  if(window.location.pathname == "/gauth.php"){
-      $('span[class="float_right smalltext"]').attr('style','display: block !important'); // Gauth Reset Link Reveal
-  }
-    
-  if(window.location.pathname == "/reputation.php"){
-      $('a[href$="&show=positive"]').attr('style','font-size: 14px; background-color: #2DA546; border: 1px solid #2CC330; padding: 5px 10px 5px 10px; font-weight: bold; color: white;').after("<br/>"); // Positive Rep Box
-      $('a[href$="&show=neutral"]').attr('style','font-size: 14px; background-color: #777777; border: 1px solid #949494; padding: 5px 10px 5px 10px; font-weight: bold; color: white;').after("<br/>"); // Neutral Rep Box
-      $('a[href$="&show=negative"]').attr('style','font-size: 14px; background-color: #CC4444; border: 1px solid #FF5656; padding: 5px 10px 5px 10px; font-weight: bold; color: white;'); // Negative Rep Box
-      $('strong[class="reputation_positive"]:contains("Positives")').remove(); // Legend Text Remove
-      $('strong[class="reputation_neutral"]:contains("Neutrals")').remove(); // Legend Text Remove
-      $('strong[class="reputation_negative"]:contains("Negatives")').remove(); // Legend Text Remove
-      $('span[class="smalltext"]:contains("Total Reputation:")').find("br").remove(); // Received Rep Boxes Layout
-      $('strong:contains("Total Reputation:")').before("<br/><br/>"); // Received Rep Boxes Layout
-      $('span[class^="repbox"]').after("<br/><br/>"); // Received Rep Boxes Layout
-  }
-  
-  if(showLogo == true){ // Show Logo
-      $('img[src$="http://hackforums.net/images/modern_bl/logo_bl.gif"]').attr('src', 'http://i.imgur.com/fAzkq6w.png');
-      $('div[class="logo"]').removeClass("logo").attr('style','text-align:center');
-  }
-  
-  if(enableNSFW == true) { // Enable Not-Safe-For-Work
-      $('div[style="overflow:hidden; max-height:200px;"] img').attr('style','display:none;');
-      $('td[class="post_avatar"]').attr('style','display:none;');  
-  }    
-    
-  $('img[src$="hackforums.net/images/modern_bl/groupimages/english/ub3r.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Userbar Color Change
-  $('img[src$="hackforums.net/images/modern_bl/starub3r2.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Stars Color Change
-  $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color
-  $('strong:contains("Post:") > a[href^="showthread.php?tid="]').attr('id','postLink').attr('style','padding-top: 3px; padding-right: 5px; display: inline-block;'); // Post # Centered  
-  
+    if(window.location.href == "http://hackforums.net/misc.php?action=buddypopup"){ // Buddy List Online Status Fix
+        $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', ''); // Away Status
+        $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', ''); // Online Status
+        $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', ''); // Offline Status  
+    }else if(window.location.href == "http://hackforums.net/usercp.php?action=editlists"){
+        $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', 'vertical-align: top;'); // Away Status
+        $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', 'vertical-align: top;'); // Online Status
+        $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', 'vertical-align: top;'); // Offline Status  
+    }else{
+        $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', 'position: absolute; padding-top: 4px;'); // Away Status
+        $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', 'position: absolute; padding-top: 4px;'); // Online Status
+        $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', 'position: absolute; padding-top: 4px;'); // Offline Status
+    }
+
+    if(window.location.pathname == "/gauth.php"){
+        $('span[class="float_right smalltext"]').attr('style','display: block !important'); // Gauth Reset Link Reveal
+    }
+
+    if(window.location.pathname == "/reputation.php"){
+        $('a[href$="&show=positive"]').attr('style','font-size: 14px; background-color: #2DA546; border: 1px solid #2CC330; padding: 5px 10px 5px 10px; font-weight: bold; color: white;').after("<br/>"); // Positive Rep Box
+        $('a[href$="&show=neutral"]').attr('style','font-size: 14px; background-color: #777777; border: 1px solid #949494; padding: 5px 10px 5px 10px; font-weight: bold; color: white;').after("<br/>"); // Neutral Rep Box
+        $('a[href$="&show=negative"]').attr('style','font-size: 14px; background-color: #CC4444; border: 1px solid #FF5656; padding: 5px 10px 5px 10px; font-weight: bold; color: white;'); // Negative Rep Box
+        $('strong[class="reputation_positive"]:contains("Positives")').remove(); // Legend Text Remove
+        $('strong[class="reputation_neutral"]:contains("Neutrals")').remove(); // Legend Text Remove
+        $('strong[class="reputation_negative"]:contains("Negatives")').remove(); // Legend Text Remove
+        $('span[class="smalltext"]:contains("Total Reputation:")').find("br").remove(); // Received Rep Boxes Layout
+        $('strong:contains("Total Reputation:")').before("<br/><br/>"); // Received Rep Boxes Layout
+        $('span[class^="repbox"]').after("<br/><br/>"); // Received Rep Boxes Layout
+    }
+    if(showLogo === true){ // Show Logo
+        $('img[src$="http://hackforums.net/images/modern_bl/logo_bl.gif"]').attr('src', 'http://i.imgur.com/fAzkq6w.png');
+        $('div[class="logo"]').removeClass("logo").attr('style','text-align:center');
+    }
+
+    if(enableSFW === true) { // Enable Safe-For-Work
+        $('div[style="overflow:hidden; max-height:200px;"]').attr('class','sigArea');
+        $('div[style="overflow:hidden; max-height:200px;"] img').attr('class','sigImage');
+        $('td[class="post_avatar"]').attr('style','display:none;');
+        var sigShow = $('<input type="button" class="button sigButton" value="toggle" style="position:relative; float:right;" />');
+
+        $("table[id*='post_']").each(function() {
+            src = $(this).find("tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > div:nth-child(3) img").attr("src");
+            if (src != null) {
+                $(this).find("tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > div:nth-child(3) img").attr('style','display:none;');
+                $(this).find("tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > div:nth-child(3)").prepend('<input type="button" class="bitButton sigButton" value="toggle" style="position:relative; float:right; outline:none;" />');
+            }
+        });
+
+        $('.sigButton').click(function() {   
+            $(this).parent().find('.sigImage').toggleClass("sigReveal");
+            $(this).parent().toggleClass("sigResize");
+
+        });
+    }
+
+    if(window.location.pathname != "/private.php") {
+        var userName = $('strong > a[href^="http://hackforums.net/member.php?action=profile&uid="]').text();
+        $('blockquote > cite:contains(' + userName + ')').css({'color': userColor, 'font-weight': 'bold','border-bottom': '1px dotted' + userColor}); // If quoted, color-code it
+    }
+    $('img[src$="hackforums.net/images/modern_bl/groupimages/english/ub3r.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Userbar Color Change
+    $('img[src$="hackforums.net/images/modern_bl/starub3r2.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Stars Color Change
+    $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color
+    $('strong:contains("Post:") > a[href^="showthread.php?tid="]').attr('id','postLink').attr('style','padding-top: 3px; padding-right: 5px; display: inline-block;'); // Post # Centered  
+    $('span[style="color:#383838"]').attr('style','color:#444444;'); // Closed Account Username Color Change
+    $('a[href="http://hackforums.net/member.php?action=profile&uid=561239"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/iFiLjqc.png" style="position: relative;top: 3px;left: 3px;"/>');
+    $('a[href="http://hackforums.net/member.php?action=profile&uid=2377407"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/iFiLjqc.png" style="position: relative;top: 3px;left: 3px;"/>');
 });

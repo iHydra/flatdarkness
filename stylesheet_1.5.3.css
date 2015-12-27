@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "v1.5.1" !important;
+    content: "v1.5.3" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -336,49 +336,49 @@ img.expander {
 }
 
 div.post_content blockquote {
-    background-color: #252525 !important;
-    border-color: #444 !important;
-    border-style: dotted !important;
-    border-width: 1px !important;
-    color: #FFF8F8 !important;
-    margin-bottom: 8px !important;
-    margin-top: 8px !important;
-    padding: 8px !important;
+    background-color: #252525;
+    border-color: #444;
+    border-style: dotted;
+    border-width: 1px;
+    color: #FFF8F8;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding: 8px;
     box-shadow: #222 0px 0px 2px;
 }
 
 div.post_content blockquote cite {
-    border-color: transparent !important;
-    border-style: solid !important;
-    border-width: 0px !important;
-    color: #CCC !important;
-    font-weight: normal !important;
-    margin-bottom: 5px !important;
-    padding-bottom: 2px !important;
-    border-bottom: 1px dotted #444 !important;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0px;
+    color: #CCC;
+    font-weight: normal;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted #444;
 }
 
 div.post_body blockquote {
-    background-color: #252525 !important;
-    border-color: #444 !important;
-    border-style: dotted !important;
-    border-width: 1px !important;
-    color: #FFF8F8 !important;
-    margin-bottom: 8px !important;
-    margin-top: 8px !important;
-    padding: 8px !important;
+    background-color: #252525;
+    border-color: #444;
+    border-style: dotted;
+    border-width: 1px;
+    color: #FFF8F8;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding: 8px;
     box-shadow: #222 0px 0px 2px;
 }
 
 div.post_body blockquote cite {
-    border-color: transparent !important;
-    border-style: solid !important;
-    border-width: 0px !important;
-    color: #CCC !important;
-    font-weight: normal !important;
-    margin-bottom: 5px !important;
-    padding-bottom: 2px !important;
-    border-bottom: 1px dotted #444 !important;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0px;
+    color: #CCC;
+    font-weight: normal;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted #444;
 }
 
 .codeblock {
@@ -1446,7 +1446,6 @@ td .star_rating {
     background: #222 !important;
     border: 1px dotted #111 !important;
     width: auto !important;
-    display: inline-block !important;
     text-align: left !important;
     float: right !important;
     margin-right: 17px !important;
@@ -1454,6 +1453,18 @@ td .star_rating {
 
 .repbox {
     background-color: #252525 !important;
+}
+
+.mQ {
+    background-color: #6DB547;
+}
+
+.sigReveal {
+    display: inline !important;
+}
+
+.sigResize {
+    max-height: 220px !important;
 }
 
 /* MyBB Editor */

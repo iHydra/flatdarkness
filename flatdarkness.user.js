@@ -6,7 +6,6 @@
 // @match         http://www.hackforums.net/*
 // @match         http://hackforums.net/*
 // @author        iHydra/Kondax/Sasori
-// @updateURL     https://github.com/iHydra/flatdarkness/raw/master/flatdarkness.meta.js
 // @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdarkness.user.js
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js

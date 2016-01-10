@@ -1851,3 +1851,9 @@ td .star_rating {
     border-radius: 0px;
     background-color: #333333;
 }
+
+.noHover td.trow1:hover {
+	background: none !important;
+}
+
+

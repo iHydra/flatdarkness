@@ -1840,7 +1840,7 @@ td .star_rating {
 /* End MyBB Editor */
 
 .showCard {
-    width: 25%;
+    width: 16%;
     float: left;
     margin: 4px;
     border: 1px #252525 solid;
@@ -1848,7 +1848,7 @@ td .star_rating {
 }
 
 .showCardParts {
-    border-radius: 0px;
+    border-radius: 0px !important;
     background-color: #333333;
 }
 

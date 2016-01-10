@@ -1846,7 +1846,6 @@ td .star_rating {
 }
 
 .showCardParts {
-    border: 0px !important;
     border-radius: 0px;
     background-color: #333333;
 }

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.3a
+// @version       1.5.4a
 // @description   Custom theme for Hack Forums. Base theme by Sasori.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
@@ -10,7 +10,7 @@
 // @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdev.user.js
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_dev-15-210.css
+// @resource      MainCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_dev-15-307.css
 // @resource      HLCSS https://github.com/isagalaev/highlight.js/raw/master/src/styles/monokai_sublime.css 
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
@@ -33,14 +33,21 @@ GM_addStyle(HLCSS);
  * USER EDITING
  */
 
-var userColor = "#00ffd2"; // Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
-var showLogo = true; // true to show logo, false to hide logo
-var enableSFW = true; // true to enable SFW, false to disable SFW (Safe For Work)
+var quotedColor = "#00ffd2"; // Color for when quoted by someone - Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
+var showLogo = false; // true to show logo, false to hide logo
+var enableSFW = false; // true to enable SFW, false to disable SFW (Safe For Work)
 var previewKey = 'w'; // ALT + {KEY} for Chrome || ALT + SHIFT + {KEY} for Firefox - More Info: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey
+var hideMenu = false; // true to remove menu nav links, false to show.
+var badges = true; // Badges Feature - false to disable feature.
 
 /*
  * END USER EDITING
  */
+
+// BADGES - LIST OF UIDs
+var adminList = [1]; // Omniscient
+var staffList = [1292605,1093501,370510,1570078,992020]; // Skorp, Roger Waters, Alone Vampire, Sam Winchester, King of Hearts
+var mentorList = [4066,330676,1320406]; // Judge Dredd, Diabolic, Froggy
 
 $(window).load(function () { // Theme Color Scheme Changer
     var cp = $('<div class=\'cp\'/>');
@@ -95,14 +102,7 @@ $(document).ready(function() {
 
 
 /*
-function sigToggle(){
-    alert("Test");
-    if($('div[style="overflow:hidden; max-height:200px;"] img').css('display') === 'inline') {
-        $('div[style="overflow:hidden; max-height:200px;"] img').css({'display': 'none'});
-    } else {
-        $('div[style="overflow:hidden; max-height:200px;"] img').css({'display': 'inline'});
-    }
-}
+
 
 
 function copyLink(element) { // Working on adding a copy url for Post # links
@@ -121,13 +121,6 @@ function copyLink(element) { // Working on adding a copy url for Post # links
     return result;
 }
 
-function sigToggle() {
-    if($(this).prev().css('display') != 'inline') {
-        $(this).prev().css({'display': 'inline'});
-    } else {
-        $(this).prev().css({'display': 'none'});
-    }
-}
 
 */
 
@@ -153,7 +146,7 @@ $(document).ready(function () {
     $('span:contains("Moderated")').addClass('sevenpad'); // Padding fix
     $('link[href*="star_ratings"]').remove(); // Star Ratings Change
     $('#pm_notice').removeClass('pm_alert').addClass('pm_alert2'); // Group vs. PM Alert
-    $('.button').removeClass('button').addClass('button2'); // Button fix
+    
     $('.button2[name="previewpost"]').attr('accesskey',previewKey); // Preview Key Hotkey Shortcut
 
     if(window.location.href == "http://hackforums.net/misc.php?action=buddypopup"){ // Buddy List Online Status Fix
@@ -192,13 +185,17 @@ $(document).ready(function () {
 
     if(enableSFW === true) { // Enable Safe-For-Work
         $('div[style="overflow:hidden; max-height:200px;"]').attr('class','sigArea');
-        $('div[style="overflow:hidden; max-height:200px;"] img').attr('style','display:none;').attr('class','sigImage');
+        $('div[style="overflow:hidden; max-height:200px;"] img').attr('class','sigImage');
         $('td[class="post_avatar"]').attr('style','display:none;');
         var sigShow = $('<input type="button" class="button sigButton" value="toggle" style="position:relative; float:right;" />');
 
-        if($('.sigImage').length > 0) {
-            sigShow.prependTo($('.sigArea'));
-        }
+        $("table[id*='post_']").each(function() {
+            src = $(this).find("tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > div:nth-child(3) img").attr("src");
+            if (src != null) {
+                $(this).find("tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > div:nth-child(3) img").attr('style','display:none;');
+                $(this).find("tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > div:nth-child(3)").prepend('<input type="button" class="bitButton sigButton" value="toggle" style="position:relative; float:right; outline:none;" />');
+            }
+        });
 
         $('.sigButton').click(function() {   
             $(this).parent().find('.sigImage').toggleClass("sigReveal");
@@ -209,13 +206,32 @@ $(document).ready(function () {
 
     if(window.location.pathname != "/private.php") {
         var userName = $('strong > a[href^="http://hackforums.net/member.php?action=profile&uid="]').text();
-        $('blockquote > cite:contains(' + userName + ')').css({'color': userColor, 'font-weight': 'bold','border-bottom': '1px dotted' + userColor});
+        $('blockquote > cite:contains(' + userName + ')').css({'color': quotedColor, 'font-weight': 'bold','border-bottom': '1px dotted' + quotedColor});
     }
+    
+    if(window.location.pathname == "/showstaff.php") {
+        $('head').append('<style>td.trow1:hover {background: none !important;}</style>')
+        $('td[class="trow1"]').attr("style","background: none; border: 0px !important;");
+        $('div[style="width: 48%; min-height: 120px;float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("showCard");
+        $('td[class="trow1"][width="75%"]').attr("width","90%").attr("style","border: 0px !important").removeClass('trow1').addClass('showCardParts').addClass('trow2');
+        $('td[width="25%"]').attr("style","").addClass('showCardParts');
+    }
+        
+    if(hideMenu === true) {
+        $("div[class='menu']").hide();
+    }
+    
+    if(badges === true) {
+        for(var I = 0; I < staffList.length; I++) {
+            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + staffList[I] + "']").append('<img title="Hack Forums Staff" src="http://i.imgur.com/mfqIyM9.png" style="position: relative;top: 3px;left: 3px;">');
+        }
+    }
+    
     $('img[src$="hackforums.net/images/modern_bl/groupimages/english/ub3r.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Userbar Color Change
     $('img[src$="hackforums.net/images/modern_bl/starub3r2.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Stars Color Change
     $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color
     $('strong:contains("Post:") > a[href^="showthread.php?tid="]').attr('id','postLink').attr('style','padding-top: 3px; padding-right: 5px; display: inline-block;'); // Post # Centered  
     $('span[style="color:#383838"]').attr('style','color:#444444;'); // Closed Account Username Color Change
-    $('a[href="http://hackforums.net/member.php?action=profile&uid=561239"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/iFiLjqc.png" style="position: relative;top: 3px;left: 3px;"/>');
-    $('a[href="http://hackforums.net/member.php?action=profile&uid=2377407"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/iFiLjqc.png" style="position: relative;top: 3px;left: 3px;"/>');
+    $('a[href="http://hackforums.net/member.php?action=profile&uid=561239"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/EpQPylI.png" style="position: relative;top: 3px;left: 3px;"/>');
+    $('a[href="http://hackforums.net/member.php?action=profile&uid=2377407"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/EpQPylI.png" style="position: relative;top: 3px;left: 3px;"/>');
 });

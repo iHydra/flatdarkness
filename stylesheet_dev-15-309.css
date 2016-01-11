@@ -1839,7 +1839,7 @@ td .star_rating {
 
 /* End MyBB Editor */
 
-.showCard {
+.staffCard {
     width: 32%;
     margin: 4px;
     display: inline-block;
@@ -1847,10 +1847,23 @@ td .star_rating {
     padding: 0px;
 }
 
-.showCardParts {
+.staffCardParts {
     border-radius: 0px !important;
     background-color: #333333;
 }
 
+.groupsCard {
+    width: 32%;
+    margin: 4px;
+    height: 195px;
+    display: inline-block;
+    border: 1px #252525 solid;
+    padding: 0px;
+}
+
+.groupsCardParts {
+    border-radius: 0px !important;
+    background-color: #333333;
+}
 
 

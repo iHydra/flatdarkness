@@ -10,7 +10,7 @@
 // @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdev.user.js
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_dev-15-307.css
+// @resource      MainCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_dev-15-309.css
 // @resource      HLCSS https://github.com/isagalaev/highlight.js/raw/master/src/styles/monokai_sublime.css 
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
@@ -146,7 +146,7 @@ $(document).ready(function () {
     $('span:contains("Moderated")').addClass('sevenpad'); // Padding fix
     $('link[href*="star_ratings"]').remove(); // Star Ratings Change
     $('#pm_notice').removeClass('pm_alert').addClass('pm_alert2'); // Group vs. PM Alert
-    
+
     $('.button2[name="previewpost"]').attr('accesskey',previewKey); // Preview Key Hotkey Shortcut
 
     if(window.location.href == "http://hackforums.net/misc.php?action=buddypopup"){ // Buddy List Online Status Fix
@@ -208,25 +208,36 @@ $(document).ready(function () {
         var userName = $('strong > a[href^="http://hackforums.net/member.php?action=profile&uid="]').text();
         $('blockquote > cite:contains(' + userName + ')').css({'color': quotedColor, 'font-weight': 'bold','border-bottom': '1px dotted' + quotedColor});
     }
-    
-    if(window.location.pathname == "/showstaff.php") {
+
+    if(window.location.pathname == "/showstaff.php" || window.location.pathname == "/showmods.php") {
         $('head').append('<style>td.trow1:hover {background: none !important;}</style>')
         $('td[class="trow1"]').attr("style","background: none; border: 0px !important;");
-        $('div[style="width: 48%; min-height: 120px;float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("showCard");
-        $('td[class="trow1"][width="75%"]').attr("width","90%").attr("style","border: 0px !important").removeClass('trow1').addClass('showCardParts').addClass('trow2');
-        $('td[width="25%"]').attr("style","").addClass('showCardParts');
+        $('div[style="width: 48%; min-height: 120px;float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("staffCard");
+        $('div[style="width: 48%; float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("staffCard");
+        $('td[class="trow1"][width="75%"]').attr("width","90%").attr("style","border: 0px !important").removeClass('trow1').addClass('staffCardParts').addClass('trow2');
+        $('td[width="25%"]').attr("style","").addClass('staffCardParts');
     }
-        
+
+    if(window.location.pathname == "/showgroups.php") {
+        $('head').append('<style>td.trow1:hover {background: none !important;}</style>')
+        $('td[class="trow1"]').attr("style","background: none; border: 0px !important;");
+        $('div[style="width: 46%; min-height:168px;float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("groupsCard");
+        $('td[class="trow1"][width="75%"]').attr("width","90%").attr("style","border: 0px !important").removeClass('trow1').addClass('groupsCardParts').addClass('trow2');
+        $('td[width="25%"]').attr("style","").attr("valign","middle").addClass('groupsCardParts');
+        $('td[valign="bottom"]').attr("style","background-color: #333; border-radius: 0px; vertical-align: baseline; font-size: 12px;");
+        $('table[width="100%"]').attr("height","100%").attr("cellpadding","10");
+    }
+
     if(hideMenu === true) {
         $("div[class='menu']").hide();
     }
-    
+
     if(badges === true) {
         for(var I = 0; I < staffList.length; I++) {
             $("a[href='http://hackforums.net/member.php?action=profile&uid=" + staffList[I] + "']").append('<img title="Hack Forums Staff" src="http://i.imgur.com/mfqIyM9.png" style="position: relative;top: 3px;left: 3px;">');
         }
     }
-    
+
     $('img[src$="hackforums.net/images/modern_bl/groupimages/english/ub3r.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Userbar Color Change
     $('img[src$="hackforums.net/images/modern_bl/starub3r2.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Stars Color Change
     $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color

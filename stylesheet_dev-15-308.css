@@ -1840,9 +1840,9 @@ td .star_rating {
 /* End MyBB Editor */
 
 .showCard {
-    width: 16%;
-    float: left;
+    width: 32%;
     margin: 4px;
+    display: inline-block;
     border: 1px #252525 solid;
     padding: 0px;
 }
@@ -1852,8 +1852,5 @@ td .star_rating {
     background-color: #333333;
 }
 
-.noHover td.trow1:hover {
-	background: none !important;
-}
 
 

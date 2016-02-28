@@ -1,20 +1,27 @@
 // ==UserScript==
 // @name          Flat Darkness - Stable
 // @namespace     https://github.com/iHydra
-// @version       1.5.3
+// @version       1.5.4
 // @description   Custom theme for Hack Forums. Base theme by Sasori.
-// @match         http://www.hackforums.net/*
-// @match         http://hackforums.net/*
+// @include       http://www.hackforums.net/*
+// @include       http://hackforums.net/*
 // @author        iHydra/Kondax/Sasori
-// @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdarkness.user.js
+// @updateURL     https://github.com/iHydra/flatdarkness/raw/master/flatdev.meta.js
+// @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdev.user.js
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_1.5.3.css
-// @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
+// @resource      MainCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_1.5.4.css
+// @resource      HLCSS https://github.com/isagalaev/highlight.js/raw/master/src/styles/monokai_sublime.css 
 // @grant         GM_addStyle
+// @grant         GM_setValue
+// @grant         GM_getValue
 // @grant         GM_getResourceText
 // @run-at        document-start
 // ==/UserScript==
+
+var quotedPosts = GM_getValue("quotedPosts") == undefined ? [] : GM_getValue("quotedPosts");
+console.log(quotedPosts);
+//alert(GM_getValue("quotedPosts"));
 
 /* INFORMATION - READ */
 // You can change Highlighter Theme: https://github.com/isagalaev/highlight.js/tree/master/src/styles || Demo of Themes: https://highlightjs.org/static/demo/
@@ -32,10 +39,12 @@ GM_addStyle(HLCSS);
  * USER EDITING
  */
 
-var userColor = "#00ffd2"; // Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
+var quotedColor = "#00ffd2"; // Color for when quoted by someone - Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
 var showLogo = false; // true to show logo, false to hide logo
 var enableSFW = false; // true to enable SFW, false to disable SFW (Safe For Work)
 var previewKey = 'w'; // ALT + {KEY} for Chrome || ALT + SHIFT + {KEY} for Firefox - More Info: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey
+var hideMenu = false; // true to remove menu nav links, false to show.
+var badges = false; // Badges Feature - false to disable feature. || **NOT DONE**
 
 /*
  * END USER EDITING
@@ -85,17 +94,16 @@ $(window).load(function () { // Theme Color Scheme Changer
 
 /** Custom Functions **/
 
-$(document).ready(function() { 
-    $('code').each(function(i, block) { // Highlight Syntax
-        hljs.highlightBlock(block);
-    });   
-});
+
+$('code').each(function(i, block) { // Highlight Syntax
+    hljs.highlightBlock(block);
+
+});   
 
 
 /*
- * CSS Modification (jQuery/jS for multi-browser support)
+ * Modifications (jQuery/jS for multi-browser support)
  */
- 
 
 $(document).ready(function () {
     $('div.menu > ul').attr('style','text-align:center !important;');
@@ -114,7 +122,61 @@ $(document).ready(function () {
     $('span:contains("Moderated")').addClass('sevenpad'); // Padding fix
     $('link[href*="star_ratings"]').remove(); // Star Ratings Change
     $('#pm_notice').removeClass('pm_alert').addClass('pm_alert2'); // Group vs. PM Alert
-    $('.button').removeClass('button').addClass('button2'); // Button fix
+
+    $('code[class="hljs markdown"]').dblclick(function() {
+        $(this).select();
+
+        var text = this,
+            range, selection;
+
+        if (document.body.createTextRange) {
+            range = document.body.createTextRange();
+            range.moveToElementText(text);
+            range.select();
+        } else if (window.getSelection) {
+            selection = window.getSelection();
+            range = document.createRange();
+            range.selectNodeContents(text);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+    });
+
+    if($("img[id*='multiquote_']").attr("src") === "http://hackforums.net/images/modern_bl/english/postbit_multiquote_on.gif") { // Multiquote IMG to CSS - By Snorlax
+        $("img[id*='multiquote_']").hide().after("<button class='button' style='bottom: 7px;position: relative;cursor: pointer;outline: none;'>MQ-</button>");
+    } else {
+        $("img[id*='multiquote_']").hide().after("<button class='button' style='bottom: 7px;position: relative;cursor: pointer;outline: none;'>MQ+</button>");
+    }
+    $(".trow1 .button").on("click", function() {
+        var postId = $(this).parent().attr("id").match(/multiquote_link_([0-9]*)/)[1];
+        if($(this).text() == "MQ-") {
+            quotedPosts.splice(quotedPosts.indexOf(postId), 1);
+        } else {
+            quotedPosts.push(postId);
+            console.log(quotedPosts);
+        }
+        GM_setValue("quotedPosts", quotedPosts);
+        $(this).text($(this).text() == "MQ+" ? "MQ-" : "MQ+");
+    });
+
+    $(".trow1 .button").each(function() {
+        var postId = $(this).parent().attr("id").match(/multiquote_link_([0-9]*)/)[1];
+        if(GM_getValue("quotedPosts").indexOf(postId) >= 0) {
+            $(this).text("MQ-");    
+            console.log(postId);
+        }
+    });
+
+    $("body").on("click", "#quickreply_multiquote", function() {
+        console.log("Clicked");
+        quotedPosts = [];
+        GM_setValue("quotedPosts", quotedPosts);
+        $(".button").each(function() {
+            $(this).text("MQ+");
+            console.log("SET TO MQ+");
+        });
+    });
+
     $('.button2[name="previewpost"]').attr('accesskey',previewKey); // Preview Key Hotkey Shortcut
 
     if(window.location.href == "http://hackforums.net/misc.php?action=buddypopup"){ // Buddy List Online Status Fix
@@ -130,6 +192,16 @@ $(document).ready(function () {
         $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', 'position: absolute; padding-top: 4px;'); // Online Status
         $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', 'position: absolute; padding-top: 4px;'); // Offline Status
     }
+
+    $("td[class*='trow'] input:checkbox").on("click", function() { // Mods & Staf Only - Highlight checkboxed rows - Conflicts with HFES for me, please test and report back
+        console.log("something");
+        var selector = $(this).closest("tr").find("td");
+        if($(this).is(":checked")) {
+            selector.css("background", "#242424");
+        } else {
+            selector.css("background", "");
+        }
+    });
 
     if(window.location.pathname == "/gauth.php"){
         $('span[class="float_right smalltext"]').attr('style','display: block !important'); // Gauth Reset Link Reveal
@@ -174,13 +246,59 @@ $(document).ready(function () {
 
     if(window.location.pathname != "/private.php") {
         var userName = $('strong > a[href^="http://hackforums.net/member.php?action=profile&uid="]').text();
-        $('blockquote > cite:contains(' + userName + ')').css({'color': userColor, 'font-weight': 'bold','border-bottom': '1px dotted' + userColor}); // If quoted, color-code it
+        $('blockquote > cite:contains(' + userName + ')').css({'color': quotedColor, 'font-weight': 'bold','border-bottom': '1px dotted' + quotedColor});
     }
+
+    if(window.location.pathname == "/showstaff.php" || window.location.pathname == "/showmods.php") {
+        $('head').append('<style>td.trow1:hover {background: none !important;}</style>')
+        $('td[class="trow1"]').attr("style","background: none; border: 0px !important;");
+        $('div[style="width: 48%; min-height: 120px;float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("staffCard");
+        $('div[style="width: 48%; float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("staffCard");
+        $('td[class="trow1"][width="75%"]').attr("width","90%").attr("style","border: 0px !important").removeClass('trow1').addClass('staffCardParts').addClass('trow2');
+        $('td[width="25%"]').attr("style","").addClass('staffCardParts');
+    }
+
+    if(window.location.pathname == "/showgroups.php") {
+        $('head').append('<style>td.trow1:hover {background: none !important;}</style>')
+        $('td[class="trow1"]').attr("style","background: none; border: 0px !important;");
+        $('div[style="width: 46%; min-height:168px;float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("groupsCard");
+        $('td[class="trow1"][width="75%"]').attr("width","90%").attr("style","border: 0px !important").removeClass('trow1').addClass('groupsCardParts').addClass('trow2');
+        $('td[width="25%"]').attr("style","").attr("valign","middle").addClass('groupsCardParts');
+        $('td[valign="bottom"]').attr("style","background-color: #333; border-radius: 0px; vertical-align: baseline; font-size: 12px;");
+        $('table[width="100%"]').attr("height","100%").attr("cellpadding","10");
+    }
+
+    if(hideMenu === true) {
+        $("div[class='menu']").hide();
+    }
+
+    if(badges === true) {
+        // BADGES - LIST OF UIDs
+        var adminList = [1]; // Omniscient
+        var staffList = [1292605,1093501,370510,1570078,992020,1450348]; // Skorp, Roger Waters, Alone Vampire, Sam Winchester, King of Hearts, Walt Disney
+        var mentorList = [4066,330676,1320406]; // Judge Dredd, Diabolic, Froggy
+        var groupLeadersList = []; // 
+        for(var I = 0; I < staffList.length; I++) {
+            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + staffList[I] + "']").append('<img title="HF Staff" src="http://i.imgur.com/mfqIyM9.png" style="position: relative;top: 3px;left: 3px;">');
+        }
+        for(var I = 0; I < mentorList.length; I++) {
+            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + mentorList[I] + "']").append('<img title="HF Mentor" src="http://i.imgur.com/mfqIyM9.png" style="position: relative;top: 3px;left: 3px;">');
+        }
+        for(var I = 0; I < adminList.length; I++) {
+            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + adminList[I] + "']").append('<img title="Omniscient" src="http://i.imgur.com/mfqIyM9.png" style="position: relative;top: 3px;left: 3px;">');
+        }
+        for(var I = 0; I < groupLeadersList.length; I++) {
+            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + groupLeadersList[I] + "']").append('<img title="HF Group Leader" src="http://i.imgur.com/mfqIyM9.png" style="position: relative;top: 3px;left: 3px;">');
+        }
+    }
+
     $('img[src$="hackforums.net/images/modern_bl/groupimages/english/ub3r.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Userbar Color Change
     $('img[src$="hackforums.net/images/modern_bl/starub3r2.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Stars Color Change
     $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color
     $('strong:contains("Post:") > a[href^="showthread.php?tid="]').attr('id','postLink').attr('style','padding-top: 3px; padding-right: 5px; display: inline-block;'); // Post # Centered  
     $('span[style="color:#383838"]').attr('style','color:#444444;'); // Closed Account Username Color Change
-    $('a[href="http://hackforums.net/member.php?action=profile&uid=561239"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/iFiLjqc.png" style="position: relative;top: 3px;left: 3px;"/>');
-    $('a[href="http://hackforums.net/member.php?action=profile&uid=2377407"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/iFiLjqc.png" style="position: relative;top: 3px;left: 3px;"/>');
+    $('a[href="http://hackforums.net/member.php?action=profile&uid=561239"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/EpQPylI.png" style="position: relative;top: 3px;left: 3px;"/>');
+    $('a[href="http://hackforums.net/member.php?action=profile&uid=2377407"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/EpQPylI.png" style="position: relative;top: 3px;left: 3px;"/>');
+    
 });
+

@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "v1.5.3" !important;
+    content: "v1.5.4" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -128,7 +128,7 @@ div.quick_keys > table > tbody > tr > td > table:first-of-type {
 }
 
 .button2, .button, button {
-    border: none !important;
+    border: 0px !important;
     box-shadow: none !important;
 }
 
@@ -983,6 +983,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 /** BLACK THEME **/
 
+.cl-black .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
+
 .cl-black input.button:hover, .cl-black .button2:hover, .cl-black button2:hover, .cl-black .button:hover, .cl-black button:hover, .cl-black a.bitButton:hover, .cl-black input.bitButton:hover, .cl-black span.bitButton:hover {
     background-color: #151515 !important;
     border: 0px !important;
@@ -994,6 +999,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 /** BLUE THEME **/
+
+.cl-blue .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
 
 .cl-blue td.tcat {
     background-color: #619ECB !important;
@@ -1027,6 +1037,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 /** DARK BLUE THEME **/
 
+.cl-darkblue .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
+
 .cl-darkblue td.tcat {
     background-color: #235F8C !important;
 }
@@ -1058,6 +1073,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 /** GREEN THEME **/
+
+.cl-green .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
 
 .cl-green td.tcat {
     background-color: #7ECB61 !important;
@@ -1091,6 +1111,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 /** DARK GREEN THEME **/
 
+.cl-darkgreen .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
+
 .cl-darkgreen td.tcat {
     background-color: #35713F !important;
 }
@@ -1122,6 +1147,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 /** ORANGE THEME **/
+
+.cl-orange .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
 
 .cl-orange td.tcat {
     background-color: #D29C2D !important;
@@ -1155,6 +1185,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 /** DARK ORANGE THEME **/
 
+.cl-darkorange .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
+
 .cl-darkorange td.tcat {
     background-color: #9A782E !important;
 }
@@ -1187,6 +1222,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 /** PURPLE THEME **/
 
+.cl-purple .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
+
 .cl-purple td.tcat {
     background-color: #724FAD !important;
 }
@@ -1218,6 +1258,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 /** DARK PURPLE THEME **/
+
+.cl-darkpurple .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
 
 .cl-darkpurple td.tcat {
     background-color: #4d2d5e !important;
@@ -1252,6 +1297,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 /** RED THEME **/
 
+.cl-red .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
+
 .cl-red td.tcat {
     background-color: #CB6161 !important;
 }
@@ -1283,6 +1333,11 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 /** DARK RED THEME **/
+
+.cl-darkred .button {
+    border: 0px !important;
+    box-shadow: none !important;
+}
 
 .cl-darkred td.tcat {
     background-color: #682626 !important;
@@ -1783,3 +1838,32 @@ td .star_rating {
 }
 
 /* End MyBB Editor */
+
+.staffCard {
+    width: 32%;
+    margin: 4px;
+    display: inline-block;
+    border: 1px #252525 solid;
+    padding: 0px;
+}
+
+.staffCardParts {
+    border-radius: 0px !important;
+    background-color: #333333;
+}
+
+.groupsCard {
+    width: 32%;
+    margin: 4px;
+    height: 195px;
+    display: inline-block;
+    border: 1px #252525 solid;
+    padding: 0px;
+}
+
+.groupsCardParts {
+    border-radius: 0px !important;
+    background-color: #333333;
+}
+
+

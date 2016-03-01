@@ -11,7 +11,7 @@
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
 // @resource      MainCSS https://github.com/iHydra/flatdarkness/raw/master/stylesheet_1.5.4.css
-// @resource      HLCSS https://github.com/isagalaev/highlight.js/raw/master/src/styles/monokai_sublime.css 
+// @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css 
 // @grant         GM_addStyle
 // @grant         GM_setValue
 // @grant         GM_getValue

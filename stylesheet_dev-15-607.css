@@ -1536,10 +1536,6 @@ td .star_rating {
     background-color: #3E3E3E !important;
 }
 
-.messageEditor .editor_dropdown_menu li.editor_dropdown_menu_item_over:last-child {
-    border-bottom: 1px solid #3E3E3E;
-}
-
 .messageEditor .toolbar_dropdown .editor_dropdown_arrow, .messageEditor .toolbar_dropdown_image .editor_dropdown_arrow {
 	background: #2D2D2D !important;
 	border: 1px solid #222 !important;
@@ -1552,11 +1548,12 @@ td .star_rating {
 
 .messageEditor .toolbar_dropdown .editor_dropdown_label {
 	background: #2D2D2D !important;
+    border: 1px solid #222 !important;
 }
 
 .messageEditor .toolbar_dropdown_over .editor_dropdown_label, .messageEditor .editor_dropdown_menu_open .editor_dropdown_label {
     background-color: #333 !important;
-    border-color: #3E3E3E !important;
+    border-color: #202020 !important;
     color: #ccc !important;
 }
 

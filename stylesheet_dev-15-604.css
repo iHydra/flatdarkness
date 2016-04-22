@@ -25,7 +25,7 @@ div.menu ul:after {
 .cp {
     width: 24px;
     opacity: .35;
-    height: 25px;
+    height: 24px;
     position: fixed;
     right: 2px;
     bottom: 4px;
@@ -43,7 +43,6 @@ div.menu ul:after {
 .select {
     width: 26px;
     padding: 5px;
-    background: #222;
     position: fixed;
     right: 0px;
     bottom: 30px;
@@ -62,7 +61,7 @@ div.menu ul:after {
 
 .select > .part {
     width: 24px;
-    height: 25px;
+    height: 24px;
     margin-right: 6px;
     display: inline-block;
     border-radius: 50%;
@@ -1586,19 +1585,18 @@ td .star_rating {
 
 .scrollToTop{
 	width:24px; 
-	height:25px;
-	padding:3px; 
-	text-align:center; 
-	background: #202020;
-	text-decoration: none;
+	height:24px;
+	background: url('http://i.imgur.com/QgO5J7U.png');
+	background-color: #151515;
 	position:fixed;
-	bottom: 8px;
+	bottom: 32px;
 	right: 2px;
 	display:none;
+	border-radius: 50%;
 	opacity: 0.35;
 	transition: ease-in-out all .3s;
 }
 .scrollToTop:hover{
 	opacity: 1;
-	background: #242424;
+	background-color: #333;
 }

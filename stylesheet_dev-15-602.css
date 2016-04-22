@@ -27,15 +27,17 @@ div.menu ul:after {
     opacity: .35;
     height: 25px;
     position: fixed;
-    right: 2;
-    bottom: 4;
+    right: 2px;
+    bottom: 4px;
     display: block;
     background: #fff;
     transition: ease-in-out all .3s;
+    border-radius: 50%;
 }
 
 .cp:hover {
     opacity: 1.0;
+    border-radius: 25%;
 }
 
 .select {
@@ -43,7 +45,7 @@ div.menu ul:after {
     padding: 5px;
     background: #222;
     position: fixed;
-    right: 0;
+    right: 0px;
     bottom: 30px;
     display: block;
     padding-right: 0px;

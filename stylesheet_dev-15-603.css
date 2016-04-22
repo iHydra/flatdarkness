@@ -1584,4 +1584,21 @@ td .star_rating {
     background-color: #333333;
 }
 
-
+.scrollToTop{
+	width:24px; 
+	height:25px;
+	padding:3px; 
+	text-align:center; 
+	background: #202020;
+	text-decoration: none;
+	position:fixed;
+	bottom: 8px;
+	right: 2px;
+	display:none;
+	opacity: 0.35;
+	transition: ease-in-out all .3s;
+}
+.scrollToTop:hover{
+	opacity: 1;
+	background: #242424;
+}

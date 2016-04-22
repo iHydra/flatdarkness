@@ -23,33 +23,23 @@ div.menu ul:after {
 }
 
 .cp {
-    width: 30px;
+    width: 24px;
     opacity: .35;
-    height: 30px;
+    height: 25px;
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right: 2;
+    bottom: 4;
     display: block;
     background: #fff;
-    border-left: 3px solid #151515;
-    border-top: 3px solid #151515;
-
+    transition: ease-in-out all .3s;
 }
 
 .cp:hover {
-    width: 30px;
     opacity: 1.0;
-    height: 30px;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    display: block;
-    background: #fff;
-    border-left: 3px solid #151515;
-    border-top: 3px solid #151515;
 }
 
 .select {
+    width: 26px;
     padding: 5px;
     background: #222;
     position: fixed;
@@ -73,6 +63,8 @@ div.menu ul:after {
     height: 25px;
     margin-right: 6px;
     display: inline-block;
+    border-radius: 50%;
+    margin-bottom: 3px;
 }
 
 #container {

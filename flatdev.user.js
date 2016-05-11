@@ -1,17 +1,18 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.6
-// @description   Custom theme for Hack Forums. Base theme by Sasori.
+// @version       1.5.6.2
+// @description   Custom theme for Hack Forums.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
-// @author        iHydra/Kondax/Sasori
-// @updateURL     https://github.com/iHydra/flatdarkness/raw/master/flatdev.meta.js
-// @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdev.user.js
+// @author        iHydra
+// @contributor   Hash G.
+// @contributor   Kondax
+// @contributor   Sasori
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-607.css
-// @resource      HLCSS https://github.com/isagalaev/highlight.js/raw/master/src/styles/monokai_sublime.css
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-608.css
+// @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
 // @grant         GM_addStyle
 // @grant         GM_setValue
 // @grant         GM_getValue
@@ -43,6 +44,7 @@ var showLogo = false; // true to show logo, false to hide logo
 var enableSFW = false; // true to enable SFW, false to disable SFW (Safe For Work)
 var previewKey = 'w'; // ALT + {KEY} for Chrome || ALT + SHIFT + {KEY} for Firefox - More Info: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey
 var hideMenu = false; // true to remove menu nav links, false to show.
+var showTime = false; // Show HF MyBB Time (timezone set in User CP)
 var badges = false; // Badges Feature - false to disable feature. || **NOT DONE**
 
 /*
@@ -271,6 +273,9 @@ $(document).ready(function () {
     }
     if(hideMenu === true) {
         $("div[class='menu']").hide();
+    }
+    if(showTime === false) {
+        $("div[class='largetext']").hide();
     }
     if(badges === true) { // BADGES - LIST OF UIDs
         var adminList = [1]; // Omniscient

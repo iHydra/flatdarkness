@@ -1557,6 +1557,10 @@ td .star_rating {
 	background: url("http://i.imgur.com/9PaloQB.png") !important;
 }
 
+.messageEditor .toolbar_button_arrow {
+	background: url("http://i.imgur.com/f4hxRCi.png") no-repeat center center;
+}
+
 .messageEditor .toolbar_dropdown .editor_dropdown_label {
 	background: #2D2D2D !important;
         border: 1px solid #222 !important;

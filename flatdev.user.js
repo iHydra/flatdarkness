@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.6.2
+// @version       1.5.6.3
 // @description   Custom theme for Hack Forums.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
@@ -11,7 +11,7 @@
 // @contributor   Sasori
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-608.css
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-612.css
 // @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
 // @grant         GM_addStyle
 // @grant         GM_setValue
@@ -302,4 +302,6 @@ $(document).ready(function () {
     $('span[style="color:#383838"]').attr('style','color:#444444;'); // Closed Account Username Color Change
     $('a[href="http://hackforums.net/member.php?action=profile&uid=561239"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/EpQPylI.png" style="position: relative;top: 3px;left: 3px;"/>');
     $('a[href="http://hackforums.net/member.php?action=profile&uid=2377407"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/EpQPylI.png" style="position: relative;top: 3px;left: 3px;"/>');
+    $('img[src="http://hackforums.net/jscripts/editor_themes/default/images/television.gif"]').attr('src','http://i.imgur.com/nhHILRQ.png'); // BB Editor - Video Embed
+    $('img[src$="hackforums.net/jscripts/editor_themes/default/images/color.gif"]').attr('src', 'http://i.imgur.com/ZjMmUit.png'); // BB Editor - Color Picker
 });

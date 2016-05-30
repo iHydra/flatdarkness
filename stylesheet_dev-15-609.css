@@ -1549,9 +1549,17 @@ td .star_rating {
 	background-color: #3E3E3E !important;
 }
 
+.messageEditor .toolbar_sprite {
+	background: url("http://i.imgur.com/iABdyDe.png") no-repeat !important; 
+}
+
+.messageEditor .toolbar_sep {
+	background: url("http://i.imgur.com/9PaloQB.png") !important;
+}
+
 .messageEditor .toolbar_dropdown .editor_dropdown_label {
 	background: #2D2D2D !important;
-    border: 1px solid #222 !important;
+        border: 1px solid #222 !important;
 }
 
 .messageEditor .toolbar_dropdown_over .editor_dropdown_label, .messageEditor .editor_dropdown_menu_open .editor_dropdown_label {

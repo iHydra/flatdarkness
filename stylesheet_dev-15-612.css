@@ -1540,9 +1540,9 @@ td .star_rating {
 }
 
 .messageEditor .toolbar_dropdown .editor_dropdown_arrow, .messageEditor .toolbar_dropdown_image .editor_dropdown_arrow {
-	background: #2D2D2D !important;
+	background: url("http://i.imgur.com/fSxUYWG.png") no-repeat center center !important;
 	border: 1px solid #222 !important;
-    border-left: 0px !important;
+        border-left: 0px !important;
 }
 
 .messageEditor .editor_dropdown_menu_open .editor_dropdown_arrow {

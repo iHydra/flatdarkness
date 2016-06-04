@@ -1550,7 +1550,7 @@ td .star_rating {
 }
 
 .messageEditor .toolbar_sprite {
-	background: url("http://i.imgur.com/iABdyDe.png") no-repeat !important; 
+	background: url("http://i.imgur.com/eoZzugA.png") no-repeat !important; 
 }
 
 .messageEditor .toolbar_sep {
@@ -1653,6 +1653,11 @@ td .star_rating {
 
 .messageEditor .toolbar_button .toolbar_sprite_php {
     background-position: -322px 0 !important;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_close_tags {
+    width: 87px !important;
+    background-position: -345px 0 !important;
 }
 
 /* End MyBB Editor */

@@ -35,21 +35,33 @@ GM_addStyle(MainCSS);
 var HLCSS = GM_getResourceText('HLCSS');
 GM_addStyle(HLCSS);
 
-/*
- * USER EDITING
- */
+/* Default settings */
+if (!GM_getValue("quotedColor"))
+    GM_setValue("quotedColor", "#00ffd2");
+if (!GM_getValue("showLogo"))
+    GM_setValue("showLogo", "false");
+if (!GM_getValue("enableSFW"))
+    GM_setValue("enableSFW", "false");
+if (!GM_getValue("previewKey"))
+    GM_setValue("previewKey", "w");
+if (!GM_getValue("hideMenu"))
+    GM_setValue("hideMenu", "false");
+if (!GM_getValue("showTime"))
+    GM_setValue("showTime", "false");
+if (!GM_getValue("badges"))
+    GM_setValue("badges", "true");
 
-var quotedColor = "#00ffd2"; // Color for when quoted by someone - Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
-var showLogo = false; // true to show logo, false to hide logo
-var enableSFW = false; // true to enable SFW, false to disable SFW (Safe For Work)
-var previewKey = 'w'; // ALT + {KEY} for Chrome || ALT + SHIFT + {KEY} for Firefox - More Info: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey
-var hideMenu = false; // true to remove menu nav links, false to show.
-var showTime = false; // Show HF MyBB Time (timezone set in User CP)
-var badges = true; // Badges Feature - false to disable feature. || **NOT DONE**
+/* Retrieve custom settings */
 
-/*
- * END USER EDITING
- */
+var quotedColor = GM_getValue("quotedColor"); // Color for when quoted by someone - Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
+var showLogo = (GM_getValue("showLogo") === "true"); // true to show logo, false to hide logo
+var enableSFW = (GM_getValue("enableSFW") === "true");; // true to enable SFW, false to disable SFW (Safe For Work)
+var previewKey = GM_getValue("previewKey"); // ALT + {KEY} for Chrome || ALT + SHIFT + {KEY} for Firefox - More Info: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey
+var hideMenu = (GM_getValue("hideMenu") === "true"); // true to remove menu nav links, false to show.
+var showTime = (GM_getValue("showTime") === "true"); // Show HF MyBB Time (timezone set in User CP)
+var badges = (GM_getValue("badges") === "true"); // Badges Feature - false to disable feature. || **NOT DONE**
+
+/* End */
 
 $(window).load(function () { // Theme Color Scheme Changer
     var cp = $('<div class=\'cp\'/>');
@@ -73,11 +85,70 @@ $(window).load(function () { // Theme Color Scheme Changer
         localStorage.setItem('theme', 'cl-' + Object.keys(colours) [0]);
     $('body').addClass(localStorage.getItem('theme') ? localStorage.getItem('theme')  : 'cl-' + Object.keys(colours) [0]);
     $('.cp').css('background', colours[$('body').attr('class').split(' ') [0].substring(3, $('body').attr('class').split(' ') [0].length)]);
+   
+
+    /* BEGIN SETTINGS MODAL */
+    var css = "<style>.part { width: 25px; height: 25px; margin: 10px; border-radius: 50%; display: inline-block; } .link { cursor: pointer; color #fff; }</style>";
+
+    // Modal in itself
+    var settings = $('<div class=\'settings_flatdarkness\'/>');
+    settings.attr("style", "background-color: rgb(51, 51, 51); bottom: auto; border: 1px solid rgb(0, 0, 0); height: 50%; left: 182px; margin: 0px; max-height: 95%; max-width: 95%; opacity: 1; overflow: auto; padding: 0px; position: fixed; right: auto; top: 128px; width: 75%; z-index: 999; display: none;'><span style='float: right; margin-right: 1%; margin-top: 0.5%;");
+    settings.append("<h4>Flat Darkness Settings</h4>");
+    
+    // Color picker
+    settings.append("<div>Colors:<div class='colors'></div>");
     $.each(colours, function (key, value) {
-        select.append($('<div class=\'part\' style=\'background: ' + value + ' !important;\' cid=\'' + key + '\'/>'));
+        settings.find(".colors").append($('<div class=\'part\' style=\'background: ' + value + ' !important;\' cid=\'' + key + '\'/>'));
     });
+    settings.find(".colors").append("</div>");
+
+    // Quoted color picker
+    settings.append("<div>Quoted color:<div class='quotedColor'><input type='color' value='" + quotedColor + "'</div></div><br>");
+    $("body").on("change", "input[type='color']", function() {
+        GM_setValue("quotedColor", $("input[type='color']").val());
+    });
+
+    // Show logo settings
+    settings.append("<div>Show Logo? <span class='link' id='showLogo'>" + showLogo + "</span></div>");
+    $("body").on("click", "#showLogo", function() {
+        $("#showLogo").html("" + !showLogo + "");
+        GM_setValue("showLogo", "" + !showLogo + "");
+    });
+
+    // Enable SFW
+    settings.append("<div>Enable SFW? <span class='link' id='enableSFW'>" + enableSFW + "</span></div>");
+    $("body").on("click", "#enableSFW", function() {
+        $("#enableSFW").html("" + !enableSFW + "");
+        GM_setValue("enableSFW", "" + !enableSFW + "");
+    });
+
+    // Hide menu
+    settings.append("<div>Hide Menu? <span class='link' id='hideMenu'>" + hideMenu + "</span></div>");
+    $("body").on("click", "#hideMenu", function() {
+        $("#hideMenu").html("" + !hideMenu + "");
+        GM_setValue("hideMenu", "" + !hideMenu + "");
+    });
+
+    // Show time
+    settings.append("<div>Show time? <span class='link' id='showTime'>" + showTime + "</span></div>");
+    $("body").on("click", "#showTime", function() {
+        $("#showTime").html("" + !showTime + "");
+        GM_setValue("showTime", "" + !showTime + "");
+    });
+
+    // badges
+    settings.append("<div>Show badges? <span class='link' id='badges'>" + badges + "</span></div>");
+    $("body").on("click", "#badges ", function() {
+        $("#badges").html("" + !badges + "");
+        GM_setValue("badges", "" + !badges + "");
+    });
+
+    $("body").append(css);
+    $("body").append(settings);
+    /* END SETTINGS MODAL */
+
     $('.cp').click(function () {
-        $('.select').toggleClass('show');
+        $('.settings_flatdarkness').show();
     });
     $('.part').click(function () {
         var cl = 'cl-' + $(this).attr('cid');

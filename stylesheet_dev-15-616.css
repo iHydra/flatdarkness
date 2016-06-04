@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "DEV v1.5.6.4" !important;
+    content: "DEV v1.5.6.5" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -1550,7 +1550,7 @@ td .star_rating {
 }
 
 .messageEditor .toolbar_sprite {
-	background: url("http://i.imgur.com/eoZzugA.png") no-repeat !important; 
+	background: url("http://i.imgur.com/yuCkxrb.png") no-repeat !important; 
 }
 
 .messageEditor .toolbar_sep {

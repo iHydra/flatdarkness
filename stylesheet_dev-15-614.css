@@ -1619,6 +1619,10 @@ td .star_rating {
     background-position: -115px 0 !important;
 }
 
+.messageEditor .toolbar_button .toolbar_sprite_align_justify {
+    background-position: -138px 0 !important;
+}
+
 .messageEditor .toolbar_button .toolbar_sprite_list_num {
     background-position: -161px 0 !important;
 }

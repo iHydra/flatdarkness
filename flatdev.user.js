@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.6.4
+// @version       1.5.6.5
 // @description   Custom theme for Hack Forums.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
@@ -11,7 +11,7 @@
 // @contributor   Sasori
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-614.css
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-616.css
 // @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
 // @grant         GM_addStyle
 // @grant         GM_setValue
@@ -49,7 +49,7 @@ if (!GM_getValue("hideMenu"))
 if (!GM_getValue("showTime"))
     GM_setValue("showTime", "false");
 if (!GM_getValue("badges"))
-    GM_setValue("badges", "true");
+    GM_setValue("badges", "false");
 
 /* Retrieve custom settings */
 

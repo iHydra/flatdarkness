@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.6.5
+// @version       1.5.6.6
 // @description   Custom theme for Hack Forums.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
@@ -11,7 +11,7 @@
 // @contributor   Sasori
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-616.css
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-618.css
 // @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
 // @grant         GM_addStyle
 // @grant         GM_setValue
@@ -136,7 +136,7 @@ $(window).load(function () { // Theme Color Scheme Changer
         GM_setValue("showTime", "" + !showTime + "");
     });
 
-    // badges
+    // Badges
     settings.append("<div>Show badges? <span class='link' id='badges'>" + badges + "</span></div>");
     $("body").on("click", "#badges ", function() {
         $("#badges").html("" + !badges + "");
@@ -175,6 +175,12 @@ $('.scrollToTop').click(function(){
     $('html, body').animate({scrollTop: 0},800);
     return false;
 });
+
+/** Public Vars **/
+
+//var profileLink = $('#panel > strong:nth-child(1) > a:nth-child(1)').attr("href");
+//var UserID = profileLink.split("=")[2];
+//console.log(UserID);
 
 /*function getBadgeList() {
     GM_xmlhttpRequest({
@@ -341,6 +347,15 @@ $(document).ready(function () {
         $('td[width="25%"]').attr("style","").attr("valign","middle").addClass('groupsCardParts');
         $('td[valign="bottom"]').attr("style","background-color: #333; border-radius: 0px; vertical-align: baseline; font-size: 12px;");
         $('table[width="100%"]').attr("height","100%").attr("cellpadding","10");
+    }
+    if(window.location.pathname == "/newreply.php" || window.location.pathname == "/newthread.php") {
+        $('table.tborder:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1)').attr("style","border-bottom:0px !important;");
+    }
+    if (window.location.pathname == "/member.php") {
+        $('.quick_keys > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1)').attr("style","border-bottom:0px !important;");
+        $('.quick_keys > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) > br:nth-child(1)').remove();
+        var sendToUID = $('.quick_keys > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2) > a:nth-child(1)').attr("href");
+        $('span.largetext').append("<a class='bitButton' style='margin-left: 15px;' title='Send Private Message' href='" + sendToUID + "'>Send PM</a>");
     }
     if(hideMenu === true) {
         $("div[class='menu']").hide();

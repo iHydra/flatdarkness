@@ -417,6 +417,8 @@ textarea {
     -webkit-box-sizing: border-box !important;
     -moz-box-sizing: border-box !important;
     box-sizing: border-box !important;
+    min-height: 134px;
+    min-width: 100%;
 }
 
 textarea:focus {

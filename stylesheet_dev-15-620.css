@@ -1521,6 +1521,10 @@ td .star_rating {
 
 /* MyBB Editor */
 
+#message_old {
+	width: 10%;
+}
+
 .messageEditor {
 	background: #252525 !important;
 	border: 1px solid #222 !important;

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.6.6
+// @version       1.5.6.7
 // @description   Custom theme for Hack Forums.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
@@ -11,7 +11,7 @@
 // @contributor   Sasori
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-618.css
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-621.css
 // @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
 // @grant         GM_addStyle
 // @grant         GM_setValue
@@ -176,6 +176,32 @@ $('.scrollToTop').click(function(){
     return false;
 });
 
+$.fn.textWidth = function(text, font) { // AUTO GROW INPUT
+    
+    if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);
+    
+    $.fn.textWidth.fakeEl.text(text || this.val() || this.text() || this.attr('placeholder')).css('font', font || this.css('font'));
+    
+    return $.fn.textWidth.fakeEl.width();
+};
+
+$('.width-dynamic').on('input', function() {
+    var inputWidth = $(this).textWidth();
+    $(this).css({
+        width: inputWidth
+    })
+}).trigger('input');
+
+
+function inputWidth(elem, minW, maxW) {
+    elem = $(this);
+    console.log(elem)
+}
+
+var targetElem = $('.width-dynamic');
+
+inputWidth(targetElem); // AutoGrowInput
+
 /** Public Vars **/
 
 //var profileLink = $('#panel > strong:nth-child(1) > a:nth-child(1)').attr("href");
@@ -331,6 +357,10 @@ $(document).ready(function () {
         var userName = $('strong > a[href^="http://hackforums.net/member.php?action=profile&uid="]').text();
         $('blockquote > cite:contains(' + userName + ')').css({'color': quotedColor, 'font-weight': 'bold','border-bottom': '1px dotted' + quotedColor});
     }
+    if(window.location.pathname == "/private.php") {
+        $('.quick_keys > form:nth-child(1) > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1)').attr("style","border-bottom:0px !important;");
+        //$('input.textbox').addClass('width-dynamic').css('max-width','1020px').css('min-width','250px'); // Input Textbox Auto-Scale to Text Entered
+    }
     if(window.location.pathname == "/showstaff.php" || window.location.pathname == "/showmods.php") {
         $('head').append('<style>td.trow1:hover {background: none !important;}</style>');
         $('td[class="trow1"]').attr("style","background: none; border: 0px !important;");
@@ -390,10 +420,11 @@ $(document).ready(function () {
     $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color
     $('strong:contains("Post:") > a[href^="showthread.php?tid="]').attr('id','postLink').attr('style','padding-top: 3px; padding-right: 5px; display: inline-block;'); // Post # Centered
     $('span[style="color:#383838"]').attr('style','color:#444444;'); // Closed Account Username Color Change
+    
 });
 
 function BBVideoColorReplace(){ //BB Video and Color Icon Replace Delayer
     $('img[src="http://hackforums.net/jscripts/editor_themes/default/images/television.gif"]').attr('src','http://i.imgur.com/nhHILRQ.png'); // BB Editor - Video Embed
     $('img[src$="hackforums.net/jscripts/editor_themes/default/images/color.gif"]').attr('src', 'http://i.imgur.com/ZjMmUit.png'); // BB Editor - Color Picker
 };
-setTimeout(BBVideoColorReplace, 400);
+setTimeout(BBVideoColorReplace, 800);

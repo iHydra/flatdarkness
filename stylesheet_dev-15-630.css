@@ -170,18 +170,18 @@ input.textbox:focus {
 }
 
 td[bgcolor="red"]{
-    border-radius: 6px 0px 0px 6px !important;
+    border-radius: 3px 0px 0px 3px !important;
     background-color: #bb3131 !important;
-    -moz-border-radius: 6px 0px 0px 6px !important;
-    -webkit-border-radius: 6px 0px 0px 6px !important;
+    -moz-border-radius: 3px 0px 0px 3px !important;
+    -webkit-border-radius: 3px 0px 0px 3px !important;
     color: #FFF !important;
 }
 
 td[bgcolor="green"]{
-    border-radius: 0px 6px 6px 0px !important;
+    border-radius: 0px 3px 3px 0px !important;
     background-color: #31bb4b !important;
-    -moz-border-radius: 0px 6px 6px 0px !important;
-    -webkit-border-radius: 0px 6px 6px 0px !important;
+    -moz-border-radius: 0px 3px 3px 0px !important;
+    -webkit-border-radius: 0px 3px 3px 0px !important;
     color: #FFF !important;
 }
 

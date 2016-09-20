@@ -125,6 +125,10 @@ div.quick_keys > table > tbody > tr > td > table:first-of-type {
     box-shadow: none !important;
 }
 
+[contenteditable="true"]:focus {
+    outline: none;
+}
+
 input.button, .button2, .button, a.bitButton, input.bitButton, span.bitButton, input[type="submit"] {
     display: inline-block !important;
     color: #FFF !important;

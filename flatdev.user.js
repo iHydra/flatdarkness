@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.6.7
+// @version       1.5.6.8
 // @description   Custom theme for Hack Forums.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
@@ -11,7 +11,7 @@
 // @contributor   Sasori
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-621.css
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-630.css
 // @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
 // @grant         GM_addStyle
 // @grant         GM_setValue
@@ -55,7 +55,7 @@ if (!GM_getValue("badges"))
 
 var quotedColor = GM_getValue("quotedColor"); // Color for when quoted by someone - Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
 var showLogo = (GM_getValue("showLogo") === "true"); // true to show logo, false to hide logo
-var enableSFW = (GM_getValue("enableSFW") === "true");; // true to enable SFW, false to disable SFW (Safe For Work)
+var enableSFW = (GM_getValue("enableSFW") === "true"); // true to enable SFW, false to disable SFW (Safe For Work)
 var previewKey = GM_getValue("previewKey"); // ALT + {KEY} for Chrome || ALT + SHIFT + {KEY} for Firefox - More Info: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey
 var hideMenu = (GM_getValue("hideMenu") === "true"); // true to remove menu nav links, false to show.
 var showTime = (GM_getValue("showTime") === "true"); // Show HF MyBB Time (timezone set in User CP)
@@ -85,7 +85,6 @@ $(window).load(function () { // Theme Color Scheme Changer
         localStorage.setItem('theme', 'cl-' + Object.keys(colours) [0]);
     $('body').addClass(localStorage.getItem('theme') ? localStorage.getItem('theme')  : 'cl-' + Object.keys(colours) [0]);
     $('.cp').css('background', colours[$('body').attr('class').split(' ') [0].substring(3, $('body').attr('class').split(' ') [0].length)]);
-   
 
     /* BEGIN SETTINGS MODAL */
     var css = "<style>.part { width: 25px; height: 25px; margin: 10px; border-radius: 50%; display: inline-block; } .link { cursor: pointer; color #fff; }</style>";
@@ -94,7 +93,7 @@ $(window).load(function () { // Theme Color Scheme Changer
     var settings = $('<div class=\'settings_flatdarkness\'/>');
     settings.attr("style", "background-color: rgb(51, 51, 51); bottom: auto; border: 1px solid rgb(0, 0, 0); height: 50%; left: 182px; margin: 0px; max-height: 95%; max-width: 95%; opacity: 1; overflow: auto; padding: 0px; position: fixed; right: auto; top: 128px; width: 75%; z-index: 999; display: none;'><span style='float: right; margin-right: 1%; margin-top: 0.5%;");
     settings.append("<h4>Flat Darkness Settings</h4>");
-    
+
     // Color picker
     settings.append("<div>Colors:<div class='colors'></div>");
     $.each(colours, function (key, value) {
@@ -177,11 +176,8 @@ $('.scrollToTop').click(function(){
 });
 
 $.fn.textWidth = function(text, font) { // AUTO GROW INPUT
-    
     if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);
-    
     $.fn.textWidth.fakeEl.text(text || this.val() || this.text() || this.attr('placeholder')).css('font', font || this.css('font'));
-    
     return $.fn.textWidth.fakeEl.width();
 };
 
@@ -189,13 +185,13 @@ $('.width-dynamic').on('input', function() {
     var inputWidth = $(this).textWidth();
     $(this).css({
         width: inputWidth
-    })
+    });
 }).trigger('input');
 
 
 function inputWidth(elem, minW, maxW) {
     elem = $(this);
-    console.log(elem)
+    console.log(elem);
 }
 
 var targetElem = $('.width-dynamic');
@@ -359,6 +355,7 @@ $(document).ready(function () {
     }
     if(window.location.pathname == "/private.php") {
         $('.quick_keys > form:nth-child(1) > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1)').attr("style","border-bottom:0px !important;");
+        $('#content > div.quick_keys > form > table > tbody > tr > td:nth-child(2) > table:nth-child(1) > tbody > tr > td > table > tbody > tr > td').attr("style","border-bottom:0px !important;");
         //$('input.textbox').addClass('width-dynamic').css('max-width','1020px').css('min-width','250px'); // Input Textbox Auto-Scale to Text Entered
     }
     if(window.location.pathname == "/showstaff.php" || window.location.pathname == "/showmods.php") {
@@ -380,6 +377,9 @@ $(document).ready(function () {
     }
     if(window.location.pathname == "/newreply.php" || window.location.pathname == "/newthread.php") {
         $('table.tborder:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1)').attr("style","border-bottom:0px !important;");
+    }
+    if(window.location.pathname == "/search.php") {
+        $('#content > div.quick_keys > form > table > tbody > tr:nth-child(3) > td:nth-child(2) > table > tbody > tr > td:nth-child(1)').attr("style","border-bottom:0px !important;");
     }
     if (window.location.pathname == "/member.php") {
         $('.quick_keys > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1)').attr("style","border-bottom:0px !important;");
@@ -420,7 +420,6 @@ $(document).ready(function () {
     $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color
     $('strong:contains("Post:") > a[href^="showthread.php?tid="]').attr('id','postLink').attr('style','padding-top: 3px; padding-right: 5px; display: inline-block;'); // Post # Centered
     $('span[style="color:#383838"]').attr('style','color:#444444;'); // Closed Account Username Color Change
-    
 });
 
 function BBVideoColorReplace(){ //BB Video and Color Icon Replace Delayer

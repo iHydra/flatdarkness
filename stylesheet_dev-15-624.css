@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "DEV v1.5.6.7" !important;
+    content: "DEV v1.5.6.8" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -125,7 +125,7 @@ div.quick_keys > table > tbody > tr > td > table:first-of-type {
     box-shadow: none !important;
 }
 
-input.button, .button2, .button, a.bitButton, input.bitButton, span.bitButton {
+input.button, .button2, .button, a.bitButton, input.bitButton, span.bitButton, input[type="submit"] {
     display: inline-block !important;
     color: #FFF !important;
     background-color: #222 !important;
@@ -143,12 +143,12 @@ input.button, .button2, .button, a.bitButton, input.bitButton, span.bitButton {
     border: none !important;
 }
 
-input.button:hover, .button2:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover {
+input.button:hover, .button2:hover, a.bitButton:hover, input.bitButton:hover, span.bitButton:hover, input[type="submit"]:hover {
     background-color: #151515 !important;
     border: 0px !important;
 }
 
-input.button:active, .button2:active, a.bitButton:active, input.bitButton:active, span.bitButton:active {
+input.button:active, .button2:active, a.bitButton:active, input.bitButton:active, span.bitButton:active, input[type="submit"]:active {
     background-color: #151515 !important;
     border: 0px !important;
 }
@@ -996,7 +996,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     box-shadow: none !important;
 }
 
-.cl-black input.button:hover, .cl-black .button2:hover, .cl-black button2:hover, .cl-black .button:hover, .cl-black button:hover, .cl-black a.bitButton:hover, .cl-black input.bitButton:hover, .cl-black span.bitButton:hover {
+.cl-black input.button:hover, .cl-black .button2:hover, .cl-black button2:hover, .cl-black .button:hover, .cl-black button:hover, .cl-black a.bitButton:hover, .cl-black input.bitButton:hover, .cl-black span.bitButton:hover, .cl-black input[type="submit"]:hover {
     background-color: #151515 !important;
     border: 0px !important;
     color: white !important;
@@ -1021,7 +1021,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #A2D7FF !important;
 }
 
-.cl-blue input.button:hover, .cl-blue .button2:hover, .cl-blue button2:hover, .cl-blue .button:hover, .cl-blue button:hover, .cl-blue a.bitButton:hover, .cl-blue input.bitButton:hover, .cl-blue span.bitButton:hover {
+.cl-blue input.button:hover, .cl-blue .button2:hover, .cl-blue button2:hover, .cl-blue .button:hover, .cl-blue button:hover, .cl-blue a.bitButton:hover, .cl-blue input.bitButton:hover, .cl-blue span.bitButton:hover, .cl-blue input[type="submit"]:hover {
     background-color: #619ECB !important;
     border: 0px !important;
     color: white !important;
@@ -1058,7 +1058,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #A2D7FF !important;
 }
 
-.cl-darkblue input.button:hover, .cl-darkblue .button2:hover, .cl-darkblue button2:hover, .cl-darkblue .button:hover, .cl-darkblue button:hover, .cl-darkblue a.bitButton:hover, .cl-darkblue input.bitButton:hover, .cl-darkblue span.bitButton:hover {
+.cl-darkblue input.button:hover, .cl-darkblue .button2:hover, .cl-darkblue button2:hover, .cl-darkblue .button:hover, .cl-darkblue button:hover, .cl-darkblue a.bitButton:hover, .cl-darkblue input.bitButton:hover, .cl-darkblue span.bitButton:hover, .cl-darkblue input[type="submit"]:hover {
     background-color: #235F8C !important;
     border: 0px !important;
     color: white !important;
@@ -1096,7 +1096,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 }
 
 .cl-green input.button:hover, .cl-green .button2:hover, .cl-green button2:hover, .cl-green .button:hover, .cl-green button:hover, .cl-green a.bitButton:hover, .cl-green input.bitButton:hover, .cl-green span.bitButton:hover {
-    background-color: #7ECB61 !important;
+    background-color: #7ECB61 !important, .cl-green input[type="submit"]:hover;
     border: 0px !important;
     color: white !important;
 }
@@ -1132,7 +1132,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #A1FB80 !important;
 }
 
-.cl-darkgreen input.button:hover, .cl-darkgreen .button2:hover, .cl-darkgreen button2:hover, .cl-darkgreen .button:hover, .cl-darkgreen button:hover, .cl-darkgreen a.bitButton:hover, .cl-darkgreen input.bitButton:hover, .cl-darkgreen span.bitButton:hover {
+.cl-darkgreen input.button:hover, .cl-darkgreen .button2:hover, .cl-darkgreen button2:hover, .cl-darkgreen .button:hover, .cl-darkgreen button:hover, .cl-darkgreen a.bitButton:hover, .cl-darkgreen input.bitButton:hover, .cl-darkgreen span.bitButton:hover, .cl-darkgreen input[type="submit"]:hover {
     background-color: #35713F !important;
     border: 0px !important;
     color: white !important;
@@ -1169,7 +1169,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #FFC144 !important;
 }
 
-.cl-orange input.button:hover, .cl-orange .button2:hover, .cl-orange button2:hover, .cl-orange .button:hover, .cl-orange button:hover, .cl-orange a.bitButton:hover, .cl-orange input.bitButton:hover, .cl-orange span.bitButton:hover {
+.cl-orange input.button:hover, .cl-orange .button2:hover, .cl-orange button2:hover, .cl-orange .button:hover, .cl-orange button:hover, .cl-orange a.bitButton:hover, .cl-orange input.bitButton:hover, .cl-orange span.bitButton:hover, .cl-orange input[type="submit"]:hover {
     background-color: #D29C2D !important;
     border: 0px !important;
     color: white !important;
@@ -1206,7 +1206,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #FFC144 !important;
 }
 
-.cl-darkorange input.button:hover, .cl-darkorange .button2:hover, .cl-darkorange button2:hover, .cl-darkorange .button:hover, .cl-darkorange button:hover, .cl-darkorange a.bitButton:hover, .cl-darkorange input.bitButton:hover, .cl-darkorange span.bitButton:hover {
+.cl-darkorange input.button:hover, .cl-darkorange .button2:hover, .cl-darkorange button2:hover, .cl-darkorange .button:hover, .cl-darkorange button:hover, .cl-darkorange a.bitButton:hover, .cl-darkorange input.bitButton:hover, .cl-darkorange span.bitButton:hover, .cl-darkorange input[type="submit"]:hover {
     background-color: #9A782E !important;
     border: 0px !important;
     color: white !important;
@@ -1243,7 +1243,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #AD7CFF !important;
 }
 
-.cl-purple input.button:hover, .cl-purple .button2:hover, .cl-purple button2:hover, .cl-purple .button:hover, .cl-purple button:hover, .cl-purple a.bitButton:hover, .cl-purple input.bitButton:hover, .cl-purple span.bitButton:hover {
+.cl-purple input.button:hover, .cl-purple .button2:hover, .cl-purple button2:hover, .cl-purple .button:hover, .cl-purple button:hover, .cl-purple a.bitButton:hover, .cl-purple input.bitButton:hover, .cl-purple span.bitButton:hover, .cl-purple input[type="submit"]:hover {
     background-color: #724FAD !important;
     border: 0px !important;
     color: white !important;
@@ -1280,7 +1280,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #AD7CFF !important;
 }
 
-.cl-darkpurple input.button:hover, .cl-darkpurple .button2:hover, .cl-darkpurple button2:hover, .cl-darkpurple .button:hover, .cl-darkpurple button:hover, .cl-darkpurple a.bitButton:hover, .cl-darkpurple input.bitButton:hover, .cl-darkpurple span.bitButton:hover {
+.cl-darkpurple input.button:hover, .cl-darkpurple .button2:hover, .cl-darkpurple button2:hover, .cl-darkpurple .button:hover, .cl-darkpurple button:hover, .cl-darkpurple a.bitButton:hover, .cl-darkpurple input.bitButton:hover, .cl-darkpurple span.bitButton:hover, .cl-darkpurple input[type="submit"]:hover {
     background-color: #4d2d5e !important;
     border: 0px !important;
     color: white !important;
@@ -1318,7 +1318,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #FF7B7B !important;
 }
 
-.cl-red input.button:hover, .cl-red .button2:hover, .cl-red button2:hover, .cl-red .button:hover, .cl-red button:hover, .cl-red a.bitButton:hover, .cl-red input.bitButton:hover, .cl-red span.bitButton:hover {
+.cl-red input.button:hover, .cl-red .button2:hover, .cl-red button2:hover, .cl-red .button:hover, .cl-red button:hover, .cl-red a.bitButton:hover, .cl-red input.bitButton:hover, .cl-red span.bitButton:hover, .cl-red  input[type="submit"]:hover {
     background-color: #CB6161 !important;
     border: 0px !important;
     color: white !important;
@@ -1355,7 +1355,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
     color: #FF7B7B !important;
 }
 
-.cl-darkred input.button:hover, .cl-darkred .button2:hover, .cl-darkred button2:hover, .cl-darkred .button:hover, .cl-darkred button:hover, .cl-darkred a.bitButton:hover, .cl-darkred input.bitButton:hover, .cl-darkred span.bitButton:hover {
+.cl-darkred input.button:hover, .cl-darkred .button2:hover, .cl-darkred button2:hover, .cl-darkred .button:hover, .cl-darkred button:hover, .cl-darkred a.bitButton:hover, .cl-darkred input.bitButton:hover, .cl-darkred span.bitButton:hover, .cl-darkred input[type="submit"]:hover {
     background-color: #682626 !important;
     border: 0px !important;
     color: white !important;

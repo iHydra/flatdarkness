@@ -164,12 +164,9 @@ input.textbox {
 	box-sizing: border-box;
 }
 
-input.textbox:hover {
-    border: 1px dotted #111;
-}
-
 input.textbox:focus {
     outline: none !important;
+    border: 1px dotted #111;
 }
 
 td[bgcolor="red"]{

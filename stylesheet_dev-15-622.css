@@ -153,6 +153,18 @@ input.button:active, .button2:active, a.bitButton:active, input.bitButton:active
     border: 0px !important;
 }
 
+input.textbox {
+	background: #222 !important;
+	color: #ccc !important;
+	border: 1px dotted #444 !important;
+	padding: 4px !important;
+	font-size: 14px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+}
+
 td[bgcolor="red"]{
     border-radius: 6px 0px 0px 6px !important;
     background-color: #bb3131 !important;

@@ -1,17 +1,18 @@
 // ==UserScript==
 // @name          Flat Darkness - Stable
 // @namespace     https://github.com/iHydra
-// @version       1.5.5
-// @description   Custom theme for Hack Forums. Base theme by Sasori.
+// @version       1.5.6
+// @description   Custom theme for Hack Forums.
 // @include       http://www.hackforums.net/*
 // @include       http://hackforums.net/*
-// @author        iHydra/Kondax/Sasori
-// @updateURL     https://github.com/iHydra/flatdarkness/raw/master/flatdev.meta.js
-// @downloadURL   https://github.com/iHydra/flatdarkness/raw/master/flatdev.user.js
+// @author        iHydra
+// @contributor   Hash G.
+// @contributor   Kondax
+// @contributor   Sasori
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_1.5.5.css
-// @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css 
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_1.5.6.css
+// @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
 // @grant         GM_addStyle
 // @grant         GM_setValue
 // @grant         GM_getValue
@@ -19,9 +20,8 @@
 // @run-at        document-start
 // ==/UserScript==
 
-var quotedPosts = GM_getValue("quotedPosts") == undefined ? [] : GM_getValue("quotedPosts");
+var quotedPosts = GM_getValue("quotedPosts") === undefined ? [] : GM_getValue("quotedPosts");
 console.log(quotedPosts);
-//alert(GM_getValue("quotedPosts"));
 
 /* INFORMATION - READ */
 // You can change Highlighter Theme: https://github.com/isagalaev/highlight.js/tree/master/src/styles || Demo of Themes: https://highlightjs.org/static/demo/
@@ -35,25 +35,39 @@ GM_addStyle(MainCSS);
 var HLCSS = GM_getResourceText('HLCSS');
 GM_addStyle(HLCSS);
 
-/*
- * USER EDITING
- */
+/* Default settings */
+if (!GM_getValue("quotedColor"))
+    GM_setValue("quotedColor", "#00ffd2");
+if (!GM_getValue("showLogo"))
+    GM_setValue("showLogo", "false");
+if (!GM_getValue("enableSFW"))
+    GM_setValue("enableSFW", "false");
+if (!GM_getValue("previewKey"))
+    GM_setValue("previewKey", "w");
+if (!GM_getValue("hideMenu"))
+    GM_setValue("hideMenu", "false");
+if (!GM_getValue("showTime"))
+    GM_setValue("showTime", "false");
+if (!GM_getValue("badges"))
+    GM_setValue("badges", "false");
 
-var quotedColor = "#00ffd2"; // Color for when quoted by someone - Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
-var showLogo = false; // true to show logo, false to hide logo
-var enableSFW = false; // true to enable SFW, false to disable SFW (Safe For Work)
-var previewKey = 'w'; // ALT + {KEY} for Chrome || ALT + SHIFT + {KEY} for Firefox - More Info: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey
-var hideMenu = false; // true to remove menu nav links, false to show.
-var badges = false; // Badges Feature - false to disable feature. || **NOT DONE**
+/* Retrieve custom settings */
 
-/*
- * END USER EDITING
- */
+var quotedColor = GM_getValue("quotedColor"); // Color for when quoted by someone - Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
+var showLogo = (GM_getValue("showLogo") === "true"); // true to show logo, false to hide logo
+var enableSFW = (GM_getValue("enableSFW") === "true"); // true to enable SFW, false to disable SFW (Safe For Work)
+var previewKey = GM_getValue("previewKey"); // ALT + {KEY} for Chrome || ALT + SHIFT + {KEY} for Firefox - More Info: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey
+var hideMenu = (GM_getValue("hideMenu") === "true"); // true to remove menu nav links, false to show.
+var showTime = (GM_getValue("showTime") === "true"); // Show HF MyBB Time (timezone set in User CP)
+var badges = (GM_getValue("badges") === "true"); // Badges Feature - false to disable feature. || **NOT DONE**
+
+/* End */
 
 $(window).load(function () { // Theme Color Scheme Changer
     var cp = $('<div class=\'cp\'/>');
     var select = $('<div class=\'select\'/>');
-    $('body').append(cp, select);
+    var scrollTop = $('<a href=\"#\"/ title=\"Scroll to Top\"/ class=\"scrollToTop\"/></a>'); // Scroll To Top
+    $('body').append(scrollTop, cp, select);
     var colours = {
         'black': '#393939',
         'blue': '#619ECB',
@@ -71,11 +85,69 @@ $(window).load(function () { // Theme Color Scheme Changer
         localStorage.setItem('theme', 'cl-' + Object.keys(colours) [0]);
     $('body').addClass(localStorage.getItem('theme') ? localStorage.getItem('theme')  : 'cl-' + Object.keys(colours) [0]);
     $('.cp').css('background', colours[$('body').attr('class').split(' ') [0].substring(3, $('body').attr('class').split(' ') [0].length)]);
+
+    /* BEGIN SETTINGS MODAL */
+    var css = "<style>.part { width: 25px; height: 25px; margin: 10px; border-radius: 50%; display: inline-block; } .link { cursor: pointer; color #fff; }</style>";
+
+    // Modal in itself
+    var settings = $('<div class=\'settings_flatdarkness\'/>');
+    settings.attr("style", "background-color: rgb(51, 51, 51); bottom: auto; border: 1px solid rgb(0, 0, 0); height: 50%; left: 182px; margin: 0px; max-height: 95%; max-width: 95%; opacity: 1; overflow: auto; padding: 0px; position: fixed; right: auto; top: 128px; width: 75%; z-index: 999; display: none;'><span style='float: right; margin-right: 1%; margin-top: 0.5%;");
+    settings.append("<h4>Flat Darkness Settings</h4>");
+
+    // Color picker
+    settings.append("<div>Colors:<div class='colors'></div>");
     $.each(colours, function (key, value) {
-        select.append($('<div class=\'part\' style=\'background: ' + value + ' !important;\' cid=\'' + key + '\'/>'));
+        settings.find(".colors").append($('<div class=\'part\' style=\'background: ' + value + ' !important;\' cid=\'' + key + '\'/>'));
     });
+    settings.find(".colors").append("</div>");
+
+    // Quoted color picker
+    settings.append("<div>Quoted color:<div class='quotedColor'><input type='color' value='" + quotedColor + "'</div></div><br>");
+    $("body").on("change", "input[type='color']", function() {
+        GM_setValue("quotedColor", $("input[type='color']").val());
+    });
+
+    // Show logo settings
+    settings.append("<div>Show Logo? <span class='link' id='showLogo'>" + showLogo + "</span></div>");
+    $("body").on("click", "#showLogo", function() {
+        $("#showLogo").html("" + !showLogo + "");
+        GM_setValue("showLogo", "" + !showLogo + "");
+    });
+
+    // Enable SFW
+    settings.append("<div>Enable SFW? <span class='link' id='enableSFW'>" + enableSFW + "</span></div>");
+    $("body").on("click", "#enableSFW", function() {
+        $("#enableSFW").html("" + !enableSFW + "");
+        GM_setValue("enableSFW", "" + !enableSFW + "");
+    });
+
+    // Hide menu
+    settings.append("<div>Hide Menu? <span class='link' id='hideMenu'>" + hideMenu + "</span></div>");
+    $("body").on("click", "#hideMenu", function() {
+        $("#hideMenu").html("" + !hideMenu + "");
+        GM_setValue("hideMenu", "" + !hideMenu + "");
+    });
+
+    // Show time
+    settings.append("<div>Show time? <span class='link' id='showTime'>" + showTime + "</span></div>");
+    $("body").on("click", "#showTime", function() {
+        $("#showTime").html("" + !showTime + "");
+        GM_setValue("showTime", "" + !showTime + "");
+    });
+
+    // Badges
+    settings.append("<div>Show badges? <span class='link' id='badges'>" + badges + "</span></div>");
+    $("body").on("click", "#badges ", function() {
+        $("#badges").html("" + !badges + "");
+        GM_setValue("badges", "" + !badges + "");
+    });
+
+    $("body").append(css);
+    $("body").append(settings);
+    /* END SETTINGS MODAL */
+
     $('.cp').click(function () {
-        $('.select').toggleClass('show');
+        $('.settings_flatdarkness').show();
     });
     $('.part').click(function () {
         var cl = 'cl-' + $(this).attr('cid');
@@ -85,27 +157,75 @@ $(window).load(function () { // Theme Color Scheme Changer
     });
 });
 
-/** START SETTINGS PANEL **/
-
-// TBA
-
-/** END SETTINGS PANEL **/
-
-
 /** Custom Functions **/
-
 
 $('code').each(function(i, block) { // Highlight Syntax
     hljs.highlightBlock(block);
+});
 
-});   
+$(window).scroll(function(){ // Scroll to Top
+    if ($(this).scrollTop() > 100) {
+        $('.scrollToTop').fadeIn();
+    } else {
+        $('.scrollToTop').fadeOut();
+    }
+});
+$('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop: 0},800);
+    return false;
+});
 
+$.fn.textWidth = function(text, font) { // AUTO GROW INPUT
+    if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);
+    $.fn.textWidth.fakeEl.text(text || this.val() || this.text() || this.attr('placeholder')).css('font', font || this.css('font'));
+    return $.fn.textWidth.fakeEl.width();
+};
+
+$('.width-dynamic').on('input', function() {
+    var inputWidth = $(this).textWidth();
+    $(this).css({
+        width: inputWidth
+    });
+}).trigger('input');
+
+
+function inputWidth(elem, minW, maxW) {
+    elem = $(this);
+    console.log(elem);
+}
+
+var targetElem = $('.width-dynamic');
+
+inputWidth(targetElem); // AutoGrowInput
+
+/** Public Vars **/
+
+//var profileLink = $('#panel > strong:nth-child(1) > a:nth-child(1)').attr("href");
+//var UserID = profileLink.split("=")[2];
+//console.log(UserID);
+
+/*function getBadgeList() {
+    GM_xmlhttpRequest({
+        method: "GET",
+        url: "http://ihydra.net/hf/flatdark/adminList.txt"+ "?t=" + Math.random(),
+        onload: function(response){
+            var reslines, templine, i, j, donorMap = {};
+            reslines = response.responseText.split('\n');
+        }
+    });
+} */
 
 /*
  * Modifications (jQuery/jS for multi-browser support)
  */
 
 $(document).ready(function () {
+    if(1 == 1) { // window.location.pathname.indexOf("/newreply.php") == 0
+        console.log("bbLive");
+        var bbLiveButton = $('<button class="bitButton md-trigger" data-modal="modal-5">Newspaper</button>');
+        $('div[class*="messageEditor"]').addClass("test");
+        console.log("worked?");
+    }
     $('div.menu > ul').attr('style','text-align:center !important;');
     $('img[src$="hackforums.net/images/modern_bl/starstaff.png"]').attr('style', 'filter: hue-rotate(5deg) saturate(8); -webkit-filter: hue-rotate(5deg) saturate(8)'); // Staff Stars Color Change
     $('img[src$="hackforums.net/images/modern_bl/dismiss_notice.gif"]').attr('src', 'http://i.imgur.com/uxvQQDI.png'); // PM Notif Dismiss Icon
@@ -122,13 +242,10 @@ $(document).ready(function () {
     $('span:contains("Moderated")').addClass('sevenpad'); // Padding fix
     $('link[href*="star_ratings"]').remove(); // Star Ratings Change
     $('#pm_notice').removeClass('pm_alert').addClass('pm_alert2'); // Group vs. PM Alert
-
-    $('code[class="hljs markdown"]').dblclick(function() {
+    $('div > code').dblclick(function() {
         $(this).select();
-
         var text = this,
             range, selection;
-
         if (document.body.createTextRange) {
             range = document.body.createTextRange();
             range.moveToElementText(text);
@@ -141,7 +258,6 @@ $(document).ready(function () {
             selection.addRange(range);
         }
     });
-
     if($("img[id*='multiquote_']").attr("src") === "http://hackforums.net/images/modern_bl/english/postbit_multiquote_on.gif") { // Multiquote IMG to CSS - By Snorlax
         $("img[id*='multiquote_']").hide().after("<button class='button' style='bottom: 7px;position: relative;cursor: pointer;outline: none;'>MQ-</button>");
     } else {
@@ -158,15 +274,13 @@ $(document).ready(function () {
         GM_setValue("quotedPosts", quotedPosts);
         $(this).text($(this).text() == "MQ+" ? "MQ-" : "MQ+");
     });
-
     $(".trow1 .button").each(function() {
         var postId = $(this).parent().attr("id").match(/multiquote_link_([0-9]*)/)[1];
         if(GM_getValue("quotedPosts").indexOf(postId) >= 0) {
-            $(this).text("MQ-");    
+            $(this).text("MQ-");
             console.log(postId);
         }
     });
-
     $("body").on("click", "#quickreply_multiquote", function() {
         console.log("Clicked");
         quotedPosts = [];
@@ -176,23 +290,20 @@ $(document).ready(function () {
             console.log("SET TO MQ+");
         });
     });
-
     $('.button2[name="previewpost"]').attr('accesskey',previewKey); // Preview Key Hotkey Shortcut
-
     if(window.location.href == "http://hackforums.net/misc.php?action=buddypopup"){ // Buddy List Online Status Fix
         $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', ''); // Away Status
         $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', ''); // Online Status
-        $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', ''); // Offline Status  
+        $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', ''); // Offline Status
     }else if(window.location.href == "http://hackforums.net/usercp.php?action=editlists"){
         $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', 'vertical-align: top;'); // Away Status
         $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', 'vertical-align: top;'); // Online Status
-        $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', 'vertical-align: top;'); // Offline Status  
+        $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', 'vertical-align: top;'); // Offline Status
     }else{
         $('img[src$="hackforums.net/images/modern_bl/buddy_away.gif"]').attr('src', 'http://i.imgur.com/x7dAaGE.png').attr('style', 'position: absolute; padding-top: 4px;'); // Away Status
         $('img[src$="hackforums.net/images/modern_bl/buddy_online.gif"]').attr('src', 'http://i.imgur.com/lpKaTIB.png').attr('style', 'position: absolute; padding-top: 4px;'); // Online Status
         $('img[src$="hackforums.net/images/modern_bl/buddy_offline.gif"]').attr('src', 'http://i.imgur.com/EKt4fXk.png').attr('style', 'position: absolute; padding-top: 4px;'); // Offline Status
     }
-
     $("td[class*='trow'] input:checkbox").on("click", function() { // Mods & Staf Only - Highlight checkboxed rows - Conflicts with HFES for me, please test and report back
         console.log("something");
         var selector = $(this).closest("tr").find("td");
@@ -202,11 +313,9 @@ $(document).ready(function () {
             selector.css("background", "");
         }
     });
-
     if(window.location.pathname == "/gauth.php"){
         $('span[class="float_right smalltext"]').attr('style','display: block !important'); // Gauth Reset Link Reveal
     }
-
     if(window.location.pathname == "/reputation.php"){
         $('a[href$="&show=positive"]').attr('style','font-size: 14px; background-color: #2DA546; border: 1px solid #2CC330; padding: 5px 10px 5px 10px; font-weight: bold; color: white;').after("<br/>"); // Positive Rep Box
         $('a[href$="&show=neutral"]').attr('style','font-size: 14px; background-color: #777777; border: 1px solid #949494; padding: 5px 10px 5px 10px; font-weight: bold; color: white;').after("<br/>"); // Neutral Rep Box
@@ -222,44 +331,43 @@ $(document).ready(function () {
         $('img[src$="http://hackforums.net/images/modern_bl/logo_bl.gif"]').attr('src', 'http://i.imgur.com/fAzkq6w.png');
         $('div[class="logo"]').removeClass("logo").attr('style','text-align:center');
     }
-
     if(enableSFW === true) { // Enable Safe-For-Work
         $('div[style="overflow:hidden; max-height:200px;"]').attr('class','sigArea');
         $('div[style="overflow:hidden; max-height:200px;"] img').attr('class','sigImage');
         $('td[class="post_avatar"]').attr('style','display:none;');
         var sigShow = $('<input type="button" class="button sigButton" value="toggle" style="position:relative; float:right;" />');
-
         $("table[id*='post_']").each(function() {
             src = $(this).find("tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > div:nth-child(3) img").attr("src");
-            if (src != null) {
+            if (src !== null) {
                 $(this).find("tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > div:nth-child(3) img").attr('style','display:none;');
                 $(this).find("tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > div:nth-child(3)").prepend('<input type="button" class="bitButton sigButton" value="toggle" style="position:relative; float:right; outline:none;" />');
             }
         });
-
-        $('.sigButton').click(function() {   
+        $('.sigButton').click(function() {
             $(this).parent().find('.sigImage').toggleClass("sigReveal");
             $(this).parent().toggleClass("sigResize");
 
         });
     }
-
     if(window.location.pathname != "/private.php") {
         var userName = $('strong > a[href^="http://hackforums.net/member.php?action=profile&uid="]').text();
         $('blockquote > cite:contains(' + userName + ')').css({'color': quotedColor, 'font-weight': 'bold','border-bottom': '1px dotted' + quotedColor});
     }
-
+    if(window.location.pathname == "/private.php") {
+        $('.quick_keys > form:nth-child(1) > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1)').attr("style","border-bottom:0px !important;");
+        $('#content > div.quick_keys > form > table > tbody > tr > td:nth-child(2) > table:nth-child(1) > tbody > tr > td > table > tbody > tr > td').attr("style","border-bottom:0px !important;");
+        //$('input.textbox').addClass('width-dynamic').css('max-width','1020px').css('min-width','250px'); // Input Textbox Auto-Scale to Text Entered
+    }
     if(window.location.pathname == "/showstaff.php" || window.location.pathname == "/showmods.php") {
-        $('head').append('<style>td.trow1:hover {background: none !important;}</style>')
+        $('head').append('<style>td.trow1:hover {background: none !important;}</style>');
         $('td[class="trow1"]').attr("style","background: none; border: 0px !important;");
         $('div[style="width: 48%; min-height: 120px;float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("staffCard");
         $('div[style="width: 48%; float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("staffCard");
         $('td[class="trow1"][width="75%"]').attr("width","90%").attr("style","border: 0px !important").removeClass('trow1').addClass('staffCardParts').addClass('trow2');
         $('td[width="25%"]').attr("style","").addClass('staffCardParts');
     }
-
     if(window.location.pathname == "/showgroups.php") {
-        $('head').append('<style>td.trow1:hover {background: none !important;}</style>')
+        $('head').append('<style>td.trow1:hover {background: none !important;}</style>');
         $('td[class="trow1"]').attr("style","background: none; border: 0px !important;");
         $('div[style="width: 46%; min-height:168px;float: left; border: 1px #4F3A6B solid; margin: 4px; padding: 2px;"]').attr("style","").addClass("groupsCard");
         $('td[class="trow1"][width="75%"]').attr("width","90%").attr("style","border: 0px !important").removeClass('trow1').addClass('groupsCardParts').addClass('trow2');
@@ -267,38 +375,55 @@ $(document).ready(function () {
         $('td[valign="bottom"]').attr("style","background-color: #333; border-radius: 0px; vertical-align: baseline; font-size: 12px;");
         $('table[width="100%"]').attr("height","100%").attr("cellpadding","10");
     }
-
+    if(window.location.pathname == "/newreply.php" || window.location.pathname == "/newthread.php") {
+        $('table.tborder:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1)').attr("style","border-bottom:0px !important;");
+    }
+    if(window.location.pathname == "/search.php") {
+        $('#content > div.quick_keys > form > table > tbody > tr:nth-child(3) > td:nth-child(2) > table > tbody > tr > td:nth-child(1)').attr("style","border-bottom:0px !important;");
+    }
+    if (window.location.pathname == "/member.php") {
+        $('.quick_keys > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1)').attr("style","border-bottom:0px !important;");
+        $('.quick_keys > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) > br:nth-child(1)').remove();
+        var sendToUID = $('.quick_keys > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2) > a:nth-child(1)').attr("href");
+        $('span.largetext').append("<a class='bitButton' style='margin-left: 15px;' title='Send Private Message' href='" + sendToUID + "'>Send PM</a>");
+    }
     if(hideMenu === true) {
         $("div[class='menu']").hide();
     }
-
-    if(badges === true) {
-        // BADGES - LIST OF UIDs
+    if(showTime === false) {
+        $("div[class='largetext']").hide();
+    }
+    if(badges === true) { // Badge System >> Displays an icon as an identfier
         var adminList = [1]; // Omniscient
-        var staffList = [1292605,1093501,370510,1570078,992020,1450348]; // Skorp, Roger Waters, Alone Vampire, Sam Winchester, King of Hearts, Walt Disney
-        var mentorList = [4066,330676,1320406]; // Judge Dredd, Diabolic, Froggy
-        var groupLeadersList = []; // 
-        for(var I = 0; I < staffList.length; I++) {
-            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + staffList[I] + "']").append('<img title="HF Staff" src="http://i.imgur.com/mfqIyM9.png" style="position: relative;top: 3px;left: 3px;">');
-        }
-        for(var I = 0; I < mentorList.length; I++) {
-            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + mentorList[I] + "']").append('<img title="HF Mentor" src="http://i.imgur.com/mfqIyM9.png" style="position: relative;top: 3px;left: 3px;">');
+        var staffList = [992020,1292605,1570078]; // King of Hearts, Skorp, Sam Winchester
+        var mentorList = [4066,330676,1320406,23809]; // Judge Dredd, Diabolic, Froggy, Viral Dragon
+        var groupLeadersList = [992067,1642244,1406453,1121882,1191229,1066501,2052441,431105,80618,370510,55709,1148878,1961000,1469364,1812679,664032,1843672,2110841,561239]; // Nobility, Dubitus, Escrow, Avunit, Arrow, Moeseph, Billie Joe, The Grim, nokia2mon2, Alone Vampire, Glitch, Clique, Zexo, Prada, Ninetales, Water Aura, Infamy, Night Fury
+        var devList = [561239, 2577525]; // iHydra, Hash G.
+        for(var I = 0; I < devList.length; I++) {
+            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + devList[I] + "']").append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/oH5ci89.png" style="position: relative;top: 3px; left: 2px; padding-left: 2px;">');
         }
         for(var I = 0; I < adminList.length; I++) {
-            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + adminList[I] + "']").append('<img title="Omniscient" src="http://i.imgur.com/mfqIyM9.png" style="position: relative;top: 3px;left: 3px;">');
+            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + adminList[I] + "']").append('<img title="Omniscient" src="http://i.imgur.com/xsUlRrE.png" style="position: relative;top: 3px;left: 2px; padding-left: 2px;">');
+        }
+        for(var I = 0; I < staffList.length; I++) {
+            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + staffList[I] + "']").append('<img title="HF Staff" src="http://i.imgur.com/UP5TYS4.png" style="position: relative;top: 3px;left: 2px; padding-left: 2px;">');
+        }
+        for(var I = 0; I < mentorList.length; I++) {
+            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + mentorList[I] + "']").append('<img title="HF Mentor" src="http://i.imgur.com/Tu5taXM.png" style="position: relative;top: 3px;left: 2px; padding-left: 2px;">');
         }
         for(var I = 0; I < groupLeadersList.length; I++) {
-            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + groupLeadersList[I] + "']").append('<img title="HF Group Leader" src="http://i.imgur.com/mfqIyM9.png" style="position: relative;top: 3px;left: 3px;">');
+            $("a[href='http://hackforums.net/member.php?action=profile&uid=" + groupLeadersList[I] + "']").append('<img title="HF Group Leader" src="http://i.imgur.com/DvGiZJk.png" style="position: relative;top: 3px; left: 2px; padding-left: 2px;">');
         }
     }
-
     $('img[src$="hackforums.net/images/modern_bl/groupimages/english/ub3r.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Userbar Color Change
     $('img[src$="hackforums.net/images/modern_bl/starub3r2.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Stars Color Change
     $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color
-    $('strong:contains("Post:") > a[href^="showthread.php?tid="]').attr('id','postLink').attr('style','padding-top: 3px; padding-right: 5px; display: inline-block;'); // Post # Centered  
+    $('strong:contains("Post:") > a[href^="showthread.php?tid="]').attr('id','postLink').attr('style','padding-top: 3px; padding-right: 5px; display: inline-block;'); // Post # Centered
     $('span[style="color:#383838"]').attr('style','color:#444444;'); // Closed Account Username Color Change
-    $('a[href="http://hackforums.net/member.php?action=profile&uid=561239"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/EpQPylI.png" style="position: relative;top: 3px;left: 3px;"/>');
-    $('a[href="http://hackforums.net/member.php?action=profile&uid=2377407"] > span[class^="group"]').append('<img title="Developer of Flat Darkness" src="http://i.imgur.com/EpQPylI.png" style="position: relative;top: 3px;left: 3px;"/>');
-    
 });
 
+function BBVideoColorReplace(){ //BB Video and Color Icon Replace Delayer
+    $('img[src="http://hackforums.net/jscripts/editor_themes/default/images/television.gif"]').attr('src','http://i.imgur.com/nhHILRQ.png'); // BB Editor - Video Embed
+    $('img[src$="hackforums.net/jscripts/editor_themes/default/images/color.gif"]').attr('src', 'http://i.imgur.com/ZjMmUit.png'); // BB Editor - Color Picker
+};
+setTimeout(BBVideoColorReplace, 800);

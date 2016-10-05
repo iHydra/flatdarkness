@@ -6,7 +6,7 @@ div.menu ul:after {
     background-color: #222 !important;
     border-radius: 2px !important;
     color: white !important;
-    content: "DEV v1.5.6.8" !important;
+    content: "DEV v1.5.7.1" !important;
     font-size: 10px !important;
     font-weight: bold !important;
     line-height: 1 !important;
@@ -728,58 +728,58 @@ img[src$="hackforums.net/images/modern_bl/groupimages/english/admin-bar.png"] {
 }
 
 /**
-img[src="http://x.hackforums.net/images/modern_bl/folder.gif"] {
-    content: url(http://i.imgur.com/BbrrwYq.png) !important;
+img[src="https://hackforums.net/images/modern_bl/folder.gif"] {
+    content: url(https://i.imgur.com/BbrrwYq.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/lockfolder.gif"] {
-    content: url(http://i.imgur.com/nqX2AqL.png) !important;
+img[src="https://hackforums.net/images/modern_bl/lockfolder.gif"] {
+    content: url(https://i.imgur.com/nqX2AqL.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/dot_folder.gif"] {
-    content: url(http://i.imgur.com/ulTXXHb.png) !important;
+img[src="https://hackforums.net/images/modern_bl/dot_folder.gif"] {
+    content: url(https://i.imgur.com/ulTXXHb.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/dot_lockfolder.gif"] {
-    content: url(http://i.imgur.com/lpHkIES.png) !important;
+img[src="https://hackforums.net/images/modern_bl/dot_lockfolder.gif"] {
+    content: url(https://i.imgur.com/lpHkIES.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/newfolder.gif"] {
-    content: url(http://i.imgur.com/QZFauA4.png) !important;
+img[src="https://hackforums.net/images/modern_bl/newfolder.gif"] {
+    content: url(https://i.imgur.com/QZFauA4.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/hotfolder.gif"] {
-    content: url(http://i.imgur.com/TIFZ5RW.png) !important;
+img[src="https://hackforums.net/images/modern_bl/hotfolder.gif"] {
+    content: url(https://i.imgur.com/TIFZ5RW.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/newlockfolder.gif"] {
-    content: url(http://i.imgur.com/klYYE8l.png) !important;
+img[src="https://hackforums.net/images/modern_bl/newlockfolder.gif"] {
+    content: url(https://i.imgur.com/klYYE8l.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/hotlockfolder.gif"] {
-    content: url(http://i.imgur.com/ESnLT8k.png) !important;
+img[src="https://hackforums.net/images/modern_bl/hotlockfolder.gif"] {
+    content: url(https://i.imgur.com/ESnLT8k.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/dot_hotfolder.gif"] {
-    content: url(http://i.imgur.com/AwHEzIa.png) !important;
+img[src="https://hackforums.net/images/modern_bl/dot_hotfolder.gif"] {
+    content: url(https://i.imgur.com/AwHEzIa.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/dot_newfolder.gif"] {
-    content: url(http://i.imgur.com/Xu1hNl8.png) !important;
+img[src="https://hackforums.net/images/modern_bl/dot_newfolder.gif"] {
+    content: url(https://i.imgur.com/Xu1hNl8.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/dot_hotlockfolder.gif"] {
-    content: url(http://i.imgur.com/tImSTXU.png) !important;
+img[src="https://hackforums.net/images/modern_bl/dot_hotlockfolder.gif"] {
+    content: url(https://i.imgur.com/tImSTXU.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/dot_newlockfolder.gif"] {
-    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+img[src="https://hackforums.net/images/modern_bl/dot_newlockfolder.gif"] {
+    content: url(https://i.imgur.com/h6EuMOc.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/newhotfolder.gif"] {
-    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+img[src="https://hackforums.net/images/modern_bl/newhotfolder.gif"] {
+    content: url(https://i.imgur.com/h6EuMOc.png) !important;
 }
-img[src="http://x.hackforums.net/images/modern_bl/dot_newhotfolder.gif"] {
-    content: url(http://i.imgur.com/h6EuMOc.png) !important;
+img[src="https://hackforums.net/images/modern_bl/dot_newhotfolder.gif"] {
+    content: url(https://i.imgur.com/h6EuMOc.png) !important;
 } **/
 
 li[class="printable"] {
-    background: url(http://i.imgur.com/uJA6SMg.png) no-repeat 0px 0px !important;
+    background: url(https://i.imgur.com/uJA6SMg.png) no-repeat 0px 0px !important;
 }
 
 li[class="subscription_add"] {
-    background: url(http://i.imgur.com/s3ao1YU.png) no-repeat 0px 0px !important;
+    background: url(https://i.imgur.com/s3ao1YU.png) no-repeat 0px 0px !important;
 }
 li[class="subscription_remove"] {
-    background: url(http://i.imgur.com/dw4vjon.png) no-repeat 0px 0px !important;
+    background: url(https://i.imgur.com/dw4vjon.png) no-repeat 0px 0px !important;
 }
 
 td.thead strong {
@@ -910,74 +910,74 @@ a[id^="thread_options"]>strong {
     border: 1px solid #444444 !important;
 }
 .usercp_nav_home {
-    background: url(http://i.imgur.com/8rXcWeo.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/8rXcWeo.png) no-repeat left center !important;
 }
 .usercp_nav_composepm {
-    background: url(http://i.imgur.com/rVRzAP6.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/rVRzAP6.png) no-repeat left center !important;
 }
 .usercp_nav_pmfolder {
-    background: url(http://i.imgur.com/x6gbgmA.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/x6gbgmA.png) no-repeat left center !important;
 }
 .usercp_nav_sub_pmfolder {
     padding-left: 40px !important;
-    background: url(http://i.imgur.com/qdHyFZ0.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/qdHyFZ0.png) no-repeat left center !important;
 }
 .usercp_nav_trash_pmfolder {
     padding-left: 40px !important;
-    background: url(http://i.imgur.com/JRO03a9.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/JRO03a9.png) no-repeat left center !important;
 }
 .usercp_nav_pmtracking {
-    background: url(http://i.imgur.com/P1gVL47.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/P1gVL47.png) no-repeat left center !important;
 }
 .usercp_nav_pmfolders {
-    background: url(http://i.imgur.com/vqO8iBQ.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/vqO8iBQ.png) no-repeat left center !important;
 }
 .usercp_nav_profile {
-    background: url(http://i.imgur.com/El4eUCM.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/El4eUCM.png) no-repeat left center !important;
 }
 .usercp_nav_username {
     padding-left: 40px !important;
-    background: url(http://i.imgur.com/FXBSRap.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/FXBSRap.png) no-repeat left center !important;
 }
 .usercp_nav_password {
     padding-left: 40px !important;
-    background: url(http://i.imgur.com/R4qyASb.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/R4qyASb.png) no-repeat left center !important;
 }
 .usercp_nav_email {
     padding-left: 40px !important;
-    background: url(http://i.imgur.com/G9o7url.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/G9o7url.png) no-repeat left center !important;
 }
 .usercp_nav_avatar {
     padding-left: 40px !important;
-    background: url(http://i.imgur.com/RsGEB1l.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/RsGEB1l.png) no-repeat left center !important;
 }
 .usercp_nav_editsig {
     padding-left: 40px !important;
-    background: url(http://i.imgur.com/PD5kBXb.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/PD5kBXb.png) no-repeat left center !important;
 }
 .usercp_nav_options {
-    background: url(http://i.imgur.com/voq5d7N.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/voq5d7N.png) no-repeat left center !important;
 }
 .usercp_nav_usergroups {
-    background: url(http://i.imgur.com/12LehKH.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/12LehKH.png) no-repeat left center !important;
 }
 .usercp_nav_editlists {
-    background: url(http://i.imgur.com/bfcL3Wz.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/bfcL3Wz.png) no-repeat left center !important;
 }
 .usercp_nav_attachments {
-    background: url(http://i.imgur.com/5q8EbgL.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/5q8EbgL.png) no-repeat left center !important;
 }
 .usercp_nav_drafts {
-    background: url(http://i.imgur.com/ryliPsU.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/ryliPsU.png) no-repeat left center !important;
 }
 .usercp_nav_subscriptions {
-    background: url(http://i.imgur.com/N9wUWFu.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/N9wUWFu.png) no-repeat left center !important;
 }
 .usercp_nav_fsubscriptions {
-    background: url(http://i.imgur.com/0K4Hftt.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/0K4Hftt.png) no-repeat left center !important;
 }
 .usercp_nav_viewprofile {
-    background: url(http://i.imgur.com/kUfuaZK.png) no-repeat left center !important;
+    background: url(https://i.imgur.com/kUfuaZK.png) no-repeat left center !important;
 }
 
 div[style="padding: 5px 2px;"] {
@@ -1386,7 +1386,7 @@ div[style="margin-top: 6px; padding-right: 10px;"] {
 
 .quick_jump, a.quick_jump {
     color: transparent !important;
-    background: url('http://i.imgur.com/LKctNTL.png') no-repeat;
+    background: url('https://i.imgur.com/LKctNTL.png') no-repeat;
     text-decoration: none !important;
     font-size: 18px !important;
     width: 16px !important;
@@ -1412,7 +1412,7 @@ a.quick_jump {
 .star_rating, 
 .star_rating li a:hover, 
 .star_rating .current_rating {
-    background: url(http://i.imgur.com/Ut8dLFN.png) left -1000px repeat-x !important;
+    background: url(https://i.imgur.com/Ut8dLFN.png) left -1000px repeat-x !important;
     vertical-align: middle !important;
 }
 
@@ -1561,7 +1561,7 @@ td .star_rating {
 }
 
 .messageEditor .toolbar_dropdown .editor_dropdown_arrow, .messageEditor .toolbar_dropdown_image .editor_dropdown_arrow {
-	background: url("http://i.imgur.com/fSxUYWG.png") no-repeat center center !important;
+	background: url("https://i.imgur.com/fSxUYWG.png") no-repeat center center !important;
 	border: 1px solid #222 !important;
         border-left: 0px !important;
 }
@@ -1571,15 +1571,15 @@ td .star_rating {
 }
 
 .messageEditor .toolbar_sprite {
-	background: url("http://i.imgur.com/yuCkxrb.png") no-repeat !important; 
+	background: url("https://i.imgur.com/yuCkxrb.png") no-repeat !important; 
 }
 
 .messageEditor .toolbar_sep {
-	background: url("http://i.imgur.com/9PaloQB.png") !important;
+	background: url("https://i.imgur.com/9PaloQB.png") !important;
 }
 
 .messageEditor .toolbar_button_arrow {
-	background: url("http://i.imgur.com/f4hxRCi.png") no-repeat center center !important;
+	background: url("https://i.imgur.com/f4hxRCi.png") no-repeat center center !important;
 }
 
 .messageEditor .toolbar_dropdown .editor_dropdown_label {
@@ -1713,7 +1713,7 @@ td .star_rating {
 .scrollToTop{
 	width:24px; 
 	height:24px;
-	background: url('http://i.imgur.com/QgO5J7U.png');
+	background: url('https://i.imgur.com/QgO5J7U.png');
 	background-color: #151515;
 	position:fixed;
 	bottom: 32px;

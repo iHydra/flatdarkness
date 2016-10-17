@@ -3,8 +3,8 @@
 // @namespace     https://github.com/iHydra
 // @version       1.5.7
 // @description   Custom theme for Hack Forums.
-// @include       http://www.hackforums.net/*
-// @include       http://hackforums.net/*
+// @include       http*://www.hackforums.net/*
+// @include       http*://hackforums.net/*
 // @author        iHydra
 // @contributor   Hash G.
 // @contributor   Kondax

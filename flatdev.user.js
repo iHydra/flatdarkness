@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.7.1
+// @version       1.5.8.1
 // @description   Custom theme for Hack Forums.
 // @include       http*://www.hackforums.net/*
 // @include       http*://hackforums.net/*
@@ -12,8 +12,10 @@
 // @contributor   Yani
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-700.css
+// @require       https://raw.githubusercontent.com/CreoArt/jquery.textareafullscreen/master/jquery.textareafullscreen.js
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-800.css
 // @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
+// @resource      EditorCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/fseditor-005.css
 // @grant         GM_addStyle
 // @grant         GM_setValue
 // @grant         GM_getValue
@@ -35,6 +37,8 @@ var MainCSS = GM_getResourceText('MainCSS');
 GM_addStyle(MainCSS);
 var HLCSS = GM_getResourceText('HLCSS');
 GM_addStyle(HLCSS);
+var EditorCSS = GM_getResourceText('EditorCSS');
+GM_addStyle(EditorCSS);
 
 /* Default settings */
 if (!GM_getValue("quotedColor"))
@@ -275,29 +279,30 @@ $(document).ready(function () {
         GM_setValue("quotedPosts", quotedPosts);
         $(this).text($(this).text() == "MQ+" ? "MQ-" : "MQ+");
     });
-    $(".trow1 .button").each(function() {
-        var postId = $(this).parent().attr("id").match(/multiquote_link_([0-9]*)/)[1];
-        if(GM_getValue("quotedPosts").indexOf(postId) >= 0) {
-            $(this).text("MQ-");
-            console.log(postId);
-        }
-    });
-    $("body").on("click", "#quickreply_multiquote", function() {
-        console.log("Clicked");
-        quotedPosts = [];
-        GM_setValue("quotedPosts", quotedPosts);
-        $(".button").each(function() {
-            $(this).text("MQ+");
-            console.log("SET TO MQ+");
+    if(window.location.pathname == "showthread.php") {
+        $(".trow1 .button").each(function() {
+            var postId = $(this).parent().attr("id").match(/multiquote_link_([0-9]*)/)[1];
+            if(GM_getValue("quotedPosts").indexOf(postId) >= 0) {
+                $(this).text("MQ-");
+                console.log(postId);
+            }
         });
-    });
+        $("body").on("click", "#quickreply_multiquote", function() {
+            console.log("Clicked");
+            quotedPosts = [];
+            GM_setValue("quotedPosts", quotedPosts);
+            $(".button").each(function() {
+                $(this).text("MQ+");
+                console.log("SET TO MQ+");
+            });
+        });
+    }
     $('.button2[name="previewpost"]').attr('accesskey',previewKey); // Preview Key Hotkey Shortcut
     if(window.location.href == "https://hackforums.net/misc.php?action=buddypopup"){ // Buddy List Online Status Fix
         console.log('buddypopup');
         $('img[src="' + imagepath + '/buddy_away.gif"]').attr('src', 'https://i.imgur.com/x7dAaGE.png').attr('style', ''); // Away Status
         $('img[src="' + imagepath + '/buddy_online.gif"]').attr('src', 'https://i.imgur.com/lpKaTIB.png').attr('style', ''); // Online Status
         $('img[src="' + imagepath + '/buddy_offline.gif"]').attr('src', 'https://i.imgur.com/EKt4fXk.png').attr('style', ''); // Offline Status
-        
     }else if(window.location.href == "https://hackforums.net/usercp.php?action=editlists"){
         $('img[src="' + imagepath + '/buddy_away.gif"]').attr('src', 'https://i.imgur.com/x7dAaGE.png').attr('style', 'vertical-align: top;'); // Away Status
         $('img[src="' + imagepath + '/buddy_online.gif"]').attr('src', 'https://i.imgur.com/lpKaTIB.png').attr('style', 'vertical-align: top;'); // Online Status
@@ -332,7 +337,7 @@ $(document).ready(function () {
     }
     if(showLogo === true){ // Show Logo
         $('img[src="https://hackforums.net/images/modern_bl/logo_bl.gif"]').attr('src', 'https://i.imgur.com/fAzkq6w.png');
-		$('img[src="https://hackforums.net/images/modern_pl/logo_pl.gif"]').attr('src', 'https://i.imgur.com/fAzkq6w.png');
+        $('img[src="https://hackforums.net/images/modern_pl/logo_pl.gif"]').attr('src', 'https://i.imgur.com/fAzkq6w.png');
         $('div[class="logo"]').removeClass("logo").attr('style','text-align:center');
     }
     if(enableSFW === true) { // Enable Safe-For-Work
@@ -355,7 +360,7 @@ $(document).ready(function () {
     }
     if(window.location.pathname != "/private.php") {
         var userName = $('div#panel > strong > a[href^="https://hackforums.net/member.php?action=profile&uid="]').text();
-		if(!userName) userName = NULL;
+        if(!userName) userName = NULL;
         $('blockquote > cite:contains(' + userName + ')').css({'color': quotedColor, 'font-weight': 'bold','border-bottom': '1px dotted' + quotedColor});
     }
     if(window.location.pathname == "/private.php") {
@@ -392,6 +397,20 @@ $(document).ready(function () {
         var sendToUID = $('.quick_keys > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2) > a:nth-child(1)').attr("href");
         $('span.largetext').append("<a class='bitButton' style='margin-left: 15px;' title='Send Private Message' href='" + sendToUID + "'>Send PM</a>");
     }
+    if(window.location.pathname == "/editpost.php") {
+        console.log("1");
+        $('div[class="messageEditor"]').before('<textarea class="fullScreenEdit" style="display:none;"></textarea>');
+        console.log("2");
+        $('span[id="editor_item_color"]').after('<span id="fsButton" title="Fullscreen Editor" class="toolbar_button toolbar_normal toolbar_button_group_last"><a href="#" class="fs-icon"></a></span>');
+        console.log("3");
+    }
+    /**if(window.location.pathname == "/editpost.php") {
+        console.log("1");
+        $('div[class="messageEditor"]').before('<textarea class="fullScreenEdit" style="display:none;"></textarea>');
+        console.log("2");
+        $('span[id="editor_item_color"]').after('<span id="fsButton" title="Fullscreen Editor" class="toolbar_button toolbar_normal toolbar_button_group_last"><a href="#" class="fs-icon"></a></span>');
+        console.log("3");
+    }**/
     if(hideMenu === true) {
         $("div[class='menu']").hide();
     }
@@ -432,3 +451,15 @@ function BBVideoColorReplace(){ //BB Video and Color Icon Replace Delayer
     $('img[src$="hackforums.net/jscripts/editor_themes/default/images/color.gif"]').attr('src', 'https://i.imgur.com/ZjMmUit.png'); // BB Editor - Color Picker
 };
 setTimeout(BBVideoColorReplace, 800);
+/**
+$(".fullScreenEdit").fseditor({
+    overlay: true,  expandOnFocus: false,  transition: '',  placeholder: '',  maxWidth: '90%',  maxHeight: '100%',  onExpand: function() {},  onMinimize: function() {}
+});**/
+
+$(document).ready(function() {
+    $('#message_new').textareafullscreen({
+        overlay: true, // Overlay
+        maxWidth: '90%', // Max width
+        maxHeight: '98%', // Max height
+    });
+});

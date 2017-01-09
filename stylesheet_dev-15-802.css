@@ -1727,3 +1727,14 @@ td .star_rating {
 	opacity: 1;
 	background-color: #333;
 }
+
+#Sticky {
+	background-color: #202020;
+	border-width: 0px;
+}
+
+.sticky-wrapper .is-sticky {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-width:5px;
+}

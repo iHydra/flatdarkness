@@ -224,7 +224,7 @@ inputWidth(targetElem); // AutoGrowInput
  * Modifications (jQuery/jS for multi-browser support)
  */
 
-$(document).ready(function () {
+// $(document).ready(function () { REMOVED
     if(1 == 1) { // window.location.pathname.indexOf("/newreply.php") == 0
         console.log("bbLive");
         var bbLiveButton = $('<button class="bitButton md-trigger" data-modal="modal-5">Newspaper</button>');
@@ -444,22 +444,22 @@ $(document).ready(function () {
     $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color
     $('strong:contains("Post:") > a[href^="showthread.php?tid="]').attr('id','postLink').attr('style','padding-top: 3px; padding-right: 5px; display: inline-block;'); // Post # Centered
     $('span[style="color:#383838"]').attr('style','color:#444444;'); // Closed Account Username Color Change
-});
+// }); REMOVED
 
 function BBVideoColorReplace(){ //BB Video and Color Icon Replace Delayer
     $('img[src="https://hackforums.net/jscripts/editor_themes/default/images/television.gif"]').attr('src','https://i.imgur.com/nhHILRQ.png'); // BB Editor - Video Embed
     $('img[src$="hackforums.net/jscripts/editor_themes/default/images/color.gif"]').attr('src', 'https://i.imgur.com/ZjMmUit.png'); // BB Editor - Color Picker
-};
+}
 setTimeout(BBVideoColorReplace, 800);
 /**
 $(".fullScreenEdit").fseditor({
     overlay: true,  expandOnFocus: false,  transition: '',  placeholder: '',  maxWidth: '90%',  maxHeight: '100%',  onExpand: function() {},  onMinimize: function() {}
 });**/
 
-$(document).ready(function() {
+// $(document).ready(function() { REMOVED
     $('#message_new').textareafullscreen({
         overlay: true, // Overlay
         maxWidth: '90%', // Max width
         maxHeight: '98%', // Max height
     });
-});
+// }); REMOVED

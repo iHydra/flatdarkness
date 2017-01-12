@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Flat Darkness - Development
 // @namespace     https://github.com/iHydra
-// @version       1.5.8.3
+// @version       1.5.8.4
 // @description   Custom theme for Hack Forums.
 // @include       http*://www.hackforums.net/*
 // @include       http*://hackforums.net/*
@@ -13,7 +13,7 @@
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
 // @require       https://raw.githubusercontent.com/CreoArt/jquery.textareafullscreen/master/jquery.textareafullscreen.js
-// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-803.css
+// @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/stylesheet_dev-15-804.css
 // @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
 // @resource      EditorCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/fseditor-005.css
 // @grant         GM_addStyle

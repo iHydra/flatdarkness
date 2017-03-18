@@ -1,3 +1,2 @@
-# Flat Darkness Userscript (LEGACY)
+# Flat Darkness
 Hack Forums Custom Theme - Flat Darkness - Userscript
-No Longer in Development - Use Extension for Latest Updates and Support

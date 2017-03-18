@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
+    <defs>
+        <style>
+        .icon {
+            display: none;
+        }
+        
+        .icon:target {
+            display: inline;
+        }
+        
+        rect,
+        line,
+        circle {
+            shape-rendering: geometricPrecision;
+        }
+        
+        #toTopArrow {
+            fill: white;
+        }
+        </style>
+    </defs>
+    <g id="Layer_4" class="icon">
+        <rect x="-10142.173" y="-10142.173" class="st1" width="22284.346" height="22284.346" />
+    </g>
+    <g id="toTopArrow" class="icon">
+        <g>
+            <polygon points="1000.5,385.526 10,983.255 10,1296.221 1000.5,768.943 1991,1296.221 1991,983.255 		" />
+            <polygon points="1000.5,898.147 10,1433.507 10,1614.458 1000.5,1104.189 1991,1614.458 1991,1433.507 		" />
+        </g>
+    </g>
+    <g id="firstUnreadPost" class="icon">
+        <path d="M1985.943,884.491L1067,353.939v279.607C205.641,641.678,13.772,1214.774,13.772,1646.061
+		c0,0,208.494-515.551,1053.228-523.029v292.011L1985.943,884.491z" />
+    </g>
+    <g id="forumNoNew" class="icon">
+        <g>
+            <image style="overflow:visible;" width="1953" height="1953" xlink:href="564466F4.png" transform="matrix(1 0 0 1 23.0125 23.0125)">
+            </image>
+            <g>
+                <g>
+                    <path class="st2" d="M1874.317,1916H124.683C101.662,1916,83,1897.338,83,1874.317V124.683C83,101.662,101.662,83,124.683,83
+					h1749.635c23.021,0,41.683,18.662,41.683,41.683v1749.635C1916,1897.338,1897.338,1916,1874.317,1916z" />
+                </g>
+                <defs>
+                    <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="83" y="83" width="1833" height="1833">
+                        <feColorMatrix type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source" />
+                    </filter>
+                </defs>
+                <mask maskUnits="userSpaceOnUse" x="83" y="83" width="1833" height="1833" id="SVGID_1_">
+                    <g class="st3">
+                        <image style="overflow:visible;" width="1837" height="1837" xlink:href="564466F4.jpg" transform="matrix(1 0 0 1 81 81)">
+                        </image>
+                    </g>
+                </mask>
+                <g class="st4">
+                    <path class="st5" d="M1874.317,1916H124.683C101.662,1916,83,1897.338,83,1874.317V124.683C83,101.662,101.662,83,124.683,83
+					h1749.635c23.021,0,41.683,18.662,41.683,41.683v1749.635C1916,1897.338,1897.338,1916,1874.317,1916z" />
+                </g>
+            </g>
+        </g>
+    </g>
+    <g id="forumNew" class="icon">
+        <g>
+            <image style="overflow:visible;" width="1953" height="1953" xlink:href="564466F3.png" transform="matrix(1 0 0 1 23.0125 23.0125)">
+            </image>
+            <g>
+                <g>
+                    <path class="st6" d="M1872.318,1916H126.682C102.557,1916,83,1896.443,83,1872.318V126.682C83,102.557,102.557,83,126.682,83
+					h1745.635c24.125,0,43.682,19.557,43.682,43.682v1745.635C1916,1896.443,1896.443,1916,1872.318,1916z" />
+                </g>
+                <defs>
+                    <filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="83" y="83" width="1833" height="1833">
+                        <feColorMatrix type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source" />
+                    </filter>
+                </defs>
+                <mask maskUnits="userSpaceOnUse" x="83" y="83" width="1833" height="1833" id="SVGID_2_">
+                    <g class="st7">
+                        <image style="overflow:visible;" width="1837" height="1837" xlink:href="564466FC.jpg" transform="matrix(1 0 0 1 81 81)">
+                        </image>
+                    </g>
+                </mask>
+                <g class="st8">
+                    <path d="M1872.318,1916H126.682C102.557,1916,83,1896.443,83,1872.318V126.682C83,102.557,102.557,83,126.682,83h1745.635
+					c24.125,0,43.682,19.557,43.682,43.682v1745.635C1916,1896.443,1896.443,1916,1872.318,1916z" />
+                </g>
+            </g>
+        </g>
+    </g>
+    <g id="offlineDot" class="icon">
+        <g>
+            <image style="overflow:visible;opacity:0.7;" width="1999" height="1999" xlink:href="564466FC.png" transform="matrix(1 0 0 1 0.1281 0.1281)">
+            </image>
+            <g>
+                <g>
+                    <circle class="st9" cx="999.5" cy="999.5" r="934.5" />
+                </g>
+                <defs>
+                    <filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="65" y="65" width="1869" height="1869">
+                        <feColorMatrix type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source" />
+                    </filter>
+                </defs>
+                <mask maskUnits="userSpaceOnUse" x="65" y="65" width="1869" height="1869" id="SVGID_3_">
+                    <g class="st10">
+                        <image style="overflow:visible;" width="1873" height="1873" xlink:href="564466FD.jpg" transform="matrix(1 0 0 1 63 63)">
+                        </image>
+                    </g>
+                </mask>
+                <g class="st11">
+                    <circle cx="999.5" cy="999.5" r="934.5" />
+                </g>
+            </g>
+        </g>
+    </g>
+    <g id="awayDot" class="icon">
+        <g>
+            <image style="overflow:visible;opacity:0.7;" width="1999" height="1999" xlink:href="564466F2.png" transform="matrix(1 0 0 1 0.1281 0.1281)">
+            </image>
+            <g>
+                <g>
+                    <circle class="st12" cx="999.5" cy="999.5" r="934.5" />
+                </g>
+                <defs>
+                    <filter id="Adobe_OpacityMaskFilter_3_" filterUnits="userSpaceOnUse" x="65" y="65" width="1869" height="1869">
+                        <feColorMatrix type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source" />
+                    </filter>
+                </defs>
+                <mask maskUnits="userSpaceOnUse" x="65" y="65" width="1869" height="1869" id="SVGID_4_">
+                    <g class="st13">
+                        <image style="overflow:visible;" width="1873" height="1873" xlink:href="564466F5.jpg" transform="matrix(1 0 0 1 63 63)">
+                        </image>
+                    </g>
+                </mask>
+                <g class="st14">
+                    <circle cx="999.5" cy="999.5" r="934.5" />
+                </g>
+            </g>
+        </g>
+    </g>
+    <g id="onlineDot" class="icon">
+        <defs>
+            <filter id='innerShadow'>
+                <!-- Shadow Offset -->
+                <feOffset dx='0' dy='0' />
+                <!-- Shadow Blur -->
+                <feGaussianBlur stdDeviation='100' result='offset-blur' />
+                <!-- Invert the drop shadow to create an inner shadow -->
+                <feComposite operator='out' in='SourceGraphic' in2='offset-blur' result='inverse' />
+                <!-- Color & Opacity -->
+                <feFlood flood-color='#33FF33' flood-opacity='1' result='color' />
+                <!-- Clip color inside shadow -->
+                <feComposite operator='in' in='color' in2='inverse' result='shadow' />
+                <!-- Put shadow over original object -->
+                <feComposite operator='over' in='shadow' in2='SourceGraphic' />
+            </filter>
+            <filter id="dropShadow">
+                <feOffset result="offOut" in="SourceAlpha" dx="0" dy="0" />
+                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3" />
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            </filter>
+        </defs>
+        <g filter="url(#dropShadow)">
+            <circle cx="16" cy="16" r="16" filter="url(#innerShadow)" />
+        </g>
+    </g>
+</svg>

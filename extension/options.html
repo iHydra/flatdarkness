@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flat Darkness &mdash; Settings</title>
+    <style>
+    body {
+        background: #333333;
+        color: #cccccc;
+        padding: 20px;
+    }
+    
+    .block {
+        background: #222222;
+        padding: 5px;
+    }
+    
+    input[type="color"] {
+        width: 98%;
+        height: 32px;
+    }
+
+    .block h2 {
+    	margin-top: -15px;
+    	height: 20px;
+    	line-height: 20px;
+    	color: white;
+    }
+
+    .block h2 span {
+    	background-color: #151515;
+    	padding: 2px 5px;
+    }
+
+    label {
+    	font-size: 1.2em;
+    	color: white;
+    	padding-right: 10px;
+    }
+
+    input[type="checkbox"] {
+    	margin-top: -5px;
+    }
+
+    .optionsSpacing {
+    	display: block;
+    	padding-bottom: 5px;
+    }
+    
+    </style>
+</head>
+
+<body>
+	<h1>Work In Progress</h1><br/><br/>
+    <div class="block">
+    	<h2><span>Theme Color</span></h2>
+        <input type='color' id="themeColor" />
+    </div><br/><br/>
+    <div class="block">
+    	<h2><span>Quoted Color</span></h2>
+        <input type='color' id="quotedColor" />
+    </div><br/><br/>
+    <div class="block">
+    	<h2><span>Options</span></h2>
+        <div class="optionsSpacing"><label for="showLogo">Show Logo?</label><input type="checkbox" id="showLogo" /></div>
+        <div class="optionsSpacing"><label for="enableSFW">Enable Safe-For-Work?</label><input type="checkbox" id="enableSFW" /></div>
+        <div class="optionsSpacing"><label for="hideMenu">Hide Navigation Menu?</label><input type="checkbox" id="hideMenu" /></div>
+        <div class="optionsSpacing"><label for="showTime">Show Time?</label><input type="checkbox" id="showTime" /></div>
+        <div class="optionsSpacing"><label for="showBadges">Show Badges?</label><input type="checkbox" id="showBadges" /></div>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>

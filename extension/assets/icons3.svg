@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
+	 <defs>
+        <style>
+        .icon {
+            display: none;
+        }
+        
+        .icon:target {
+            display: inline;
+        }
+        
+        rect,
+        line,
+        circle {
+            shape-rendering: geometricPrecision;
+        }
+        
+        #toTopArrow {
+            fill: white;
+        }
+        </style>
+    </defs>
+<style type="text/css">
+	.Drop_x0020_Shadow{fill:none;}
+	.Outer_x0020_Glow_x0020_5_x0020_pt{fill:none;}
+	.Jive_GS{fill:#A6D0E4;}
+	.st0{display:none;}
+	.st1{display:inline;fill:#333333;}
+	.st2{display:inline;}
+	.st3{display:inline;fill:#161616;}
+	.st4{display:inline;fill:#CCCCCC;}
+	.st5{display:inline;fill:#888888;}
+	.st6{display:inline;fill:#CECB65;}
+	.st7{display:inline;fill:#33FF33;}
+</style>
+<g id="Layer_4" class="icon">
+	<rect x="-10142.173" y="-10142.173" class="st1" width="22284.346" height="22284.346"/>
+</g>
+<g id="toTopArrow" class="icon">
+	<g>
+		<polygon points="1000.5,385.526 10,983.255 10,1296.221 1000.5,768.943 1991,1296.221 1991,983.255 		"/>
+		<polygon points="1000.5,898.147 10,1433.507 10,1614.458 1000.5,1104.189 1991,1614.458 1991,1433.507 		"/>
+	</g>
+</g>
+<g id="firstUnreadPost" class="icon">
+	<path class="st2" d="M1985.943,884.491L1067,353.939v279.607C205.641,641.678,13.772,1214.774,13.772,1646.061
+		c0,0,208.494-515.551,1053.228-523.029v292.011L1985.943,884.491z"/>
+</g>
+<g id="minioff" class="icon">
+	<path class="st3" d="M1874.317,1916H124.683C101.662,1916,83,1897.338,83,1874.317V124.683C83,101.662,101.662,83,124.683,83
+		h1749.635c23.021,0,41.683,18.662,41.683,41.683v1749.635C1916,1897.338,1897.338,1916,1874.317,1916z"/>
+</g>
+<g id="minion" class="icon">
+	<path class="st4" d="M1872.318,1916H126.682C102.557,1916,83,1896.443,83,1872.318V126.682C83,102.557,102.557,83,126.682,83
+		h1745.635c24.125,0,43.682,19.557,43.682,43.682v1745.635C1916,1896.443,1896.443,1916,1872.318,1916z"/>
+</g>
+<g id="offlineDot" class="icon">
+	<circle class="st5" cx="1000" cy="1000" r="885"/>
+</g>
+<g id="awayDot" class="icon">
+	<circle class="st6" cx="1000" cy="1000" r="885"/>
+</g>
+<g id="onlineDot" class="icon">
+	<circle class="st7" cx="1000" cy="1000" r="885"/>
+</g>
+</svg>

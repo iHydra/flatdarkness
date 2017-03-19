@@ -1,12 +1,14 @@
-// Copyright (c) 2011 Pete Boere (the-echoplex.net) Free under terms of the MIT license: https://www.opensource.org/licenses/mit-license.php
-! function(s) { s.fn.alterClass = function(a, e) {
+! function(s) {
+    s.fn.alterClass = function(a, e) {
         var r = this;
         if (-1 === a.indexOf("*")) return r.removeClass(a), e ? r.addClass(e) : r;
         var n = new RegExp("\\s" + a.replace(/\*/g, "[A-Za-z0-9-_]+").split(" ").join("\\s|\\s") + "\\s", "g");
         return r.each(function(a, e) {
             for (var r = " " + e.className + " "; n.test(r);) r = r.replace(n, " ");
-            e.className = s.trim(r) }), e ? r.addClass(e) : r } }(jQuery);
-
+            e.className = s.trim(r)
+        }), e ? r.addClass(e) : r
+    }
+}(jQuery);
 //var quotedColor = GM_getValue("quotedColor"); // Color for when quoted by someone - Keep inside quotes - if you enter hex code, put # as prefix. Ex: "#282828" vs. "teal"
 //var showLogo = (GM_getValue("showLogo") === "true"); // true to show logo, false to hide logo
 //var enableSFW = (GM_getValue("enableSFW") === "true"); // true to enable SFW, false to disable SFW (Safe For Work)
@@ -19,18 +21,17 @@ var showTime = false;
 var hideMenu = false;
 var showLogo = false;
 var enableSFW = false;
-
 var scrollTop = $('<a href=\"#\"/ title=\"Scroll to Top\"/ class=\"scrollToTop\"/></a>'); // Scroll To Top
 $('body').append(scrollTop);
 var scrollBottom = $('<a href=\"#\"/ title=\"Scroll to Bottom\"/ class=\"scrollToBottom\"/></a>'); // Scroll To Bottom
 $('body').append(scrollBottom);
-
 $('code').each(function(i, block) { // Highlight Syntax
     hljs.highlightBlock(block);
 });
-
+var pageHeight = $(window).height();
+pageHeight = pageHeight * 0.40;
 $(window).scroll(function() { // Scroll to Top
-    if ($(this).scrollTop() > 350) {
+    if ($(this).scrollTop() > pageHeight) {
         $('.scrollToTop').fadeIn();
         $('.scrollToBottom').fadeOut();
     } else {
@@ -46,13 +47,11 @@ $('.scrollToBottom').click(function() {
     $('html, body').animate({ scrollTop: $(document).height() }, 800);
     return false;
 });
-
 $.fn.textWidth = function(text, font) { // AUTO GROW INPUT
     if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);
     $.fn.textWidth.fakeEl.text(text || this.val() || this.text() || this.attr('placeholder')).css('font', font || this.css('font'));
     return $.fn.textWidth.fakeEl.width();
 };
-
 $('.width-dynamic').on('input', function() {
     var inputWidth = $(this).textWidth();
     $(this).css({
@@ -60,34 +59,15 @@ $('.width-dynamic').on('input', function() {
     });
 }).trigger('input');
 
-
 function inputWidth(elem, minW, maxW) {
     elem = $(this);
     console.log(elem);
 }
-
 var targetElem = $('.width-dynamic');
-
 inputWidth(targetElem); // AutoGrowInput
-
-
 var profileLink = $('#panel > strong:nth-child(1) > a:nth-child(1)').attr("href");
 var UserID = profileLink.split("=")[2];
 console.log(UserID);
-
-/*function getBadgeList() {
-    GM_xmlhttpRequest({
-        method: "GET",
-        url: "https://ihydra.net/hf/flatdark/adminList.txt"+ "?t=" + Math.random(),
-        onload: function(response){
-            var reslines, templine, i, j, donorMap = {};
-            reslines = response.responseText.split('\n');
-        }
-    });
-} */
-
-//$('div.menu > ul').attr('style', 'text-align:center !important;');
-//$('img[src$="/starstaff.png"]').attr('style', 'filter: hue-rotate(5deg) saturate(8); -webkit-filter: hue-rotate(5deg) saturate(8)'); // Staff Stars Color Change
 $('img[src$="/dismiss_notice.gif"]').attr('src', 'https://i.imgur.com/uxvQQDI.png'); // PM Notif Dismiss Icon
 $('img[src$="/add_buddy.gif"]').attr('src', 'https://i.imgur.com/3d5FKNX.png'); // Add Buddy Icon
 $('img[src$="/remove_buddy.gif"]').attr('src', 'https://i.imgur.com/zDwBkq5.png'); // Remove Buddy Icon
@@ -95,9 +75,6 @@ $('img[src$="/add_ignore.gif"]').attr('src', 'https://i.imgur.com/u3NZbDu.png');
 $('img[src$="/remove_ignore.gif"]').attr('src', 'https://i.imgur.com/zDwBkq5.png'); // Remove Ignore Icon
 $('img[src$="/img/disable.png"]').attr('src', 'https://i.imgur.com/LXGekE9.png'); // Disable icon for multi-page loader userscript(not included)
 $('img[src$="/img/enable.png"]').attr('src', 'https://i.imgur.com/YHDATSF.png'); // Enable icon for multi-page loader userscript(not included)
-//$('img[src$="/minioff.gif"]').attr('src', 'https://i.imgur.com/AP6vLRo.png').attr('style', 'padding-bottom: 2px;'); // No Posts SF Icon
-//$('img[src$="/miniofflock.gif"]').attr('src', 'https://i.imgur.com/AP6vLRo.png').attr('style', 'padding-bottom: 2px;'); // No Posts SF Icon Locked
-//$('img[src$="/minion.gif"]').attr('src', 'https://i.imgur.com/Wsl1Gfc.png').attr('style', 'padding-bottom: 3px;'); // New Posts SF icon
 $('img[src$="/spinner_big.gif"]').attr('src', 'https://i.imgur.com/y3wDcUA.gif'); // Quick Reply Spinner Change
 $('span:contains("Moderated")').addClass('sevenpad'); // Padding fix
 $('link[href*="star_ratings"]').remove(); // Star Ratings Change
@@ -118,11 +95,9 @@ $('div > code').dblclick(function() {
         selection.addRange(range);
     }
 });
-/**var quotedPosts = chrome.storage.sync.get("quotedPosts") === undefined ? [] : chrome.storage.sync.get("quotedPosts");
-console.log(quotedPosts);**/
 var quotedPosts;
 chrome.storage.sync.get("quotedPosts", function(multiQuotes) {
-    if(!chrome.runtime.error) {
+    if (!chrome.runtime.error) {
         console.log(multiQuotes);
         quotedPosts = multiQuotes.quotedPosts;
         console.log(quotedPosts);
@@ -141,22 +116,19 @@ $(".trow1 .button").on("click", function() {
         quotedPosts.push(postId);
         console.log(quotedPosts);
     }
-    chrome.storage.sync.set({"quotedPosts": quotedPosts}, function() {});
+    chrome.storage.sync.set({ "quotedPosts": quotedPosts }, function() {});
     $(this).text($(this).text() == "MQ+" ? "MQ-" : "MQ+");
 });
 console.log(window.location.pathname);
 if (window.location.pathname == "/showthread.php") {
     console.log("Showthread");
     $(".trow1 .button").each(function() {
-        var that = this;
+        var that = $(this);
         var postId = $(this).parent().attr("id").match(/multiquote_link_([0-9]*)/)[1];
-        /**if (chrome.storage.sync.get("quotedPosts").indexOf(postId) >= 0) {
-            $(this).text("MQ-");
-            console.log(postId);
-        }**/
         chrome.storage.sync.get("quotedPosts", function(multiQuotes) {
-            if(!chrome.runtime.error) {
-                if(this.indexOf(postId) >= 0) {
+            if (!chrome.runtime.error) {
+                console.log(multiQuotes);
+                if (multiQuotes.quotedPosts.indexOf(postId) >= 0) {
                     that.text("MQ-");
                     console.log(postId);
                 }
@@ -166,14 +138,13 @@ if (window.location.pathname == "/showthread.php") {
     $("body").on("click", "#quickreply_multiquote", function() {
         console.log("Clicked");
         quotedPosts = [];
-        chrome.storage.sync.set({"quotedPosts": quotedPosts}, function() {});
+        chrome.storage.sync.set({ "quotedPosts": quotedPosts }, function() {});
         $(".button").each(function() {
             $(this).text("MQ+");
             console.log("SET TO MQ+");
         });
     });
-    $('a[id^="thread_options_"]').remove(); // Ignore, not part of the MQ, just need it in if showthread
-    //$('a[href^="javascript:MyBB.whoPosted"]').addClass('popup_item');
+    $('a[id^="thread_options_"]').remove();
 }
 //$('.button2[name="previewpost"]').attr('accesskey', previewKey); // Preview Key Hotkey Shortcut
 if (window.location.href == "https://hackforums.net/misc.php?action=buddypopup") { // Buddy List Online Status Fix
@@ -271,9 +242,25 @@ if (window.location.pathname == "/member.php") {
     $('.quick_keys > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) > br:nth-child(1)').remove();
     var sendToUID = $('.quick_keys > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2) > a:nth-child(1)').attr("href");
     $('span.largetext').after("<a class='bitButton' style='margin-left: 15px;' title='Send Private Message' href='" + sendToUID + "'><span style='color: rgba(0,0,0,0.0); text-shadow: none;'>.</span>Send PM<span style='color: rgba(0,0,0,0.0); text-shadow: none;'>.</span></a>");
-    /**$('span.largetext > strong > span').dblclick(function () {
-        $(this).select();
-    });**/
+    jQuery.fn.selectText = function() {
+        var doc = document,
+            element = this[0],
+            range, selection;
+        if (doc.body.createTextRange) {
+            range = document.body.createTextRange();
+            range.moveToElementText(element);
+            range.select();
+        } else if (window.getSelection) {
+            selection = window.getSelection();
+            range = document.createRange();
+            range.selectNodeContents(element);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+    };
+    $('span.largetext > strong > span').dblclick(function() {
+        $(this).selectText();
+    });
 }
 if (window.location.pathname == "/editpost.php" || window.location.pathname == "/newreply.php") {
     $('div[class="messageEditor"]').before('<textarea class="fullScreenEdit" style="display:none;"></textarea>');
@@ -309,7 +296,7 @@ if (showTime === false) {
 }**/
 $('img[src$="/groupimages/english/ub3r.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Userbar Color Change
 $('img[src$="/starub3r2.png"]').attr('style', '-webkit-filter: hue-rotate(15deg); filter: hue-rotate(15deg);'); // Uber Stars Color Change
-$('img[src$="/starreg.png"]').attr('style','-webkit-filter: grayscale(1); filter: grayscale(1);'); // Groups and Reg Star
+$('img[src$="/starreg.png"]').attr('style', '-webkit-filter: grayscale(1); filter: grayscale(1);'); // Groups and Reg Star
 $('strong span[style="rgb(56, 56, 56)"]').addClass("closedGroup"); // Changes Closed Usergroup Color
 //$('strong:contains("Post:") > a[href^="showthread.php?tid="]').attr('id', 'postLink').attr('style', 'padding-top: 3px; padding-right: 5px; display: inline-block;'); // Post # Centered
 $('span[style="color:#383838"]').attr('style', 'color:#444444;'); // Closed Account Username Color Change
@@ -318,7 +305,7 @@ $('#message_new').textareafullscreen({
     maxWidth: '90%', // Max width
     maxHeight: '98%', // Max height
 });
-$('.prefix').each(function () {
-    var slicedPrefix = $(this).text().slice(1,-1);
+$('.prefix').each(function() {
+    var slicedPrefix = $(this).text().slice(1, -1);
     $(this).text(slicedPrefix);
 });

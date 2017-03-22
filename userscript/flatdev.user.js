@@ -263,7 +263,7 @@ inputWidth(targetElem); // AutoGrowInput
             selection.addRange(range);
         }
     });
-    if($("img[id*='multiquote_']").attr("src") === imagepath + "/english/postbit_multiquote_on.gif") { // Multiquote IMG to CSS - By Snorlax
+    if($("img[id*='multiquote_']").attr("src") ===  "https://hackforums.net/images/modern_bl/english/postbit_multiquote.gif" || "img[id*='multiquote_']").attr("src") ===  "https://hackforums.net/images/modern_pl/english/postbit_multiquote.gif") { // Multiquote IMG to CSS - By Snorlax
         $("img[id*='multiquote_']").hide().after("<button class='button' style='bottom: 7px;position: relative;cursor: pointer;outline: none;'>MQ-</button>");
     } else {
         $("img[id*='multiquote_']").hide().after("<button class='button' style='bottom: 7px;position: relative;cursor: pointer;outline: none;'>MQ+</button>");

@@ -12,9 +12,9 @@
 // @contributor   Yani
 // @require       https://code.jquery.com/jquery-2.1.4.min.js
 // @require       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js
-// @require       https://raw.githubusercontent.com/CreoArt/jquery.textareafullscreen/master/userscript/jquery.textareafullscreen.js
+// @require       https://raw.githubusercontent.com/CreoArt/jquery.textareafullscreen/master/jquery.textareafullscreen.js
 // @resource      MainCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/userscript/stylesheet_dev-15-804.css
-// @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/userscript/src/styles/monokai-sublime.css
+// @resource      HLCSS https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/monokai-sublime.css
 // @resource      EditorCSS https://raw.githubusercontent.com/iHydra/flatdarkness/master/userscript/fseditor-005.css
 // @grant         GM_addStyle
 // @grant         GM_setValue

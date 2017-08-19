@@ -2,74 +2,56 @@
 <html>
 
 <head>
-    <title>Flat Darkness &mdash; Settings</title>
-    <style>
-    body {
-        background: #333333;
-        color: #cccccc;
-        padding: 20px;
-    }
-    
-    .block {
-        background: #222222;
-        padding: 5px;
-    }
-    
-    input[type="color"] {
-        width: 98%;
-        height: 32px;
-    }
-
-    .block h2 {
-    	margin-top: -15px;
-    	height: 20px;
-    	line-height: 20px;
-    	color: white;
-    }
-
-    .block h2 span {
-    	background-color: #151515;
-    	padding: 2px 5px;
-    }
-
-    label {
-    	font-size: 1.2em;
-    	color: white;
-    	padding-right: 10px;
-    }
-
-    input[type="checkbox"] {
-    	margin-top: -5px;
-    }
-
-    .optionsSpacing {
-    	display: block;
-    	padding-bottom: 5px;
-    }
-    
-    </style>
+  <title>Flat Darkness &mdash; Settings</title>
+  <link rel="stylesheet" href="css/options.css" type="text/css">
 </head>
 
 <body>
-	<h1>Work In Progress</h1><br/><br/>
-    <div class="block">
-    	<h2><span>Theme Color</span></h2>
-        <input type='color' id="themeColor" />
-    </div><br/><br/>
-    <div class="block">
-    	<h2><span>Quoted Color</span></h2>
-        <input type='color' id="quotedColor" />
-    </div><br/><br/>
-    <div class="block">
-    	<h2><span>Options</span></h2>
-        <div class="optionsSpacing"><label for="showLogo">Show Logo?</label><input type="checkbox" id="showLogo" /></div>
-        <div class="optionsSpacing"><label for="enableSFW">Enable Safe-For-Work?</label><input type="checkbox" id="enableSFW" /></div>
-        <div class="optionsSpacing"><label for="hideMenu">Hide Navigation Menu?</label><input type="checkbox" id="hideMenu" /></div>
-        <div class="optionsSpacing"><label for="showTime">Show Time?</label><input type="checkbox" id="showTime" /></div>
-        <div class="optionsSpacing"><label for="showBadges">Show Badges?</label><input type="checkbox" id="showBadges" /></div>
+  <div id="container">
+    <div id="left">
+      <h1>Color Options</h1>
+      <div class="spacing"><label for="themeColor" class="inputLabel">Theme Color</label><input id="themeColor" class="jscolor" maxlength="6" size="4" /></div>
+      <div class="spacing"><label for="quoteColor" class="inputLabel">Quote Color</label><input id="quoteColor" class="jscolor" maxlength="6" size="4" /></div>
+      <div class="spacing"><label for="prefixColor" class="inputLabel">Prefix Color</label><input id="prefixColor" class="jscolor" maxlength="6" size="4" /></div>
+      </div>
     </div>
-    <script>
-    </script>
+    <div id="right">
+      <div class="control-group">
+        <h1>Settings</h1>
+        <label class="control control-checkbox" for="showLogo">Show Logo?
+                    <input type="checkbox" class="" id="showLogo" />
+                    <div class="control-indicator"></div>
+                </label>
+        <label class="control control-checkbox" for="enableSFW">Enable Safe-For-Work?
+                    <input type="checkbox" class="" id="enableSFW" />
+                    <div class="control-indicator"></div>
+                </label>
+        <label class="control control-checkbox" for="hideMenu">Hide Navigation Menu?
+                    <input type="checkbox" class="" id="hideMenu" />
+                    <div class="control-indicator"></div>
+                </label>
+        <label class="control control-checkbox" for="showTime">Show Current Time?
+                    <input type="checkbox" class="" id="showTime" />
+                    <div class="control-indicator"></div>
+                </label>
+        <label class="control control-checkbox" for="enableBadge">Enable Badge System? (Coming Soon)
+                    <input type="checkbox" class="" id="enableBadge" />
+                    <div class="control-indicator"></div>
+                </label>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="centerAlign"><label for="apiKey" class="inputLabel">HF API Key</label><input type='password' id="apiKey" class="textbox" placeholder='Not Working Yet' /></div>
+    <div class="clear"></div>
+  </div>
+  <div id="controls">
+    <button id="saveSettings" class="">Save Settings</button>
+    <button id="defaultSettings" class="">Default Settings</button>
+    <span id="message"></span>
+  </div>
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/options.js"></script>
+
 </body>
 
 </html>

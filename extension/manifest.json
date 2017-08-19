@@ -2,8 +2,8 @@
     "manifest_version": 2,
     "name": "Flat Darkness HF Theme",
     "short_name": "Flat Darkness",
-    "version": "0.7",
-    "version_name": "alpha 0.7",
+    "version": "1.1.0",
+    "version_name": "v1.1.0",
     "description": "A Custom Hack Forums Theme",
     "icons": {
         "16": "assets/icons/icon16.png",
@@ -12,13 +12,12 @@
         "128": "assets/icons/icon128.png"
     },
     "background": {
-    	"scripts": ["background.js"], 
+    	"scripts": ["background.js"],
     	"persistant": false
     },
     "browser_action": {
         "default_icon": "assets/icons/pageActionIcon.png",
-        "default_title": "Flat Darkness",
-        "default_popup": "popup.html"
+        "default_title": "Flat Darkness"
     },
     "author": "iHydra",
     "content_scripts": [{
@@ -33,12 +32,12 @@
     	"assets/*"
     ],
     "incognito": "not_allowed",
-    "minimum_chrome_version": "54.0.2840",
+    "minimum_chrome_version": "56.0.2924",
     "offline_enabled": false,
     "options_page": "options.html",
     "options_ui": {
         "chrome_style": true,
         "page": "options.html"
     },
-    "permissions": ["activeTab", "tabs", "notifications", "storage", "webNavigation", "declarativeContent"]
+    "permissions": ["activeTab", "tabs", "notifications", "storage", "webNavigation", "declarativeContent", "https://hackforums.net/", "https://www.hackforums.net/"]
 }
